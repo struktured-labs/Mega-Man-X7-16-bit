@@ -59,12 +59,17 @@ signal select_weapon(weapon_resource)
 signal screenshake(amount)
 signal fade_out
 
-signal full_hermes
-signal full_icarus
+signal full_glide
 signal mixed_set
 
-signal noahspark_cutscene_start
-signal noahspark_cutscene_end
+signal tag_switch
+signal rescue_reploid
+signal red_defeated
+signal x_unlocked
+signal crimson_palace_enter
+
+signal introstage_cutscene_start
+signal introstage_cutscene_end
 
 signal stage_start
 signal stage_clear
@@ -78,7 +83,7 @@ signal rotate_inclusion(object)
 signal stage_teleport  
 signal stage_teleport_end  
 
-signal gateway_capsule_teleport
+signal palace_capsule_teleport
 
 signal boss_door_open  
 signal boss_door_closed  
@@ -190,38 +195,28 @@ signal gigacrash
 signal special_activated(special_ability)
 signal special_deactivated(special_ability)
 
-signal teleport_rooster
-signal teleport_manowar
-signal teleport_trilobyte
-signal teleport_panda
-signal teleport_antonion
-signal teleport_mantis
-signal teleport_sunflower
-signal teleport_yeti
+signal teleport_stonekong
+signal teleport_tonion
+signal teleport_warfly
+signal teleport_hyenard
+signal teleport_boarski
+signal teleport_anteator
+signal teleport_crowrang
+signal teleport_gungaroo
 
-signal gateway_crystal_get(boss_name)
-signal gateway_boss_spawned(boss_name)
-signal gateway_boss_defeated(boss_name)
-signal gateway_lock_capsules
-signal gateway_unlock_capsules
-signal gateway_final_section
-signal copy_sigma_desperation  
-signal copy_sigma_flash  
-signal copy_sigma_end_desperation  
-
-signal vile_eject(devilbear)
-signal set_vile_respawn(value)
-signal vile_intro
+signal palace_crystal_get(boss_name)
+signal palace_boss_spawned(boss_name)
+signal palace_boss_defeated(boss_name)
+signal palace_lock_capsules
+signal palace_unlock_capsules
+signal palace_final_section
+signal red_desperation
+signal red_flash
+signal red_end_desperation
 
 signal boss_death_screen_flash
 signal set_boss_bar(new_bar)
 signal sigma_walls
 signal sigma_desperation(atk_direction)
-signal trilobyte_desperation
-signal trilobyte_desperation_end
-signal lumine_death
-signal lumine_went_seraph
-signal lumine_desperation
-signal beat_seraph_lumine
 signal final_fade_out
 

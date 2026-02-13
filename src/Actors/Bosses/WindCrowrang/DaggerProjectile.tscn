@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/WindCrowrang/DaggerProjectile.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 3, 3 )
+
+[node name="DaggerProjectile" type="KinematicBody2D" groups=["Enemy Projectile"]]
+z_index = 8
+collision_layer = 16
+script = ExtResource( 1 )
+damage = 2.0
+speed = 100.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+
+[node name="Hit Particle" parent="." instance=ExtResource( 2 )]
+texture = ExtResource( 3 )
+hframes = 4
+vframes = 4
+animation_speed = 24.0
+vertical_flip_chance = 0.0
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 1 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 4 )
+damage = 2.0
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 2 )

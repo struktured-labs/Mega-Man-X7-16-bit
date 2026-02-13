@@ -1,0 +1,155 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/Levels/base_stage.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/Lumine/Lumine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/BossSpawner.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Sounds/OST - Lumine - Intro.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Sounds/OST - Lumine - Loop.ogg" type="AudioStream" id=7]
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=8]
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_nearbg1.png" type="Texture" id=9]
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_farbg.png" type="Texture" id=10]
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_nearbg3.png" type="Texture" id=11]
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_nearbg2.png" type="Texture" id=12]
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_skypalette.png" type="Texture" id=13]
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_map.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/Effects/Textures/long_smoke.png" type="Texture" id=16]
+[ext_resource path="res://src/Effects/Materials/Finalstage_introparticles.tres" type="Material" id=17]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 8 )
+shader_param/skip_first_row = false
+shader_param/use_palette_alpha = false
+shader_param/fps = 7.0
+shader_param/palette = ExtResource( 13 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 199, 112 )
+
+[node name="Luminetest" instance=ExtResource( 1 )]
+
+[node name="Music Player" parent="." index="1"]
+boss_intro = ExtResource( 6 )
+boss_song = ExtResource( 7 )
+
+[node name="X" parent="." index="3"]
+position = Vector2( 661, 72 )
+
+[node name="Collision" parent="Scenery" index="0"]
+visible = false
+modulate = Color( 0.305882, 0.329412, 0.376471, 1 )
+tile_data = PoolIntArray( -524253, 7, 0, -524252, 7, 0, -393228, 7, 0, -393227, 7, 0, -393226, 7, 0, -393225, 7, 0, -393224, 7, 0, -393223, 7, 0, -393222, 7, 0, -393221, 7, 0, -393220, 7, 0, -393219, 7, 0, -393218, 7, 0, -393217, 7, 0, -458752, 7, 0, -458751, 7, 0, -458750, 7, 0, -458749, 7, 0, -458748, 7, 0, -458747, 7, 0, -458746, 7, 0, -458745, 7, 0, -458744, 7, 0, -458743, 7, 0, -458742, 7, 0, -458741, 7, 0, -458717, 7, 0, -458716, 7, 0, -458715, 7, 0, -458714, 7, 0, -458713, 7, 0, -458712, 7, 0, -458711, 7, 0, -458710, 7, 0, -458709, 7, 0, -458708, 7, 0, -458707, 7, 0, -458706, 7, 0, -458705, 7, 0, -458704, 7, 0, -458703, 7, 0, -458702, 7, 0, -458701, 7, 0, -458700, 7, 0, -458699, 7, 0, -458698, 7, 0, -458697, 7, 0, -458696, 7, 0, -458695, 7, 0, -458694, 7, 0, -458693, 7, 0, -458692, 7, 0, -327692, 7, 0, -393205, 7, 0, -393181, 7, 0, -262156, 7, 0, -327669, 7, 0, -327645, 7, 0, -196620, 7, 0, -262133, 7, 0, -262109, 7, 0, -131084, 7, 0, -196597, 7, 0, -196573, 7, 0, -65548, 7, 0, -131061, 7, 0, -131037, 7, 0, -12, 7, 0, -65525, 7, 0, -65501, 7, 0, 65524, 7, 0, 11, 7, 0, 35, 7, 0, 131060, 7, 0, 65547, 7, 0, 65571, 7, 0, 196596, 7, 0, 131083, 7, 0, 131107, 7, 0, 262132, 7, 0, 196619, 7, 0, 196643, 7, 0, 196670, 7, 0, 327668, 7, 0, 262155, 7, 0, 262179, 7, 0, 262206, 7, 0, 393204, 7, 0, 327691, 7, 0, 327715, 7, 0, 327742, 7, 0, 458740, 7, 0, 458741, 7, 0, 458742, 7, 0, 458743, 7, 0, 458744, 7, 0, 458745, 7, 0, 458746, 7, 0, 458747, 7, 0, 458748, 7, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 7, 0, 393217, 7, 0, 393218, 7, 0, 393219, 7, 0, 393220, 7, 0, 393221, 7, 0, 393222, 7, 0, 393223, 7, 0, 393224, 7, 0, 393225, 7, 0, 393226, 7, 0, 393227, 7, 0, 393251, 7, 0, 393253, 7, 0, 393254, 7, 0, 393255, 7, 0, 393256, 7, 0, 393257, 7, 0, 393258, 7, 0, 393259, 7, 0, 393260, 7, 0, 393261, 7, 0, 393262, 7, 0, 393263, 7, 0, 393264, 7, 0, 393265, 7, 0, 393266, 7, 0, 393267, 7, 0, 393268, 7, 0, 393269, 7, 0, 393270, 7, 0, 393271, 7, 0, 393272, 7, 0, 393273, 7, 0, 393274, 7, 0, 393275, 7, 0, 393276, 7, 0, 458787, 7, 0 )
+
+[node name="UnclimbableWalls" parent="Scenery/Collision" index="0"]
+tile_data = PoolIntArray( -524252, 7, 0, -524251, 7, 0, -524250, 7, 0, -524249, 7, 0, -524248, 7, 0, -524247, 7, 0, -524246, 7, 0, -524245, 7, 0, -524244, 7, 0, -524243, 7, 0, -524242, 7, 0, -524241, 7, 0, -524240, 7, 0, -524239, 7, 0, -524238, 7, 0, -524237, 7, 0, -524236, 7, 0, -524235, 7, 0, -524234, 7, 0, -524233, 7, 0, -524232, 7, 0, -524231, 7, 0, -524230, 7, 0, -524229, 7, 0, -524228, 7, 0, -524227, 7, 0, -458716, 7, 0, -458691, 7, 0, -393180, 7, 0, -393155, 7, 0, -327644, 7, 0, -327619, 7, 0, -262108, 7, 0, -262083, 7, 0, -196572, 7, 0, -196547, 7, 0, -131036, 7, 0, -131011, 7, 0, -65500, 7, 0, -65475, 7, 0, 36, 7, 0, 61, 7, 0, 65572, 7, 0, 65597, 7, 0, 131108, 7, 0, 131133, 7, 0, 196644, 7, 0, 196669, 7, 0, 262180, 7, 0, 262205, 7, 0, 327716, 7, 0, 327741, 7, 0, 393252, 7, 0, 393277, 7, 0, 458788, 7, 0, 458789, 7, 0, 458790, 7, 0, 458791, 7, 0, 458792, 7, 0, 458793, 7, 0, 458794, 7, 0, 458795, 7, 0, 458796, 7, 0, 458797, 7, 0, 458798, 7, 0, 458799, 7, 0, 458800, 7, 0, 458801, 7, 0, 458802, 7, 0, 458803, 7, 0, 458804, 7, 0, 458805, 7, 0, 458806, 7, 0, 458807, 7, 0, 458808, 7, 0, 458809, 7, 0, 458810, 7, 0, 458811, 7, 0, 458812, 7, 0, 458813, 7, 0 )
+
+[node name="parallaxBackground" type="ParallaxBackground" parent="Scenery" index="2"]
+
+[node name="farthest" type="ParallaxLayer" parent="Scenery/parallaxBackground" index="0"]
+motion_scale = Vector2( 0.025, 0.01 )
+motion_offset = Vector2( 477, -555 )
+motion_mirroring = Vector2( 800, 640 )
+
+[node name="sprite2" type="Sprite" parent="Scenery/parallaxBackground/farthest" index="0"]
+material = SubResource( 2 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 800, 640 )
+
+[node name="near" type="ParallaxLayer" parent="Scenery/parallaxBackground" index="1"]
+visible = false
+position = Vector2( -198, -43 )
+motion_scale = Vector2( 0.05, 0.025 )
+motion_offset = Vector2( 0, 48 )
+motion_mirroring = Vector2( 400, 0 )
+
+[node name="sprite" type="Sprite" parent="Scenery/parallaxBackground/near" index="0"]
+position = Vector2( 24, 128 )
+texture = ExtResource( 9 )
+offset = Vector2( 176, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 400, 256 )
+
+[node name="near2" type="ParallaxLayer" parent="Scenery/parallaxBackground" index="2"]
+visible = false
+position = Vector2( -198, -43 )
+motion_scale = Vector2( 0.1, 0.047 )
+motion_offset = Vector2( 0, 48 )
+motion_mirroring = Vector2( 400, 0 )
+
+[node name="sprite" type="Sprite" parent="Scenery/parallaxBackground/near2" index="0"]
+position = Vector2( 24, 128 )
+texture = ExtResource( 12 )
+offset = Vector2( 176, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 400, 256 )
+
+[node name="near3" type="ParallaxLayer" parent="Scenery/parallaxBackground" index="3"]
+visible = false
+position = Vector2( -198, -43 )
+motion_scale = Vector2( 0.2, 0.1 )
+motion_offset = Vector2( 0, 48 )
+motion_mirroring = Vector2( 400, 0 )
+
+[node name="sprite" type="Sprite" parent="Scenery/parallaxBackground/near3" index="0"]
+position = Vector2( 24, 128 )
+texture = ExtResource( 11 )
+offset = Vector2( 176, 0 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 400, 256 )
+
+[node name="sigmapalace_map" parent="Scenery" index="3" instance=ExtResource( 15 )]
+position = Vector2( -9095, -128 )
+z_index = -1
+
+[node name="BossSpawner" parent="Objects" index="0" instance=ExtResource( 5 )]
+position = Vector2( 894, 41 )
+script = ExtResource( 4 )
+object_to_spawn = ExtResource( 3 )
+spawn_at_start = true
+make_child_of_this_object = true
+set_direction_to_right = false
+despawnable = false
+skip_intro = true
+
+[node name="Limits" parent="." index="7"]
+visible = false
+
+[node name="boss" type="Area2D" parent="Limits" index="0"]
+position = Vector2( 787, 0 )
+z_index = 3
+collision_layer = 2048
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Limits/boss" index="0"]
+position = Vector2( -2, 0 )
+shape = SubResource( 1 )
+
+[node name="parallaxBackground2" type="ParallaxBackground" parent="." index="8"]
+layer = 0
+
+[node name="foreground" type="ParallaxLayer" parent="parallaxBackground2" index="0"]
+z_index = 256
+motion_scale = Vector2( 1.15, 1.15 )
+motion_mirroring = Vector2( 632, 320 )
+
+[node name="particles2D" type="Particles2D" parent="parallaxBackground2/foreground" index="0"]
+modulate = Color( 0.698039, 0.560784, 0.898039, 0.27451 )
+position = Vector2( 132, 15 )
+amount = 6
+lifetime = 12.0
+process_material = ExtResource( 17 )
+texture = ExtResource( 16 )
+
+[node name="particles2D2" type="Particles2D" parent="parallaxBackground2/foreground" index="1"]
+modulate = Color( 0.698039, 0.560784, 0.898039, 0.27451 )
+position = Vector2( -114, 15 )
+amount = 6
+lifetime = 12.0
+process_material = ExtResource( 17 )
+texture = ExtResource( 16 )

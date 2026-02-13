@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/mantis.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/StageSelect/preview/stage_4.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "crowrang_weapon"
+beaten_condition = [  ]
+pointer_position = Vector2( 21, 278 )
+should_play_intro = true
+name_id = "CROWRANG"
+collectibles = [ "crowrang_weapon", "glide_arms", "life_up_crowrang" ]
+preview = ExtResource( 3 )
+sprite_frames = ExtResource( 2 )
+animation_beats = [ "dash", "slash_1", "slash_2_start", "slash_2" ]
+inverse_sprites = false

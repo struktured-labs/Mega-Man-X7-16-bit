@@ -1,0 +1,166 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/StonekongIntro.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/StonekongIdle.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/StoneShield.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/StoneDash.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/RockSplit.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/SwordSlash.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/RockBarrage.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=14]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=15]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=16]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/trilobyte.res" type="SpriteFrames" id=18]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/ShieldProjectile.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/ShockwaveProjectile.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/RockProjectile.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/SmallRockProjectile.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/FallingRockProjectile.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/Actors/Bosses/SoldierStonekong/GroundSpikeProjectile.tscn" type="PackedScene" id=24]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12, 19.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 15 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 16, 22 )
+
+[node name="Stonekong" type="KinematicBody2D" groups=["Bosses", "Enemies"]]
+z_index = 5
+collision_layer = 8
+script = ExtResource( 1 )
+max_health = 160.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 2 )
+time_between_attacks = Vector2( 0.5, 1.25 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 8.5 )
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 14 )
+position = Vector2( 0, -5 )
+z_index = 1
+frames = ExtResource( 18 )
+animation = "idle"
+frame = 5
+playing = true
+flip_h = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+z_index = 2
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 1, 8 )
+shape = SubResource( 2 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 3 )
+actions = [ "Event" ]
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+should_turn = false
+
+[node name="StoneShield" type="Node2D" parent="."]
+script = ExtResource( 5 )
+actions = [ "Event" ]
+shield_projectile = ExtResource( 19 )
+
+[node name="StoneDash" type="Node2D" parent="."]
+script = ExtResource( 6 )
+actions = [ "Event" ]
+horizontal_velocity = 400.0
+jump_velocity = 300.0
+shockwave_projectile = ExtResource( 20 )
+
+[node name="RockSplit" type="Node2D" parent="."]
+script = ExtResource( 7 )
+actions = [ "Event" ]
+big_rock = ExtResource( 21 )
+small_rock = ExtResource( 22 )
+
+[node name="SwordSlash" type="Node2D" parent="."]
+script = ExtResource( 8 )
+actions = [ "Event" ]
+
+[node name="RockBarrage" type="Node2D" parent="."]
+script = ExtResource( 9 )
+actions = [ "Event" ]
+desperation_attack = true
+falling_rock = ExtResource( 23 )
+ground_spike = ExtResource( 24 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 10 )
+max_flash_time = 0.35
+weakenesses = [ "Explosion" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 17 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 11 )
+damage = 2.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, 7 )
+shape = SubResource( 3 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 12 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 60.0
+jump_velocity = 100.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 13 )]
+position = Vector2( 0, 8 )
+death_animation = "death"
+collectible = "stonekong_weapon"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 15 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 16 )
+
+[connection signal="ability_start" from="RockBarrage" to="BossStun" method="deactivate"]
+[connection signal="ready_for_stun" from="RockBarrage" to="BossStun" method="reactivate"]
+
+[editable path="BossDeath"]

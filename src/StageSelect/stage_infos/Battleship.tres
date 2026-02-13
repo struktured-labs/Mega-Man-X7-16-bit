@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/manowar.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/StageSelect/preview/stage_7.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "warfly_weapon"
+beaten_condition = [  ]
+pointer_position = Vector2( 69, 285 )
+should_play_intro = true
+name_id = "WARFLY"
+collectibles = [ "warfly_weapon", "life_up_warfly", "subtank_warfly" ]
+preview = ExtResource( 3 )
+sprite_frames = ExtResource( 2 )
+animation_beats = [ "storm_loop", "thunder_prepare", "thunder_loop", "intro" ]
+inverse_sprites = false

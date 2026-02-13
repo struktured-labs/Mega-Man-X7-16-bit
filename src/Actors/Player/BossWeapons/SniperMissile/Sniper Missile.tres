@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SniperMissile/SniperMissile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Options/selectable_weapon_02.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+short_name = "ANTEATOR_WPNMENU"
+collectible = "anteator_weapon"
+icon = ExtResource( 3 )
+regular_shot = ExtResource( 2 )
+regular_ammo_cost = 2.0
+charged_shot = ExtResource( 2 )
+charged_ammo_cost = 5.0
+cooldown = 0.4
+MainColor1 = Color( 0.65, 0.5, 0.8, 1 )
+MainColor2 = Color( 0.4, 0.25, 0.6, 1 )
+MainColor3 = Color( 0.2, 0.12, 0.35, 1 )
+MainColor4 = Color( 0.7, 0.7, 0.75, 1 )
+MainColor5 = Color( 0.5, 0.5, 0.55, 1 )
+MainColor6 = Color( 0.3, 0.3, 0.35, 1 )

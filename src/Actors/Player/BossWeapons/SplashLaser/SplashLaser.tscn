@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/SplashLaser/SplashLaser.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12, 4 )
+
+[node name="SplashLaser" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 8
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 1 )
+damage = 5.0
+damage_to_bosses = 2.5
+damage_to_weakness = 14.0
+time_off_screen = 0.5
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 2 )
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false

@@ -1,0 +1,209 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/Intro.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/Lumine/lumine_main.res" type="SpriteFrames" id=3]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=4]
+[ext_resource path="res://src/Actors/Enemies/EnemyIdle.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/SigmaX7FinalAI.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=8]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=10]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/GiantPunch.gd" type="Script" id=13]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/EnergySpread.gd" type="Script" id=14]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/SweepLaser.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/FireSpin.gd" type="Script" id=16]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/Apocalypse.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=19]
+[ext_resource path="res://src/Sounds/Sunflower - OrbCharge.ogg" type="AudioStream" id=20]
+[ext_resource path="res://src/Sounds/Sunflower - LaserLoop.ogg" type="AudioStream" id=21]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=22]
+[ext_resource path="res://src/Sounds/Mantis - Cut2.ogg" type="AudioStream" id=23]
+[ext_resource path="res://src/Sounds/Mantis - DeathImage.ogg" type="AudioStream" id=24]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/ShockwaveProjectile.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/EnergyBallProjectile.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/FireOrbProjectile.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/DeathWall.tscn" type="PackedScene" id=28]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 60 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50, 70 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 80, 50 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 60, 40 )
+
+[node name="SigmaX7Final" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 4
+collision_layer = 0
+collision_mask = 257
+script = ExtResource( 2 )
+max_health = 250.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 6 )
+time_between_attacks = Vector2( 0.5, 1.0 )
+desperation_threshold = 0.25
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 10 )
+frames = ExtResource( 3 )
+animation = "idle"
+playing = true
+
+[node name="shot_pos" type="Position2D" parent="animatedSprite"]
+position = Vector2( 55, -20 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 2 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( 0, 0 )
+scale = Vector2( 6.0, 6.0 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 1 )
+defeated_var = "sigma_x7_final_defeated"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+should_turn = false
+
+[node name="GiantPunch" type="Node2D" parent="."]
+script = ExtResource( 13 )
+shockwave = ExtResource( 25 )
+
+[node name="punch_sfx" type="AudioStreamPlayer2D" parent="GiantPunch"]
+stream = ExtResource( 22 )
+volume_db = 2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="land_sfx" type="AudioStreamPlayer2D" parent="GiantPunch"]
+stream = ExtResource( 22 )
+volume_db = 4.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="EnergySpread" type="Node2D" parent="."]
+script = ExtResource( 14 )
+projectile = ExtResource( 26 )
+
+[node name="shot_sfx" type="AudioStreamPlayer2D" parent="EnergySpread"]
+stream = ExtResource( 23 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="charge_sfx" type="AudioStreamPlayer2D" parent="EnergySpread"]
+stream = ExtResource( 20 )
+volume_db = 4.0
+pitch_scale = 0.8
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="SweepLaser" type="Node2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="eye_sfx" type="AudioStreamPlayer2D" parent="SweepLaser"]
+stream = ExtResource( 21 )
+volume_db = 4.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="charge_sfx" type="AudioStreamPlayer2D" parent="SweepLaser"]
+stream = ExtResource( 20 )
+volume_db = 4.0
+pitch_scale = 0.8
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="FireSpin" type="Node2D" parent="."]
+script = ExtResource( 16 )
+fire_orb = ExtResource( 27 )
+
+[node name="fire_sfx" type="AudioStreamPlayer2D" parent="FireSpin"]
+stream = ExtResource( 23 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="Apocalypse" type="Node2D" parent="."]
+script = ExtResource( 17 )
+desperation_attack = true
+death_walls = ExtResource( 28 )
+energy_projectile = ExtResource( 26 )
+
+[node name="roar_sfx" type="AudioStreamPlayer2D" parent="Apocalypse"]
+stream = ExtResource( 24 )
+volume_db = 4.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="shot_sfx" type="AudioStreamPlayer2D" parent="Apocalypse"]
+stream = ExtResource( 23 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 12 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 8 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "SplashLaser", "Explosion", "GaeaShield", "Hadangeki", "Suiretsusen", "Gokumonken" ]
+weakness_multiplier = 1.25
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 9 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 7 )
+active = false
+damage = 14.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 18 )]
+position = Vector2( 0, 0 )
+death_animation = "death"
+force_reploid_death = true
+defeated_flag = "sigma_x7_final_defeated"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 32
+process_material = ExtResource( 4 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 19 )
+
+[editable path="BossDeath"]

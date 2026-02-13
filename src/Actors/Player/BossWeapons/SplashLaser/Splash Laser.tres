@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SplashLaser/SplashLaser.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Options/selectable_weapon_02.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+short_name = "WARFLY_WPNMENU"
+collectible = "warfly_weapon"
+icon = ExtResource( 3 )
+regular_shot = ExtResource( 2 )
+regular_ammo_cost = 2.0
+charged_shot = ExtResource( 2 )
+charged_ammo_cost = 4.0
+cooldown = 0.2
+MainColor1 = Color( 0.7, 0.9, 1, 1 )
+MainColor2 = Color( 0.3, 0.6, 1, 1 )
+MainColor3 = Color( 0.15, 0.3, 0.7, 1 )
+MainColor4 = Color( 0.85, 0.95, 1, 1 )
+MainColor5 = Color( 0.5, 0.75, 1, 1 )
+MainColor6 = Color( 0.1, 0.25, 0.6, 1 )

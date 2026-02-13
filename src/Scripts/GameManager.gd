@@ -1,12 +1,18 @@
 extends Node
 
-const codename := "X8FC"
+const codename := "X7FC"
 const version := "1.0.0.9"
 const current_demo := "16-bit"
 
 var player : Character
 var camera : Camera2D
 var state := "Normal"
+
+# Tag-team system (X7)
+var player_1 : Character
+var player_2 : Character
+var active_player : Character
+var inactive_player : Character
 var bikes = []
 var debug_actions = []
 var debug_skip := 1
@@ -55,7 +61,7 @@ var pause_sources: Array
 var debug_enabled := false
 var last_player_position := Vector2.ZERO
 
-var lumine_boss_order : Array
+var sigma_boss_order : Array
 
 func _ready() -> void:
 	print ("GameManager: Initializing...")
@@ -125,13 +131,13 @@ func start_stage_music() -> void:
 		music_player.call_deferred("play_stage_song")
 
 func start_level(StageName : String) -> void:
-	
+
 	clear_checkpoint()
 	set_player_lives_to_at_least_2()
 	current_level = StageName
 	var path : String
-	if StageName == "NoahsPark":
-		path = "res://src/Levels/NoahsPark/Intro_NoahsPark.tscn"
+	if StageName == "IntroStage":
+		path = "res://src/Levels/IntroStage/Intro_IntroStage.tscn"
 	else:
 		path = "res://src/Levels/" + StageName + "/Stage_" + StageName + ".tscn"
 	var _dv = get_tree().change_scene(path)
@@ -154,9 +160,9 @@ func go_to_igt() -> void:
 	var _dv = get_tree().change_scene("res://src/Screens/IGTScreen.tscn")
 	GameManager.call_deferred("restart_level")
 
-func go_to_lumine_boss_test() -> void:
-	print_debug(":::::::: going to seraph lumine boss test")
-	var _dv = get_tree().change_scene("res://src/Levels/SigmaPalace/SeraphTest.tscn")
+func go_to_sigma_boss_test() -> void:
+	print_debug(":::::::: going to sigma boss test")
+	var _dv = get_tree().change_scene("res://src/Levels/CrimsonPalace/SigmaTest.tscn")
 	GameManager.checkpoint = null
 	GameManager.call_deferred("restart_level")
 	
@@ -190,7 +196,7 @@ func finished_fade_out() -> void:
 	if player_died:
 		player_died = false
 		#prevents going to stageselect on intro
-		if current_level == "NoahsPark": 
+		if current_level == "IntroStage":
 			call_deferred("restart_level")
 			#go_to_intro()
 
@@ -216,14 +222,14 @@ func finished_fade_out() -> void:
 
 func go_to_end_cutscene():
 	print_debug(":::::::: going to final cutscene")
-	var _dv = get_tree().change_scene("res://src/Levels/SigmaPalace/FinalCutscene.tscn")
+	var _dv = get_tree().change_scene("res://src/Levels/CrimsonPalace/FinalCutscene.tscn")
 	call_deferred("force_unpause")
 	call_deferred("on_level_start")
 	pass
 	
 func go_to_credits():
 	print_debug(":::::::: going to final cutscene")
-	var _dv = get_tree().change_scene("res://src/Levels/SigmaPalace/CreditsScene.tscn")
+	var _dv = get_tree().change_scene("res://src/Levels/CrimsonPalace/CreditsScene.tscn")
 	call_deferred("force_unpause")
 	call_deferred("on_level_start")
 	pass
@@ -358,13 +364,13 @@ func handle_end_of_level(delta: float) -> void:
 			GameManager.force_unpause()
 			#call_deferred("restart_level")
 
-var primrose_paused := false
+var stage_paused := false
 
-func primrose_pause():
-	pause("Primrose")
+func stage_pause():
+	pause("Stage")
 
-func primrose_unpause():
-	unpause("Primrose")
+func stage_unpause():
+	unpause("Stage")
 	
 func pause(source : String):
 	if not source in pause_sources:
@@ -554,7 +560,7 @@ func was_dialogue_seen(dialog) -> bool:
 	return dialog in seen_dialogues
 
 func is_armor(collectible_name : String) -> bool:
-	return "hermes" in collectible_name or "icarus" in collectible_name
+	return "glide" in collectible_name
 
 func is_heart(collectible_name : String) -> bool:
 	return "life_up" in collectible_name
@@ -585,4 +591,4 @@ func finish_weapon_get() -> void:
 	current_armor = []
 
 func has_beaten_the_game() -> bool:
-	return GlobalVariables.get("seraph_lumine_defeated")
+	return GlobalVariables.get("sigma_defeated")

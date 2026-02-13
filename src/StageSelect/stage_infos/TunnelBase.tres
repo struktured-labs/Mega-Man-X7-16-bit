@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/panda.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/StageSelect/preview/stage_1.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "gungaroo_weapon"
+beaten_condition = [  ]
+pointer_position = Vector2( -41, 258 )
+should_play_intro = true
+name_id = "GUNGAROO"
+collectibles = [ "gungaroo_weapon", "life_up_gungaroo", "subtank_gungaroo" ]
+preview = ExtResource( 3 )
+sprite_frames = ExtResource( 2 )
+animation_beats = [ "appear", "slash1", "rage_start", "slash2" ]
+inverse_sprites = false

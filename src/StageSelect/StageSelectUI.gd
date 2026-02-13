@@ -12,10 +12,9 @@ onready var fader: ColorRect = $Fader
 onready var pick: AudioStreamPlayer = $pick
 onready var music: AudioStreamPlayer = $"../music"
 
-onready var jacob_elevator: TextureButton = $Menu/JacobElevator
-onready var gateway: TextureButton = $Menu/Gateway
-onready var sigma_palace: TextureButton = $Menu/SigmaPalace
-onready var last_stages := [jacob_elevator,gateway,sigma_palace]
+onready var palace_road: TextureButton = $Menu/Gateway
+onready var crimson_palace: TextureButton = $Menu/SigmaPalace
+onready var last_stages := [palace_road,crimson_palace]
 
 const music_0_intro:= preload("res://src/Sounds/OST - Stage Select 1 - Intro.ogg")
 const music_0_loop := preload("res://src/Sounds/OST - Stage Select 1 - Loop.ogg")

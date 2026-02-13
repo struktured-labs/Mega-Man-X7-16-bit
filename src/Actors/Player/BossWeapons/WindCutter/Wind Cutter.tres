@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/WindCutter/WindCutter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/WindCutter/WindCutterCharged.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Options/selectable_weapon_02.png" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+short_name = "CROWRANG_WPNMENU"
+collectible = "crowrang_weapon"
+icon = ExtResource( 4 )
+regular_shot = ExtResource( 2 )
+regular_ammo_cost = 2.0
+charged_shot = ExtResource( 3 )
+charged_ammo_cost = 8.0
+cooldown = 0.3
+MainColor1 = Color( 0.7, 1, 0.7, 1 )
+MainColor2 = Color( 0.3, 0.75, 0.3, 1 )
+MainColor3 = Color( 0.15, 0.4, 0.15, 1 )
+MainColor4 = Color( 0.75, 0.8, 0.75, 1 )
+MainColor5 = Color( 0.5, 0.6, 0.5, 1 )
+MainColor6 = Color( 0.3, 0.35, 0.3, 1 )

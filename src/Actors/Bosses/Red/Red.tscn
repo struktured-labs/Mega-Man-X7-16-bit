@@ -1,0 +1,354 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/Red/Intro.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/Bike - Land.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/copysigma.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=5]
+[ext_resource path="res://src/Actors/Enemies/EnemyIdle.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=10]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=12]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=13]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=14]
+[ext_resource path="res://src/Sounds/Mantis - Dash.ogg" type="AudioStream" id=15]
+[ext_resource path="res://src/Sounds/Mantis - Cut2.ogg" type="AudioStream" id=16]
+[ext_resource path="res://src/Actors/Bosses/Red/RedSlash.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Bosses/Red/RedWave.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/Red/RedWallJump.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Bosses/Red/RedCounter.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Bosses/Red/RedBarrage.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Bosses/Red/SwordWaveProjectile.gd" type="Script" id=22]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=24]
+[ext_resource path="res://src/Sounds/Mantis - DeathImage.ogg" type="AudioStream" id=25]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Mantis - Jump.wav" type="AudioStream" id=26]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=27]
+[ext_resource path="res://src/Actors/Bosses/Red/SwordWaveProjectile.tscn" type="PackedScene" id=28]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14, 31 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18, 34.5 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 19.0
+height = 100.0
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 12.0
+height = 77.0
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 40, 30 )
+
+[node name="Red" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 6
+collision_layer = 0
+script = ExtResource( 2 )
+max_health = 200.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 7 )
+time_between_attacks = Vector2( 0.2, 0.65 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 12 )
+frames = ExtResource( 4 )
+animation = "idle"
+playing = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 2 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 1 )
+defeated_var = "red_defeated"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="RedSlash" type="Node2D" parent="."]
+script = ExtResource( 17 )
+actions = [ "Event" ]
+
+[node name="highslash" type="Node2D" parent="RedSlash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+damage_in_combo = 10.0
+
+[node name="area2D" type="Area2D" parent="RedSlash/highslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="RedSlash/highslash/area2D"]
+position = Vector2( 42, -13 )
+rotation = 1.67552
+shape = SubResource( 3 )
+
+[node name="lowslash" type="Node2D" parent="RedSlash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+previous_combo = NodePath("../highslash")
+
+[node name="area2D" type="Area2D" parent="RedSlash/lowslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="RedSlash/lowslash/area2D"]
+position = Vector2( 67, 7 )
+rotation = 1.34041
+shape = SubResource( 4 )
+
+[node name="dash_sfx" type="AudioStreamPlayer2D" parent="RedSlash"]
+stream = ExtResource( 15 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="RedSlash"]
+stream = ExtResource( 16 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="RedWave" type="Node2D" parent="."]
+script = ExtResource( 18 )
+projectile = ExtResource( 28 )
+
+[node name="highslash" type="Node2D" parent="RedWave"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 2.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="RedWave/highslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="RedWave/highslash/area2D"]
+position = Vector2( 45, -16 )
+shape = SubResource( 3 )
+
+[node name="lowslash" type="Node2D" parent="RedWave"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 10.0
+active_duration = 3.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="RedWave/lowslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="RedWave/lowslash/area2D"]
+position = Vector2( 29, 23 )
+rotation = 1.5708
+shape = SubResource( 4 )
+
+[node name="dash_sfx" type="AudioStreamPlayer2D" parent="RedWave"]
+stream = ExtResource( 15 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="RedWave"]
+stream = ExtResource( 16 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="RedWallJump" type="Node2D" parent="."]
+script = ExtResource( 19 )
+projectile = ExtResource( 28 )
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="RedWallJump"]
+stream = ExtResource( 16 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="land_sfx" type="AudioStreamPlayer2D" parent="RedWallJump"]
+stream = ExtResource( 3 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="jump_sfx" type="AudioStreamPlayer2D" parent="RedWallJump"]
+stream = ExtResource( 26 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="dive_sfx" type="AudioStreamPlayer2D" parent="RedWallJump"]
+stream = ExtResource( 27 )
+pitch_scale = 1.1
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="RedCounter" type="Node2D" parent="."]
+script = ExtResource( 20 )
+
+[node name="counter_hitbox" type="Node2D" parent="RedCounter"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 15.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="RedCounter/counter_hitbox"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="RedCounter/counter_hitbox/area2D"]
+position = Vector2( 42, 0 )
+shape = SubResource( 5 )
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="RedCounter"]
+stream = ExtResource( 16 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="guard_sfx" type="AudioStreamPlayer2D" parent="RedCounter"]
+stream = ExtResource( 27 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="RedBarrage" type="Node2D" parent="."]
+script = ExtResource( 21 )
+desperation_attack = true
+
+[node name="SlashHitbox" type="Node2D" parent="RedBarrage"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 25.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="RedBarrage/SlashHitbox"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="RedBarrage/SlashHitbox/area2D"]
+position = Vector2( 42, 0 )
+shape = SubResource( 5 )
+
+[node name="jump_sfx" type="AudioStreamPlayer2D" parent="RedBarrage"]
+stream = ExtResource( 26 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="land_sfx" type="AudioStreamPlayer2D" parent="RedBarrage"]
+stream = ExtResource( 3 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="RedBarrage"]
+stream = ExtResource( 16 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="desperation_sfx" type="AudioStreamPlayer2D" parent="RedBarrage"]
+stream = ExtResource( 25 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 9 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "GaeaShield" ]
+weakness_multiplier = 1.5
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 11 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 8 )
+active = false
+damage = 10.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 23 )]
+position = Vector2( 0, 0 )
+death_animation = "death"
+force_reploid_death = true
+defeated_flag = "red_defeated"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 5 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 24 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 10 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[editable path="BossDeath"]

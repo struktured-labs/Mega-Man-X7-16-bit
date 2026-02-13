@@ -140,90 +140,37 @@ func process_flash(delta):
 		if flash_timer > 0.034:
 			end_flash()
 	
-func equip_hermes_head_parts():
-	get_node("Charge").charge_time_reduction = 0.45
-	get_node("JumpDamage").deactivate()
+func equip_glide_head_parts(): # doubles pickup absorption range
+	if has_node("PickupRange"):
+		get_node("PickupRange").pickup_range *= 2.0
 
-func equip_hermes_body_parts():
+func equip_glide_body_parts(): # halves damage, no knockdown, Giga Crash
 	var dmg = get_node("Damage")
-	dmg.damage_reduction = 33 #used to be 25
-	dmg.prevent_knockbacks = false
-	dmg.conflicting_moves = ["Death", "WallSlide", "Ride"]
-	get_node("LifeSteal").activate()
-
-func equip_hermes_arms_parts(): #triple shot
-	var cannon = get_node("Shot")
-	var hermes_Buster = cannon.get_node("Hermes Buster")
-	var icarus_Buster = cannon.get_node("Icarus Buster")
-	var altfire = get_node("AltFire")
-	
-	hermes_Buster.active = true
-	icarus_Buster.active = false
-	cannon.upgraded = true
-	cannon.infinite_charged_ammo = false
-	cannon.infinite_regular_ammo = true
-	cannon.update_list_of_weapons()
-	cannon.set_current_weapon(hermes_Buster)
-	altfire.switch_to_hermes()
-	#get_node("Charge").level_4_charge = 2.8
-
-func equip_hermes_legs_parts(): #ghost dash
-	get_node("Dash").upgraded = true
-	get_node("Dash").invulnerability_duration = 0.475
-	get_node("AirJump").set_max_air_jumps(0)
-	get_node("AirDash").max_airdashes = 1
-	get_node("AirDash").airdash_count = 2
-
-func equip_icarus_head_parts():
-	get_node("Charge").charge_time_reduction = 0
-	get_node("JumpDamage").activate()
-
-func equip_icarus_body_parts():
-	var dmg = get_node("Damage")
-	dmg.damage_reduction = 50 #used to be 40
+	dmg.damage_reduction = 50
 	dmg.prevent_knockbacks = true
 	dmg.conflicting_moves = ["Death", "Nothing"]
-	get_node("LifeSteal").deactivate()
 
-func equip_icarus_arms_parts(): #laser shot
+func equip_glide_arms_parts(): # charge shot gains 3 homing bullets, can charge special weapons
 	var cannon = get_node("Shot")
-	var icarus_Buster = cannon.get_node("Icarus Buster")
-	var hermes_Buster = cannon.get_node("Hermes Buster")
-	var altfire = get_node("AltFire")
-	icarus_Buster.active = true
-	hermes_Buster.active = false
 	cannon.upgraded = true
-	cannon.infinite_charged_ammo = true
-	cannon.infinite_regular_ammo = false
+	cannon.homing_bullets = 3
+	cannon.charge_special_weapons = true
 	cannon.update_list_of_weapons()
-	cannon.set_current_weapon(icarus_Buster)
-	altfire.switch_to_icarus()
-	#get_node("Charge").level_4_charge = 3.25
 
-func equip_icarus_legs_parts(): #double jump
-	var dash = get_node("Dash")
-	var airdash = get_node("AirDash")
-	get_node("AirJump").set_max_air_jumps(2)
-	dash.upgraded = false
-	dash.dash_duration = 0.55
-	dash.invulnerability_duration = 0
-	airdash.upgraded = false
-	airdash.max_airdashes = 2
-	airdash.invulnerability_duration = 0
+func equip_glide_legs_parts(): # Glide Dash - glide forward slowly descending in air
+	get_node("Dash").upgraded = true
+	get_node("Dash").glide_enabled = true
+	get_node("AirDash").max_airdashes = 1
+	get_node("AirDash").glide_enabled = true
 
 func is_full_armor() -> String:
-	var armor_set := 0
+	var armor_count := 0
 	for piece in current_armor:
-		if "hermes" in piece:
-			#print("Checking armor: " + piece)
-			armor_set += 1
-		elif "icarus" in piece:
-			armor_set -= 1
+		if "glide" in piece:
+			armor_count += 1
 
-	if armor_set == 4:
-		return "hermes"
-	elif armor_set == -4:
-		return "icarus"
+	if armor_count == 4:
+		return "glide"
 	return "no_armor"
 
 func equip_parts(collectible : String):
@@ -282,7 +229,7 @@ func get_subtank_current_health(id) -> int:
 	return -1
 	
 func add_part_to_current_armor(collectible: String):
-	var part_location = collectible.replace("icarus_","").replace("hermes_","")
+	var part_location = collectible.replace("glide_","")
 	for location in current_armor:
 		if part_location in location:
 			current_armor.remove(current_armor.find(location))
@@ -290,7 +237,7 @@ func add_part_to_current_armor(collectible: String):
 	GameManager.remove_equip_exception(part_location)
 
 func is_armor_part(collectible : String) -> bool:
-	return "icarus" in collectible or "hermes" in collectible
+	return "glide" in collectible
 
 func finished_equipping() -> void:
 	get_node("Shot").update_list_of_weapons()

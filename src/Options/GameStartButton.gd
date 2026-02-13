@@ -17,7 +17,7 @@ func go_to_next_scene() -> void:
 	if already_finished_noahs_park():
 		GameManager.call_deferred("go_to_stage_select")
 	else:
-		GameManager.start_level("NoahsPark")
+		GameManager.start_level("IntroStage")
 
 func already_finished_noahs_park() -> bool:
 	return "finished_intro" in GameManager.collectibles

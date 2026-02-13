@@ -5,11 +5,11 @@
 [ext_resource path="res://src/Options/AutonomousMenuButton.gd" type="Script" id=3]
 [ext_resource path="res://src/StageSelect/music.gd" type="Script" id=4]
 [ext_resource path="res://src/StageSelect/StageSelectUI.gd" type="Script" id=5]
-[ext_resource path="res://src/StageSelect/stage_infos/Inferno.tres" type="Resource" id=6]
+[ext_resource path="res://src/StageSelect/stage_infos/LavaFactory.tres" type="Resource" id=6]
 [ext_resource path="res://src/StageSelect/StageButton.gd" type="Script" id=7]
 [ext_resource path="res://src/Sounds/OST - StageSelect2 - Intro.ogg" type="AudioStream" id=8]
 [ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=9]
-[ext_resource path="res://src/StageSelect/stage_infos/PitchBlack.tres" type="Resource" id=10]
+[ext_resource path="res://src/StageSelect/stage_infos/CyberField.tres" type="Resource" id=10]
 [ext_resource path="res://src/Sounds/FX - Menu Switch.ogg" type="AudioStream" id=11]
 [ext_resource path="res://src/Options/selectable_options.png" type="Texture" id=12]
 [ext_resource path="res://src/Options/selectable_keyconfig.png" type="Texture" id=13]
@@ -22,16 +22,16 @@
 [ext_resource path="res://src/StageSelect/ss_map_animated.png" type="Texture" id=20]
 [ext_resource path="res://src/StageSelect/ss_cursor.png" type="Texture" id=21]
 [ext_resource path="res://src/StageSelect/selectables/selectable.tscn" type="PackedScene" id=22]
-[ext_resource path="res://src/StageSelect/stage_infos/JakobElevator.tres" type="Resource" id=23]
-[ext_resource path="res://src/StageSelect/stage_infos/TroiaBase.tres" type="Resource" id=24]
+[ext_resource path="res://src/StageSelect/stage_infos/AirForces.tres" type="Resource" id=23]
+[ext_resource path="res://src/StageSelect/stage_infos/TunnelBase.tres" type="Resource" id=24]
 [ext_resource path="res://src/StageSelect/move_bottom.gd" type="Script" id=25]
-[ext_resource path="res://src/StageSelect/stage_infos/Gateway.tres" type="Resource" id=26]
-[ext_resource path="res://src/StageSelect/stage_infos/Primrose.tres" type="Resource" id=27]
-[ext_resource path="res://src/StageSelect/stage_infos/MetalValley.tres" type="Resource" id=28]
-[ext_resource path="res://src/StageSelect/stage_infos/SigmaPalace.tres" type="Resource" id=29]
-[ext_resource path="res://src/StageSelect/stage_infos/CentralWhite.tres" type="Resource" id=30]
-[ext_resource path="res://src/StageSelect/stage_infos/BoosterForest.tres" type="Resource" id=31]
-[ext_resource path="res://src/StageSelect/stage_infos/Dynasty.tres" type="Resource" id=32]
+[ext_resource path="res://src/StageSelect/stage_infos/PalaceRoad.tres" type="Resource" id=26]
+[ext_resource path="res://src/StageSelect/stage_infos/RadioTower.tres" type="Resource" id=27]
+[ext_resource path="res://src/StageSelect/stage_infos/CentralCircuit.tres" type="Resource" id=28]
+[ext_resource path="res://src/StageSelect/stage_infos/CrimsonPalace.tres" type="Resource" id=29]
+[ext_resource path="res://src/StageSelect/stage_infos/Battleship.tres" type="Resource" id=30]
+[ext_resource path="res://src/StageSelect/stage_infos/DeepForest.tres" type="Resource" id=31]
+[ext_resource path="res://src/StageSelect/stage_infos/AirForces.tres" type="Resource" id=32]
 [ext_resource path="res://src/StageSelect/selectables/selectable_sunflower.res" type="SpriteFrames" id=33]
 [ext_resource path="res://src/StageSelect/selectables/selectable_gateway.res" type="SpriteFrames" id=34]
 [ext_resource path="res://src/StageSelect/selectables/selectable_sigma.res" type="SpriteFrames" id=35]
@@ -412,6 +412,7 @@ frame = 3
 intensity = 3
 
 [node name="JacobElevator" type="TextureButton" parent="StageSelectUI/Menu"]
+visible = false
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 35.0
@@ -694,6 +695,7 @@ position = Vector2( 295, 186 )
 frame = 3
 
 [node name="JacobElevator" parent="button_sprites" instance=ExtResource( 22 )]
+visible = false
 position = Vector2( 55, 112 )
 frames = ExtResource( 19 )
 frame = 3

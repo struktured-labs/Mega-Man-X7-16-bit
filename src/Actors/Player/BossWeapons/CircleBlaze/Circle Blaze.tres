@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CircleBlaze/CircleBlaze.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CircleBlaze/CircleBlazeCharged.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Options/selectable_weapon_02.png" type="Texture" id=4]
+
+[resource]
+script = ExtResource( 1 )
+short_name = "HYENARD_WPNMENU"
+collectible = "hyenard_weapon"
+icon = ExtResource( 4 )
+regular_shot = ExtResource( 2 )
+regular_ammo_cost = 3.0
+charged_shot = ExtResource( 3 )
+charged_ammo_cost = 6.0
+cooldown = 0.4
+MainColor1 = Color( 1, 0.8, 0.4, 1 )
+MainColor2 = Color( 1, 0.5, 0.2, 1 )
+MainColor3 = Color( 0.7, 0.2, 0.1, 1 )
+MainColor4 = Color( 1, 0.9, 0.5, 1 )
+MainColor5 = Color( 1, 0.6, 0.2, 1 )
+MainColor6 = Color( 0.6, 0.15, 0.05, 1 )

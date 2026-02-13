@@ -1004,7 +1004,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Mega Man X8 16-bit"
+config/name="Mega Man X7 16-bit"
 run/main_scene="res://src/Title/DisclaimerScreen.tscn"
 run/low_processor_mode=true
 boot_splash/show_image=false

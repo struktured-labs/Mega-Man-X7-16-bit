@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/trilobyte.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/StageSelect/preview/stage_6.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "boarski_weapon"
+beaten_condition = [  ]
+pointer_position = Vector2( -91, 244 )
+should_play_intro = true
+name_id = "BOARSKI"
+collectibles = [ "boarski_weapon", "glide_body", "life_up_boarski", "subtank_boarski" ]
+preview = ExtResource( 3 )
+sprite_frames = ExtResource( 2 )
+animation_beats = [ "run", "ready", "desperation_prepare" ]
+inverse_sprites = false

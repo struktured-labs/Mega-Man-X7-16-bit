@@ -1,0 +1,370 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/Intro.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/Bike - Land.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/satan_sigma.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=5]
+[ext_resource path="res://src/Actors/Enemies/EnemyIdle.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=10]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=12]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=13]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=14]
+[ext_resource path="res://src/Sounds/Mantis - Cut2.ogg" type="AudioStream" id=15]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/SigmaSlash.gd" type="Script" id=16]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/SigmaJump.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/RicochetBullet.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/LaserCannon.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/SigmaGuard.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/LaserBeamProjectile.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=23]
+[ext_resource path="res://src/Sounds/Sunflower - OrbCharge.ogg" type="AudioStream" id=24]
+[ext_resource path="res://src/Sounds/Sunflower - LaserLoop.ogg" type="AudioStream" id=25]
+[ext_resource path="res://src/Effects/Textures/white_screen.png" type="Texture" id=26]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/flash.gd" type="Script" id=27]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/charge_circle.gd" type="Script" id=28]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=29]
+[ext_resource path="res://src/Effects/Textures/simple_gradient.png" type="Texture" id=30]
+[ext_resource path="res://src/Actors/Bosses/SigmaX7/RicochetBulletProjectile.tscn" type="PackedScene" id=31]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 17, 36 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18, 34.5 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 19.0
+height = 100.0
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 12.0
+height = 77.0
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 40, 30 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 60, 40 )
+
+[node name="SigmaX7" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 5
+collision_layer = 0
+collision_mask = 257
+script = ExtResource( 2 )
+max_health = 200.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 7 )
+time_between_attacks = Vector2( 0.25, 0.65 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 23 )
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 12 )
+frames = ExtResource( 4 )
+animation = "idle"
+playing = true
+
+[node name="shot_pos" type="Position2D" parent="animatedSprite"]
+position = Vector2( 44, -10 )
+
+[node name="SigmaLaser" type="Node2D" parent="animatedSprite"]
+visible = false
+script = ExtResource( 21 )
+
+[node name="DamageOnTouch" type="Node2D" parent="animatedSprite/SigmaLaser"]
+script = ExtResource( 8 )
+active = false
+damage = 14.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="animatedSprite/SigmaLaser"]
+frames = ExtResource( 4 )
+animation = "idle"
+
+[node name="overdrive_raycast" type="RayCast2D" parent="animatedSprite"]
+cast_to = Vector2( -512, 0 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 2 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 1 )
+defeated_var = "sigma_x7_defeated"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+should_turn = false
+
+[node name="SigmaSlash" type="Node2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="slash1" type="Node2D" parent="SigmaSlash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="SigmaSlash/slash1"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SigmaSlash/slash1/area2D"]
+position = Vector2( 42, -13 )
+rotation = 1.67552
+shape = SubResource( 3 )
+
+[node name="slash2" type="Node2D" parent="SigmaSlash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+previous_combo = NodePath("../slash1")
+
+[node name="area2D" type="Area2D" parent="SigmaSlash/slash2"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SigmaSlash/slash2/area2D"]
+position = Vector2( 67, 7 )
+rotation = 1.34041
+shape = SubResource( 4 )
+
+[node name="slash3" type="Node2D" parent="SigmaSlash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+previous_combo = NodePath("../slash2")
+
+[node name="area2D" type="Area2D" parent="SigmaSlash/slash3"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SigmaSlash/slash3/area2D"]
+position = Vector2( 42, -13 )
+shape = SubResource( 5 )
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="SigmaSlash"]
+stream = ExtResource( 15 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="SigmaJump" type="Node2D" parent="."]
+script = ExtResource( 17 )
+
+[node name="slash1" type="Node2D" parent="SigmaJump"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 0.1
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="SigmaJump/slash1"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SigmaJump/slash1/area2D"]
+position = Vector2( 42, -13 )
+shape = SubResource( 3 )
+
+[node name="slash2" type="Node2D" parent="SigmaJump"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 12.0
+active_duration = 2.0
+owner_character = NodePath("../..")
+previous_combo = NodePath("../slash1")
+
+[node name="area2D" type="Area2D" parent="SigmaJump/slash2"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SigmaJump/slash2/area2D"]
+position = Vector2( 42, 10 )
+shape = SubResource( 5 )
+
+[node name="slash_sfx" type="AudioStreamPlayer2D" parent="SigmaJump"]
+stream = ExtResource( 15 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="land_sfx" type="AudioStreamPlayer2D" parent="SigmaJump"]
+stream = ExtResource( 3 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="RicochetBullet" type="Node2D" parent="."]
+script = ExtResource( 18 )
+projectile = ExtResource( 31 )
+
+[node name="shot_sfx" type="AudioStreamPlayer2D" parent="RicochetBullet"]
+stream = ExtResource( 15 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="charge_sfx" type="AudioStreamPlayer2D" parent="RicochetBullet"]
+stream = ExtResource( 24 )
+volume_db = 4.0
+pitch_scale = 0.8
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="LaserCannon" type="Node2D" parent="."]
+script = ExtResource( 19 )
+
+[node name="shot_sfx" type="AudioStreamPlayer2D" parent="LaserCannon"]
+stream = ExtResource( 25 )
+volume_db = 4.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="charge_sfx" type="AudioStreamPlayer2D" parent="LaserCannon"]
+stream = ExtResource( 24 )
+volume_db = 4.0
+pitch_scale = 0.8
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="flash" type="Sprite" parent="LaserCannon"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 46 )
+scale = Vector2( 106.25, 15.0625 )
+z_index = 25
+texture = ExtResource( 26 )
+script = ExtResource( 27 )
+
+[node name="charge_circle" type="Sprite" parent="LaserCannon"]
+visible = false
+texture = ExtResource( 30 )
+script = ExtResource( 28 )
+
+[node name="SigmaGuard" type="Node2D" parent="."]
+script = ExtResource( 20 )
+desperation_attack = true
+
+[node name="shield" type="Node2D" parent="SigmaGuard"]
+script = ExtResource( 29 )
+
+[node name="area2D" type="Area2D" parent="SigmaGuard/shield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SigmaGuard/shield/area2D"]
+shape = SubResource( 6 )
+
+[node name="burst_hitbox" type="Node2D" parent="SigmaGuard"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 16.0
+active_duration = 0.1
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="SigmaGuard/burst_hitbox"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SigmaGuard/burst_hitbox/area2D"]
+shape = SubResource( 6 )
+
+[node name="guard_sfx" type="AudioStreamPlayer2D" parent="SigmaGuard"]
+stream = ExtResource( 24 )
+volume_db = 4.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="burst_sfx" type="AudioStreamPlayer2D" parent="SigmaGuard"]
+stream = ExtResource( 25 )
+volume_db = 4.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 9 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "WindCutter", "Souenbu" ]
+weakness_multiplier = 1.25
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 11 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 8 )
+active = false
+damage = 8.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 22 )]
+position = Vector2( 0, 0 )
+death_animation = "death"
+force_reploid_death = true
+defeated_flag = "sigma_x7_defeated"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 5 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 23 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 10 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[editable path="BossDeath"]

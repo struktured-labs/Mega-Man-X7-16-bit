@@ -23,7 +23,7 @@ func teleport() -> void:
 	teleport_sfx.play()
 	Event.emit_signal("stage_teleport")
 	if emit_gateway_signal:
-		Event.emit_signal("gateway_capsule_teleport")
+		Event.emit_signal("palace_capsule_teleport")
 	Event.emit_signal("disable_unneeded_objects")
 	GameManager.pause("Portal")
 	set_camera_to_process()

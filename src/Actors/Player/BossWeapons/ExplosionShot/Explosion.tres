@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ExplosionShot/ExplosionShot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Options/selectable_weapon_02.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+short_name = "GUNGAROO_WPNMENU"
+collectible = "gungaroo_weapon"
+icon = ExtResource( 3 )
+regular_shot = ExtResource( 2 )
+regular_ammo_cost = 4.0
+charged_shot = ExtResource( 2 )
+charged_ammo_cost = 8.0
+cooldown = 0.8
+MainColor1 = Color( 1, 0.85, 0.5, 1 )
+MainColor2 = Color( 1, 0.65, 0.2, 1 )
+MainColor3 = Color( 0.7, 0.35, 0.1, 1 )
+MainColor4 = Color( 1, 1, 0.7, 1 )
+MainColor5 = Color( 1, 0.9, 0.4, 1 )
+MainColor6 = Color( 0.6, 0.5, 0.2, 1 )

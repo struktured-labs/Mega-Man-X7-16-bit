@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/SigmaX7Final/FireOrbProjectile.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/Lumine/lumine_main.res" type="SpriteFrames" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
+
+[node name="FireOrbProjectile" type="KinematicBody2D" groups=["Enemy Projectile"]]
+collision_layer = 0
+collision_mask = 1
+script = ExtResource( 1 )
+damage = 8.0
+damage_to_bosses = 0.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 3 )
+animation = "idle"
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+damage = 8.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 6
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+shape = SubResource( 1 )

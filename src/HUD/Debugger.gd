@@ -229,7 +229,7 @@ func _on_mute_music_pressed() -> void:
 
 
 func _on_intro_stage_pressed() -> void:
-	GameManager.start_level("NoahsPark")
+	GameManager.start_level("IntroStage")
 
 func _on_show_colliders_pressed() -> void:
 	get_tree().set_debug_collisions_hint(!get_tree().is_debugging_collisions_hint())

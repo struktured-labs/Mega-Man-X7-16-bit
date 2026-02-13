@@ -1,0 +1,158 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/TonionIntro.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/TonionIdle.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/SpinShield.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/SpinBlade.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/TornadoVortex.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/ElectricDance.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/TornadoStorm.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=14]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=15]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=16]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/Actors/Bosses/GravityAntonion/antonion.res" type="SpriteFrames" id=18]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/TornadoProjectile.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Actors/Bosses/TornadoTonion/ElectricBallProjectile.tscn" type="PackedScene" id=20]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 18 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7, 14 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 14, 20 )
+
+[node name="Tonion" type="KinematicBody2D" groups=["Bosses", "Enemies"]]
+z_index = 5
+collision_layer = 8
+script = ExtResource( 1 )
+max_health = 160.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 2 )
+time_between_attacks = Vector2( 0.4, 1.0 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 6 )
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 14 )
+position = Vector2( 0, -5 )
+z_index = 1
+frames = ExtResource( 18 )
+animation = "idle"
+frame = 5
+playing = true
+flip_h = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+z_index = 2
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 1, 6 )
+shape = SubResource( 2 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 3 )
+actions = [ "Event" ]
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="SpinShield" type="Node2D" parent="."]
+script = ExtResource( 5 )
+actions = [ "Event" ]
+
+[node name="SpinBlade" type="Node2D" parent="."]
+script = ExtResource( 6 )
+actions = [ "Event" ]
+horizontal_velocity = 350.0
+
+[node name="TornadoVortex" type="Node2D" parent="."]
+script = ExtResource( 7 )
+actions = [ "Event" ]
+tornado_projectile = ExtResource( 19 )
+
+[node name="ElectricDance" type="Node2D" parent="."]
+script = ExtResource( 8 )
+actions = [ "Event" ]
+jump_velocity = 350.0
+electric_ball = ExtResource( 20 )
+
+[node name="TornadoStorm" type="Node2D" parent="."]
+script = ExtResource( 9 )
+actions = [ "Event" ]
+desperation_attack = true
+tornado_projectile = ExtResource( 19 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 10 )
+max_flash_time = 0.35
+weakenesses = [ "GaeaShield" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 17 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 11 )
+damage = 2.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, 6 )
+shape = SubResource( 3 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 12 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 60.0
+jump_velocity = 100.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 13 )]
+position = Vector2( 0, 6 )
+death_animation = "death"
+collectible = "tonion_weapon"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 15 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 16 )
+
+[connection signal="ability_start" from="TornadoStorm" to="BossStun" method="deactivate"]
+[connection signal="ready_for_stun" from="TornadoStorm" to="BossStun" method="reactivate"]
+
+[editable path="BossDeath"]

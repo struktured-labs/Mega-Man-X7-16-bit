@@ -6,7 +6,7 @@ onready var final_position := position
 export var buttons : NodePath
 export var map : NodePath
 onready var o_map_position = get_node(map).global_position
-var exceptions := ["JakobElevator","Gateway","SigmaPalace"]
+var exceptions := ["PalaceRoad","CrimsonPalace"]
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("alt_fire"):
