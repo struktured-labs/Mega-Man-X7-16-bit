@@ -5,6 +5,7 @@ onready var signature: Label = $"../signature2"
 onready var by: Label = $"../by"
 onready var fade: Sprite = $"../fade"
 onready var jingle: AudioStreamPlayer = $"../jingle"
+onready var ported_by: Label = $"../ported_by"
 
 export var color1 : Color
 export var color2 : Color
@@ -17,12 +18,14 @@ func _ready() -> void:
 	modulate = Color.black
 	by.modulate = Color.black
 	signature.modulate = Color.black
+	ported_by.modulate = Color.black
 	activate()
 
 func activate() -> void:
 	modulate = Color.black
 	by.modulate = Color.black
 	signature.modulate = Color.black
+	ported_by.modulate = Color.black
 	enter_by()
 	Tools.timer(1.0,"appear",self)
 	Tools.timer(2.5,"set_able_to_exit",self)
@@ -39,6 +42,8 @@ func appear():
 	tween.add_attribute("modulate",Color.white,.9)
 	tween.attribute("modulate",Color.black,.5,signature)
 	tween.add_attribute("modulate",Color.white,3,signature)
+	tween.attribute("modulate",Color.black,.5,ported_by)
+	tween.add_attribute("modulate",Color.white,3,ported_by)
 
 func set_able_to_exit():
 	able_to_exit = true
@@ -51,6 +56,7 @@ func fade():
 	tween.add_attribute("modulate",color1,.7)
 	tween.add_callback("fadeout")
 	tween.attribute("modulate",Color.black,2.0,signature)
+	tween.attribute("modulate",Color.black,2.0,ported_by)
 
 func _input(event: InputEvent) -> void:
 	if not able_to_exit:

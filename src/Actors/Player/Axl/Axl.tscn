@@ -1,6 +1,6 @@
 [gd_scene load_steps=91 format=2]
 
-[ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Player/Axl/axl_sprites/axl.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://src/Actors/Player/Axl/AxlPlayer.gd" type="Script" id=2]
 [ext_resource path="res://src/Sounds/JUMP.wav" type="AudioStream" id=3]
 [ext_resource path="res://Jump.gd" type="Script" id=4]
@@ -9,7 +9,7 @@
 [ext_resource path="res://Walk.gd" type="Script" id=7]
 [ext_resource path="res://WeaponChanger.gd" type="Script" id=8]
 [ext_resource path="res://Walljump.gd" type="Script" id=9]
-[ext_resource path="res://src/Actors/Player/x_sprites/x_leftarm.res" type="SpriteFrames" id=10]
+[ext_resource path="res://src/Actors/Player/Axl/axl_sprites/axl_leftarm.tres" type="SpriteFrames" id=10]
 [ext_resource path="res://Wallslide.gd" type="Script" id=11]
 [ext_resource path="res://src/Sounds/SLIDE.wav" type="AudioStream" id=13]
 [ext_resource path="res://src/Actors/Player/Modules/Idle.tscn" type="PackedScene" id=14]

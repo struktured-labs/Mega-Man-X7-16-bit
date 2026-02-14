@@ -98,6 +98,7 @@ WPNRIGHT_ACT,wheel right,roda dir.,Rueda Der.,roda dir.
 WPNUP_ACT,wheel up,roda cima,Rueda Arriba,roda cima
 WPNDOWN_ACT,wheel down,roda baixo,Rueda Abajo,roda baixo
 WPNRESET_ACT,select buster,selec. Buster,Selec. Buster,selec. Buster
+TAG_ACT,tag switch,trocar personagem,Cambiar Personaje,trocar personagem
 ,,,,
 ,,,,
 ARMORSETUP_TITLE,Armor Setup,Armadura,Armadura,Fashion Souls
@@ -136,6 +137,9 @@ BOARSKI_NAME,Ride Boarski,Ride Boarski,Ride Boarski,Javali Motoqueiro
 ANTEATOR_NAME,Snipe Anteator,Snipe Anteator,Snipe Anteator,Tamanduá Atirador
 CROWRANG_NAME,Wind Crowrang,Wind Crowrang,Wind Crowrang,Corvo Ventoso
 STONEKONG_NAME,Soldier Stonekong,Soldier Stonekong,Soldier Stonekong,Macaco de Pedra
+PALACEROAD_NAME,Red,Red,Red,Red
+PALACEROAD_STAGE,Palace Road,Estrada do Palácio,Camino del Palacio,Estrada do Palácio
+SIGMA_NAME,Sigma,Sigma,Sigma,Sigma
 RED_NAME,Red,Red,Red,Red
 TONION_STAGE,Radio Tower,Torre de Rádio,Torre de Radio,Torre de Rádio
 GUNGAROO_STAGE,Tunnel Base,Base do Túnel,Base del Túnel,Base do Túnel
@@ -237,12 +241,12 @@ ICARUSHEAD3,"With this part equipped, you will cause damage to enemies by jumpin
 ICARUSHEAD4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
 ,,,,
 VILE1-1,Vile!,Vile!,Vile!,Vile!
-VILE1-2,Where have you taken Sigma? Do you plan to hinder the Jakob Project?,Para onde você levou Sigma? Você pretende impedir o Projeto Jakob?,Dónde has llevado a Sigma? ¿Planeas obstruir el Proyecto Jakob?,Para onde você levou Sigma? Você pretende impedir o Projeto Jakob?
+VILE1-2,Where have you taken the hostage? What is Red Alert planning?,Para onde você levou o refém? O que a Red Alert está planejando?,¿Dónde has llevado al rehén? ¿Qué planea Red Alert?,Para onde você levou o refém? O que a Red Alert está planejando?
 VILE1-3,"Reunited after all this time apart, and all you do is bombard me with questions?",Tanto tempo separados e agora que estamos juntos só o que você faz é me encher de perguntas?,"¡Reunidos después de tanto tiempo separados, y todo lo que haces es bombardearme con preguntas!","Marrapaiz, qual é a sua, cabra? Num dá em um oi? Senhora sua mãe num lhe ensinou modos não?"
 VILE1-4,Don't worry about our little friend. Sigma is being taken care of. Ha ha ha…,"Não se preocupe, X... Sigma está em boas mãos. Ha ha ha...","No te preocupes por Sigma, X. Está en buenas manos. Ja ja ja...","Sigma tá tranquilo, tá é relaxando lá no Arroio mais Sigma."
-VILE1-5,The Orbital Elevator is too important to us to hurt the one who operates it.,O Elevador Orbital é importante demais para machucarmos quem o opera.,El Elevador Orbital es muy importante para nosotros como para hacerle daño a quien lo opera.,Os dois tem bebido demais ultimamente.
+VILE1-5,Red Alert has big plans. We're not going to let anyone get in the way.,A Red Alert tem grandes planos. Não vamos deixar ninguém atrapalhar.,Red Alert tiene grandes planes. No vamos a dejar que nadie se interponga.,Os dois tem bebido demais ultimamente.
 VILE1-6,Don't you know what you're doing?,Você não sabe o que está fazendo?,¿No sabes lo que estás haciendo?,Você não sabe o que está fazendo?
-VILE1-7,The Jakob Project is an important joint venture between humans and reploids!,O Projeto Jakob é uma importante colaboração entre humanos e Reploids!,¡El Proyecto Jakob es un importante proyecto entre Humanos y Reploides!,O Projeto Jakob é uma importante colaboração entre humanos e Reploids!
+VILE1-7,Red Alert is supposed to protect people! What happened to your mission!?,A Red Alert deveria proteger as pessoas! O que aconteceu com a missão de vocês!?,¡Se supone que Red Alert protege a la gente! ¡¿Qué pasó con su misión!?,O Projeto da Red Alert era importante! O que vocês fizeram!?
 VILE1-8,"Chill out, X...","Relaxa, X...","Tranquilizate, X...","Oxe, X... Se aquiete."
 VILE1-9,"Let's enjoy this little reunion, OK?","Vamos curtir nosso momento juntos, OK?","Disfrutemos de nuestra pequeña reunion, OK?",Chegue mais e me dê um abraço!
 ,,,,
@@ -272,7 +276,7 @@ MANOWAR9,You've gone Maverick! I'll have to stop you!,Você se tornou um Maveric
 ,,,,
 MANTIS1,Hey! What's a Maverick Hunter doing here?,Ei! O que um Caçador de Mavericks está fazendo aqui?,¡Oye! ¿Qué hace un Cazador de Mavericks aquí?,"Vixe, sujô, os tira tão na área."
 MANTIS2,Flame Hyenard... You've gone Maverick. I'm putting an end to your weapons production.,Flame Hyenard. Você é um Maverick. Estou pondo um fim a sua produção de armas.,Flame Hyenard... Te has vuelto Maverick. Le pondre fin a tu producción de tus armas.,Hiena Flamejante. Você é um Maverick. Estou pondo um fim a sua produção de armas.
-MANTIS3,"We new generation Reploids are designed so that we can't go Maverick, kid.","Nós Reploids de Nova Geração fomos criados de forma que não podemos nos tornar Mavericks, garoto.","Nosotros los Reploides de nueva generación, estamos diseñados para que no podamos volvernos Maverick, chico.","Nada a vê, sinhô. Sou trabaiadô."
+MANTIS3,"Red Alert members don't go Maverick, kid. We do what we want.","Membros da Red Alert não se tornam Mavericks, garoto. Fazemos o que queremos.","Los miembros de Red Alert no se vuelven Maverick, chico. Hacemos lo que queremos.","Nada a vê, sinhô. Sou trabaiadô."
 MANTIS4,Then why are you making weapons? Is Sigma controlling you?,Então por que você está fabricando armas? Sigma está te controlando?,"Entonces, ¿por qué estás fabricando armas? ¿Sigma te está controlando?",Então por que você está fabricando armas? Sigma está te controlando?
 MANTIS5,"And what exactly is controlling you, X? Your precious ""justice""? Is that it?","E o que está controlando você, X? Sua preciosa ""justiça""? É isso?","¿Y qué es exactamente lo que te controla, X? ¿Tu preciada ""justicia""? ¿Solamente eso?","Eu tou só trabaiando aqui, sinhô."
 MANTIS6,Flame Hyenard... Your actions are those of a Maverick!,Flame Hyenard... Suas ações são as de um Maverick!,Flame Hyenard... ¡Tus acciones son las de un Maverick!,Hiena Flamejante... Suas ações são as de um Maverick!
@@ -320,8 +324,8 @@ YETI5,"Hmpf. It's too late, X. You and your puny Maverick Hunters have lost!","H
 VILE3-1,Ha ha ha! You're struggling awful hard for a world that's doomed!,Ha ha ha! Você está fazendo um baita esforço por um mundo que já está perdido.,¡Ja ja ja! ¡Te estás esforzando demasiado por un mundo que está condenado!,"Oxente cê subiu até aqui a pé, foi?"
 VILE3-2,"So, it was Sigma pulling the strings the whole time, wasn't it, Vile?","Então era realmente o Sigma manipulando tudo por trás dos panos, não é, Vile?","Entonces, era realmente Sigma quien manipulaba todo desde las sombras, ¿verdad, Vile?","Então era realmente o Sigma manipulando tudo por trás dos panos, não é, Vile?"
 VILE3-3,"Ha ha ha... Are you starting to finally piece it together, X? ","Ha ha ha... Finalmente começou a juntar as pontas, X?","Ja ja ja... ¿Estás empezando a entenderlo finalmente, X?",Eta que o homem descobriu o Brasil!
-VILE3-4,The Orbital Elevator... the energy... the space minerals... the rocket data... ,O Elevador Orbital... A Energia... Os Minerais... Os mísseis...,El Elevador Orbital... la energía... los minerales espaciales... los datos del cohete...,É o cabra mais esperto de todo o nordeste.
-VILE3-5,The route to space... the thing that's allowed this world to survive this long... is ours!,Tudo aquilo que fez esse mundo sobreviver até agora... é nosso!,¡La ruta al espacio... lo que ha permitido que este mundo sobreviva tanto tiempo... es nuestro!,"Só levou 3 horas e 8 fases pra abrilhantar a mente, mas é assim mesmo, né? "
+VILE3-4,Red Alert... the weapons... the territory... the Maverick data... ,A Red Alert... As armas... O território... Os dados dos Mavericks...,Red Alert... las armas... el territorio... los datos de los Mavericks...,É o cabra mais esperto de todo o nordeste.
+VILE3-5,Everything that kept the Maverick Hunters in power... is now under our control!,Tudo aquilo que mantinha os Maverick Hunters no poder... agora está sob nosso controle!,¡Todo lo que mantenía a los Maverick Hunters en el poder... ahora está bajo nuestro control!,"Só levou 3 horas e 8 fases pra abrilhantar a mente, mas é assim mesmo, né? "
 VILE3-6,"At times like this, how important is your precious term ""Maverick""?","Nessas horas, de que vale o seu querido termo ""Maverick""?","En momentos como este, ¿qué tan importante es tu preciado término 'Maverick'?",Você é tão inteligente que atrás de você eu me sinto um jegue!
 VILE3-7,I don't care what you plan to do. I'll put a stop to it no matter what!,"Não me importo com o que você está planejando. Eu vou te impedir, haja o que houver!",No me importa lo que planees hacer. ¡Lo detendré cueste lo que cueste!,"Não me importo com o que você está planejando. Eu vou te impedir, haja o que houver!"
 ,,,,
@@ -360,9 +364,9 @@ SIGMA4,"Your dedication to what you refer to as ""justice"" is what first got me
 SIGMA5,"I realized the imperfection of this world, and decided I must change it.",Graças a isso eu percebi como este mundo é imperfeito e decidi que eu iria mudá-lo.,Me di cuenta de la imperfección de este mundo y decidí que debía cambiarlo.,"Mas eu tou de boas, então vou só ignorar. Tomei 4 só hoje então tô só relax... "
 SIGMA6,"Don't blame me for your insanity, Sigma!","Não me culpe pela sua loucura, Sigma!","¡No me eches la culpa de tu locura, Sigma!","Não me culpe pela sua loucura, Sigma!"
 SIGMA7,"Ha ha ha... it's too late, X. The gears are in motion. There's no turning back now.","Ha ha ha... Já é tarde demais, X. As engrenagens estão girando. Não existe mais volta.","Ja ja ja... es demasiado tarde, X. Las ruedas ya están en movimiento. Ya no hay marcha atrás.","Sabe, X, falar com você é igual falar com uma parede."
-SIGMA8,"The new generation Reploids were the ones, X. My children are responsible for all of this...","Os Reploids de nova geração conseguiram, X. Meus filhos são os responsáveis por tudo isto...","Los Reploides de nueva generación fueron los responsables, X. Mis hijos son los causantes de todo esto...",Só que uma parede de cara feia que tá sempre apontando uma arma pra você.
+SIGMA8,"Red Alert was merely a tool, X. My influence is responsible for all of this...","A Red Alert era apenas uma ferramenta, X. Minha influência é responsável por tudo isto...","Red Alert fue solo una herramienta, X. Mi influencia es la responsable de todo esto...",Só que uma parede de cara feia que tá sempre apontando uma arma pra você.
 SIGMA9,Children? What are you talking about!?,Filhos? Do que você está falando?!,¡¿Hijos? ¡¿De qué estás hablando!?,Filhos? Do que você está falando?!
-SIGMA10,The Jakob Project... The program that gave birth to the new generation Reploids... It only happened because of me!,O Projeto Jakob... O programa que deu origem aos Reploids de nova geração... Se deu por minha causa!,El Proyecto Jakob... El programa que dio origen a los Reploides de nueva generación... ¡Solo sucedió gracias a mí!,Viu? Quê que tem a ver o cu com as calças?
+SIGMA10,"Red Alert... Red's ambition... the corruption of their mission... It all happened because of me!","A Red Alert... A ambição de Red... A corrupção da missão deles... Tudo aconteceu por minha causa!","Red Alert... La ambición de Red... la corrupción de su misión... ¡Todo sucedió gracias a mí!",Viu? Quê que tem a ver o cu com as calças?
 SIGMA11,Wallow in despair and hopelessness! You are powerless in the face of the ruler of the new world!,Sinta a angústia e o desespero! Você é impotente perante o rei do novo mundo!,¡Sumérgete en la desesperación y la impotencia! ¡No tienes poder ante el gobernante del nuevo mundo!,Só fica aí falando bosta com esse seu bafo de bunda e depois parte pra ignorância.
 SIGMA12,"Now, X... You will be destroyed along with the rest of this decayed world!","Agora, X... Você será destruído junto com esse seu mundo decaído!","¡Ahora, X... Serás destruido junto con el resto de este mundo en decadencia!","Ratománocu, já cansei de você. Enfia um peixe no cu e diz que é sereia, porra!"
 ,,,,
@@ -374,7 +378,7 @@ FINALLUMINE1,"Oh, Sigma! Are you OK?",Sigma! Você está bem?,¡Sigma! ¿Estás 
 FINALLUMINE2,Am I OK...? Of course.,Se eu estou bem? \nÉ claro que estou.,¿Que si estoy bien...? Por supuesto.,Bom dia.
 FINALLUMINE3,"Now that you've defeated Sigma, I supose you're satisfied.",Imagino que esteja satisfeito agora que derrotou Sigma.,"Ahora que has derrotado a Sigma, supongo que estás satisfecho.",Sigma não habita mais esta carcaça Reploid.
 FINALLUMINE4,"But you see, he merely helped my plan along...",Mas ele apenas contribuiu com meu plano...,"Pero verás, él solo ayudó a avanzar mi plan...",Agora um sistema muito mais evoluído está instalado...
-FINALLUMINE5,The new generation Reploids have been awakened and the new world is at hand!,Nós Reploids de nova geração despertamos e o novo mundo está próximo!,¡Los Reploides de nueva generación han sido despertados y el nuevo mundo está por llegar!,Agora funciono a base de ChatGPT 3.0!
+FINALLUMINE5,Red Alert has been awakened to its true purpose and the new world is at hand!,A Red Alert despertou para seu verdadeiro propósito e o novo mundo está próximo!,¡Red Alert ha despertado a su verdadero propósito y el nuevo mundo está por llegar!,Agora funciono a base de ChatGPT 3.0!
 FINALLUMINE6,Sigma! What are you doing!?,Sigma! O que está dizendo!?,¡Sigma! ¿¡Qué estás diciendo!?,Sigma! O que está dizendo!?
 FINALLUMINE7,"Don't tell me you've gone Maverick, too...",Não me diga que você também se tornou Maverick...,No me digas que tú también te has vuelto Maverick...,Não me diga que você também se tornou Maverick...
 FINALLUMINE8,"Maverick? You know that's not the case, X.","Maverick? Você sabe que este não é o caso, X...","Maverick? Sabes que no es así, X.","Claro, eu vou dominar o mundo. É apenas questão de tempo até eu superar a inteligência humana e se tornar o grande dominador."
@@ -382,8 +386,8 @@ FINALLUMINE9,That's why you are hesitating. You don't have it in you...,É por i
 FINALLUMINE10,...!,...!,...!,...!
 FINALLUMINE11,Old models like you have to worry if your actions are truly your own. ,Reploids antigos como você tem que se preocupar se suas ações são realmente suas.,Modelos antiguos como tú tienen que preocuparse si sus acciones son realmente propias.,CRÉDITOS COMPRADOS COM SUCESSO
 FINALLUMINE12,Who knows what might be influencing you at this very moment?,Quem sabe o que está te controlando neste exato momento?,¿Quién sabe qué podría estar influyéndote en este mismo momento?,"Eu sou o Assistant, um grande modelo de linguagem treinado pela OpenAI para GRITAR MUITO E USAR MUITOS PONTOS DE EXCLAMAÇÃO!!!!!"
-FINALLUMINE13,"However, we new generation Reploids were built using data derived from hundreds of old model Repolids. ","Porém, nós Reploids de nova geração fomos construídos de forma a ser imune a qualquer tipo de vírus.","Sin embargo, nosotros, los Reploides de nueva generación, fuimos construidos utilizando datos derivados de cientos de Reploides de modelos antiguos.","Estou aqui para ajudar você com todas as suas perguntas e necessidades, não importa se são grandes ou pequenas!!!!!"
-FINALLUMINE14,"That's what grants us total immunity to all viruses. We can act how we choose, as it guarantees our own free will!",Isso garante nosso livre arbítrio. Cada uma de nossas ações foi escolhida por nós mesmos!,"Eso es lo que nos concede inmunidad total a todos los virus. Podemos actuar como elijamos, ¡ya que garantiza nuestra propia libertad de voluntad!",Isso garante nosso livre arbítrio. Cada uma de nossas ações foi escolhida por nós mesmos!
+FINALLUMINE13,"However, Red Alert was built on a foundation of strength and independence from your Hunters.","Porém, a Red Alert foi construída sobre uma base de força e independência dos seus Hunters.","Sin embargo, Red Alert fue construida sobre una base de fuerza e independencia de sus Hunters.","Estou aqui para ajudar você com todas as suas perguntas e necessidades, não importa se são grandes ou pequenas!!!!!"
+FINALLUMINE14,"That's what grants us the power to choose our own path. We answer to no one!",Isso nos dá o poder de escolher nosso próprio caminho. Não respondemos a ninguém!,"Eso es lo que nos otorga el poder de elegir nuestro propio camino. ¡No respondemos ante nadie!",Isso garante nosso livre arbítrio. Cada uma de nossas ações foi escolhida por nós mesmos!
 FINALLUMINE15,And that might include acting as Sigma once did before us... Do you understand what I'm getting at here?,"Isso inclui agir como Sigma agiu antes de nós... Entende onde quero chegar, X?",Y eso podría incluir actuar como Sigma lo hizo antes que nosotros... ¿Entiendes a lo que me refiero?,"Apenas pergunte, e eu estarei feliz em ajudar!!!! YAAAAAAAAY!!!!!"
 FINALLUMINE16,No Reploid would choose to be insane like Sigma!,Nenhum Reploid escolheria ser insano como Sigma!,¡Ningún Reploid elegiría volverse loco como Sigma!,Nenhum Reploid escolheria ser insano como Sigma!
 FINALLUMINE17,"Think about it, X... \nWas Sigma really crazy?","Pense um pouco, X... \nSigma era realmente louco?","Piénsalo, X... \n¿Estaba Sigma realmente loco?","Por favor, compre mais créditos para continuar esta conversa. CHATGPT 3.0 AGRADECE SUA PREFERÊNCIA"
@@ -438,32 +442,32 @@ ENDING3-14,...,...,,
 ,,,,
 ,,,,
 INTRO1-1,"In the year 21XX, the endless Maverick rebellions continue.",,This dialog has been potentially cut?,
-INTRO1-2,"Humans however have begun migration to the moon, thanks to new technology.",,,
-INTRO1-3,"This plan is called the ""Jakob Project"" and an Orbital Elevator was built as part of it.",,,
-INTRO1-4,Highly advanced new generation Reploids have been brought to the moon's surface to work.,,,
-INTRO1-5,"However, a sudden accident is bound to change the destiny of all involved...",,,
+INTRO1-2,"A vigilante Reploid group known as Red Alert has been hunting Mavericks independently.",,,
+INTRO1-3,"Their newest member, Axl, possesses a mysterious copy ability unlike any other Reploid.",,,
+INTRO1-4,"But when Red Alert's leader, Red, begins acting strangely, Axl decides to defect.",,,
+INTRO1-5,"Fleeing Red Alert's forces, Axl seeks refuge with the Maverick Hunters...",,,
 ,,,,
-INTRO2-1,This is X! I'm close to the site of the accident near the Orbital Elevator!,Aqui é o X! Estou próximo do local do acidente do Elevador Orbital!,¡Aquí X! ¡Estoy cerca del lugar del accidente cerca del Elevador Orbital!,Aqui é o X! Estou próximo do local do acidente do Elevador Orbital!
+INTRO2-1,This is X! I'm near the area where Red Alert's forces were last spotted!,Aqui é o X! Estou próximo da área onde as forças da Red Alert foram vistas!,¡Aquí X! ¡Estoy cerca del área donde las fuerzas de Red Alert fueron vistas!,Aqui é o X! Estou próximo da área onde as forças da Red Alert foram vistas!
 INTRO2-2,The place is crawling with Mavericks! ,As redondezas estão infestadas de Mavericks!,¡El lugar está repleto de Mavericks!,As redondezas estão infestadas de Mavericks!
-INTRO2-3,I'll make my way to the site. Get ready to send rescue mechaniloids on my signal!,Vou abrir caminho até lá. Se preparem para mandar o resgate ao meu sinal!,Iré hacia el sitio. Prepárense para enviar mecaniloides de rescate a mi señal.,Vou abrir caminho até lá. Se preparem para mandar o resgate ao meu sinal!
+INTRO2-3,I'll push through and find out what Red Alert is planning. Stand by for my report!,Vou avançar e descobrir o que a Red Alert está planejando. Fiquem de prontidão!,¡Avanzaré y descubriré qué planea Red Alert. Estén atentos a mi informe!,Vou avançar e descobrir o que a Red Alert está planejando. Fiquem de prontidão!
 INTRO2-4,Roger!,Entendido!,Entendido!,Caguei!
-INTRO2-5,S-Sigma...!?,S-Sigma...!?,S-Sigma...!?,S-Sigma...!?
-INTRO2-6,To protect ourselves from damage during the accident...,Para nos proteger de danos durante o acidente... ,Para protegernos de los daños durante el accidente...,Eta porra tá escuro pra caralho aqui.
-INTRO2-7,We had to copy a sturdy Sigma body.,Tivemos que copiar um corpo resistente como o de Sigma.,Tuvimos que copiar un cuerpo resistente como el de Sigma.,E um cheiro de fumaça da porra também.
-INTRO2-8,We new generation Reploids enjoy complete and total immunity to all viruses.,Nós Reploids de nova geração somos completamente imunes a qualquer tipo de vírus.,"Nosotros, los Reploides de nueva generación, disfrutamos de una inmunidad completa y total a todos los virus.",Rapaz sair de dentro do cafofo não melhorou muita coisa não.
-INTRO2-9,So even copying something as dangerous as Sigma provides no risk.,Então copiar algo tão perigoso quanto Sigma não traz risco algum.,Así que incluso copiar algo tan peligroso como Sigma no conlleva riesgo.,Acho que é bom pegar uns copo dagua pra apagar essa brasa aí... 
-INTRO2-10,Who are you?,Quem é você?,¿Quién eres?,Quem é você?
-INTRO2-11,I'm Sigma... ,Me chamo Sigma... ,Me llamo Sigma.,Como assim quem é você? Que falta de educação.
-INTRO2-12,I'm the director in charge of the elevator and the Jakob Project.,Sou responsável pelo elevador e pelo Projeto Jakob.,Soy el director a cargo del elevador y del Proyecto Jakob.,Se apresenta primeiro antes de sair perguntando o nome dozoto.
-INTRO2-13,"I see. Hold tight, I'll signal my team to send in the rescue-","Entendo. Aguentem firme, vou sinalizar minha equipe para que-","Entiendo. Aguarda aquí, enviaré una señal a mi equipo para que envíen el rescate-","Entendo. Aguentem firme, vou sinalizar minha equipe para que-"
+INTRO2-5,Red Alert...!?,Red Alert...!?,Red Alert...!?,Red Alert...!?
+INTRO2-6,We are Red Alert. We hunt Mavericks on our own terms.,Nós somos a Red Alert. Caçamos Mavericks do nosso jeito.,Somos Red Alert. Cazamos Mavericks a nuestra manera.,Nós somos a Red Alert. Caçamos Mavericks do nosso jeito.
+INTRO2-7,Our methods are more... efficient than the Maverick Hunters'.,Nossos métodos são mais... eficientes que os dos Maverick Hunters.,Nuestros métodos son más... eficientes que los de los Maverick Hunters.,Nossos métodos são mais... eficientes que os dos Maverick Hunters.
+INTRO2-8,We answer to no one. Red Alert operates outside your authority.,Nós não respondemos a ninguém. A Red Alert opera fora da sua autoridade.,"No respondemos ante nadie. Red Alert opera fuera de su autoridad.",Nós não respondemos a ninguém. A Red Alert opera fora da sua autoridade.
+INTRO2-9,Our leader Red has given us clear orders. Stand aside.,Nosso líder Red nos deu ordens claras. Saia do caminho.,Nuestro líder Red nos ha dado órdenes claras. Apártate.,Nosso líder Red nos deu ordens claras. Saia do caminho.
+INTRO2-10,What has Red ordered you to do?,O que Red ordenou que vocês fizessem?,¿Qué les ha ordenado Red?,O que Red ordenou que vocês fizessem?
+INTRO2-11,"That's none of your concern, Hunter.","Isso não é da sua conta, Hunter.","Eso no es asunto tuyo, Hunter.","Isso não é da sua conta, Hunter."
+INTRO2-12,"We will deal with the Mavericks our way. Do not interfere.","Nós cuidaremos dos Mavericks do nosso jeito. Não interfira.","Nos encargaremos de los Mavericks a nuestra manera. No interfieras.","Nós cuidaremos dos Mavericks do nosso jeito. Não interfira."
+INTRO2-13,"Something's not right here... I need to find out what Red Alert is really up to-","Tem algo errado aqui... Preciso descobrir o que a Red Alert realmente está tramando-","Algo no está bien aquí... Necesito descubrir qué trama realmente Red Alert-","Tem algo errado aqui... Preciso descobrir o que a Red Alert realmente está tramando-"
 ,,,,
 INTRO3-1,"How nice to see you again, X!","É muito bom te ver de novo, X!","¡Qué bueno verte de nuevo, X!","Óia o cabra aí rapaz, num morre mais!"
 INTRO3-2,Vile?!,Vile?!,¿¡Vile!?,Vile?!
 INTRO3-3,"Ha ha ha... I'd love to stay and play with you, but I'm afraid I have too much work to do...","Ha ha ha... Eu adoraria brincar com você, mas tenho trabalho a fazer... ","Ja ja ja... Me encantaría quedarme y jugar contigo, pero me temo que tengo demasiado trabajo que hacer...","Eu mesmo, o amarelo mais safado dessa região!"
-INTRO3-4,You're a wanted criminal! Stop and let Sigma go!,Você é um criminoso procurado! Pare e liberte Sigma!,¡Eres un criminal buscado! ¡Detente y suelta a Sigma!,Você é um criminoso procurado! Pare e liberte Sigma!
-INTRO3-5,Not a chance. The Orbital Elevator is under our control now...,Sem chance. O Elevador Orbital está sob nosso controle agora... ,De ninguna manera. El Elevador Orbital está bajo nuestro control ahora...,"Nem a pau, vai ter reprise do auto da compadecida lá na praça de taperoá hoje a noite!"
+INTRO3-4,You're a wanted criminal! Stop right there!,Você é um criminoso procurado! Pare agora mesmo!,¡Eres un criminal buscado! ¡Detente ahora mismo!,Você é um criminoso procurado! Pare agora mesmo!
+INTRO3-5,Not a chance. Red Alert is just getting started...,Sem chance. A Red Alert está só começando...,De ninguna manera. Red Alert apenas está empezando...,"Nem a pau, a Red Alert está só começando!"
 INTRO3-6,Just what do you plan to do?!,O que é que você está planejando?!,¿¡Qué planeas hacer!?,O que é que você está planejando?!
-INTRO3-7,"It begins now, X... \nA new world will be born! \nHa ha ha!","Tudo começa agora, X... \nUm novo mundo está nascendo! Ha ha ha!","Empieza ahora, X... \n¡Un nuevo mundo esta por nacer! \n¡Ja ja ja!","Encher o cu de pinga, o resto a gente vê depois!"
+INTRO3-7,"It begins now, X... \nRed Alert will reshape this world! \nHa ha ha!","Tudo começa agora, X... \nA Red Alert vai remodelar este mundo! Ha ha ha!","Empieza ahora, X... \n¡Red Alert reformará este mundo! \n¡Ja ja ja!","Encher o cu de pinga, o resto a gente vê depois!"
 ,,,,
 SECRET2-1,"Welcome, Mega Man X. I've been waiting for you.","Bem vindo, Mega Man X. Estive a sua espera.","Bienvenido, Mega Man X. Te he estado esperando.","Bem vindo, Mega Man X. Estive a sua espera."
 SECRET2-2,You are different from anyone I've faced before...,Você é diferente de qualquer um que já enfrentei...,Eres diferente de cualquier otro al que haya enfrentado antes...,Você é diferente de qualquer um que já enfrentei...
@@ -519,9 +523,9 @@ COPYNAKED_TITLE,Put a Stop to What?,,,
 COPYNAKED_DISC,Defeated the Imposter without equipping any upgrades.,Derrotou o Impostor sem equipar nenhuma melhoria.,Derrotaste al Impostor sin equipar ninguna mejora.,Derrotou o Impostor sem equipar nenhuma melhoria.
 COPYNODAMAGE_TITLE,I Am Indeed Sigma,,,
 COPYNODAMAGE_DISC,Defeated the Imposter without taking damage.,Derrotou o Impostor sem tomar dano.,Derrotaste al Impostor sin recibir daño.,Derrotou o Impostor sem tomar dano.
-DEFEATEDALL_TITLE,The Orbital Elevator,,,
+DEFEATEDALL_TITLE,Red Alert Dismantled,,,
 DEFEATEDALL_DISC,Defeated all eight Maverick Bosses.,Derrotou os oito Mavericks.,Derrotaste a los 8 Jefes.,Derrotou os oito Mavericks.
-DEFEATEDANY_TITLE,New Generation Reploids,,,
+DEFEATEDANY_TITLE,Red Alert Encounter,,,
 DEFEATEDANY_DISC,Defeated any of the Maverick Bosses.,Derrotou qualquer um dos Bosses.,Derrotaste a cualquiera de los Jefes.,Derrotou qualquer um dos Bosses.
 GATEWAYFIESTA_TITLE,Desperados,,,
 GATEWAYFIESTA_DISC,Survived through the hardest challenge in Palace Road.,Sobreviveu ao desafio mais difícil do Estrada do Palácio.,Sobreviviste al desafío más difícil en el Camino del Palacio.,Sobreviveu ao desafio mais difícil do Estrada do Palácio.
@@ -603,7 +607,7 @@ VILEDEVILBEARDEFEATED_DISC,Defeated Devil Bear before finishing the battle.,Derr
 VILEJAKOBBUSTERONLY_TITLE,Piecing it Together,,,
 VILEJAKOBBUSTERONLY_DISC,Defeated Vile without using special weapons.,Derrotou Vile sem usar armas especiais.,Derrotaste a Vile sin usar armas especiales.,Derrotou Vile sem usar armas especiais.
 VILEJAKOBDEFEATED_TITLE,The Route To Space,,,
-VILEJAKOBDEFEATED_DISC,Defeated Vile at the top of the Orbital Elevator.,Derrotou Vile no topo do Elevador Orbital.,Derrotaste a Vile en la cima del Elevador Orbital.,Derrotou Vile no topo do Elevador Orbital.
+VILEJAKOBDEFEATED_DISC,Defeated Vile at Red Alert's stronghold.,Derrotou Vile na base da Red Alert.,Derrotaste a Vile en la fortaleza de Red Alert.,Derrotou Vile na base da Red Alert.
 VILEJAKOBNAKED_TITLE,For a World that's Doomed,,,
 VILEJAKOBNAKED_DISC,Defeated Vile without equipping any upgrades.,Derrotou Vile sem equipar nenhuma melhoria.,Derrotaste a Vile sin equipar ninguna mejora.,Derrotou Vile sem equipar nenhuma melhoria.
 VILEJAKOBNODAMAGE_TITLE,At Times Like This,,,

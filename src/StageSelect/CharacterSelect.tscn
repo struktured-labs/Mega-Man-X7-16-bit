@@ -1,0 +1,341 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/StageSelect/CharacterSelect.gd" type="Script" id=1]
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://src/Sounds/FX - Menu Switch.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/Sounds/FX - Cancel.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=5]
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 398.0
+margin_bottom = 224.0
+color = Color( 0.05, 0.05, 0.12, 1 )
+
+[node name="UI" type="Control" parent="."]
+margin_right = 398.0
+margin_bottom = 224.0
+
+[node name="TitleShadow" type="Label" parent="UI"]
+modulate = Color( 0, 0, 0, 0.7 )
+margin_left = 100.0
+margin_top = 13.0
+margin_right = 300.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 2 )
+text = "SELECT TWO CHARACTERS"
+align = 1
+
+[node name="TitleLabel" type="Label" parent="UI"]
+modulate = Color( 1, 1, 1, 1 )
+margin_left = 99.0
+margin_top = 12.0
+margin_right = 299.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 2 )
+text = "SELECT TWO CHARACTERS"
+align = 1
+
+[node name="Slots" type="Control" parent="UI"]
+margin_right = 398.0
+margin_bottom = 224.0
+
+[node name="Slot0" type="Control" parent="UI/Slots"]
+margin_left = 39.0
+margin_top = 40.0
+margin_right = 139.0
+margin_bottom = 170.0
+
+[node name="BG" type="ColorRect" parent="UI/Slots/Slot0"]
+margin_right = 100.0
+margin_bottom = 130.0
+color = Color( 0.1, 0.2, 0.5, 1 )
+
+[node name="NameShadow" type="Label" parent="UI/Slots/Slot0"]
+modulate = Color( 0, 0, 0, 0.7 )
+margin_left = 1.0
+margin_top = 51.0
+margin_right = 101.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 2 )
+text = "X"
+align = 1
+
+[node name="NameLabel" type="Label" parent="UI/Slots/Slot0"]
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 2 )
+text = "X"
+align = 1
+
+[node name="StatusLabel" type="Label" parent="UI/Slots/Slot0"]
+modulate = Color( 0.6, 0.6, 0.6, 1 )
+margin_top = 70.0
+margin_right = 100.0
+margin_bottom = 83.0
+custom_fonts/font = ExtResource( 2 )
+text = ""
+align = 1
+
+[node name="CheckLabel" type="Label" parent="UI/Slots/Slot0"]
+visible = false
+modulate = Color( 1, 1, 0.4, 1 )
+margin_top = 110.0
+margin_right = 100.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 2 )
+text = ""
+align = 1
+
+[node name="Border" type="Control" parent="UI/Slots/Slot0"]
+visible = false
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 102.0
+margin_bottom = 132.0
+
+[node name="Top" type="ColorRect" parent="UI/Slots/Slot0/Border"]
+margin_right = 104.0
+margin_bottom = 2.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Bottom" type="ColorRect" parent="UI/Slots/Slot0/Border"]
+margin_top = 132.0
+margin_right = 104.0
+margin_bottom = 134.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Left" type="ColorRect" parent="UI/Slots/Slot0/Border"]
+margin_top = 2.0
+margin_right = 2.0
+margin_bottom = 132.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Right" type="ColorRect" parent="UI/Slots/Slot0/Border"]
+margin_left = 102.0
+margin_top = 2.0
+margin_right = 104.0
+margin_bottom = 132.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Slot1" type="Control" parent="UI/Slots"]
+margin_left = 149.0
+margin_top = 40.0
+margin_right = 249.0
+margin_bottom = 170.0
+
+[node name="BG" type="ColorRect" parent="UI/Slots/Slot1"]
+margin_right = 100.0
+margin_bottom = 130.0
+color = Color( 0.5, 0.1, 0.1, 1 )
+
+[node name="NameShadow" type="Label" parent="UI/Slots/Slot1"]
+modulate = Color( 0, 0, 0, 0.7 )
+margin_left = 1.0
+margin_top = 51.0
+margin_right = 101.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 2 )
+text = "ZERO"
+align = 1
+
+[node name="NameLabel" type="Label" parent="UI/Slots/Slot1"]
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 2 )
+text = "ZERO"
+align = 1
+
+[node name="StatusLabel" type="Label" parent="UI/Slots/Slot1"]
+modulate = Color( 0.6, 0.6, 0.6, 1 )
+margin_top = 70.0
+margin_right = 100.0
+margin_bottom = 83.0
+custom_fonts/font = ExtResource( 2 )
+text = ""
+align = 1
+
+[node name="CheckLabel" type="Label" parent="UI/Slots/Slot1"]
+visible = false
+modulate = Color( 1, 1, 0.4, 1 )
+margin_top = 110.0
+margin_right = 100.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 2 )
+text = ""
+align = 1
+
+[node name="Border" type="Control" parent="UI/Slots/Slot1"]
+visible = false
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 102.0
+margin_bottom = 132.0
+
+[node name="Top" type="ColorRect" parent="UI/Slots/Slot1/Border"]
+margin_right = 104.0
+margin_bottom = 2.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Bottom" type="ColorRect" parent="UI/Slots/Slot1/Border"]
+margin_top = 132.0
+margin_right = 104.0
+margin_bottom = 134.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Left" type="ColorRect" parent="UI/Slots/Slot1/Border"]
+margin_top = 2.0
+margin_right = 2.0
+margin_bottom = 132.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Right" type="ColorRect" parent="UI/Slots/Slot1/Border"]
+margin_left = 102.0
+margin_top = 2.0
+margin_right = 104.0
+margin_bottom = 132.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Slot2" type="Control" parent="UI/Slots"]
+margin_left = 259.0
+margin_top = 40.0
+margin_right = 359.0
+margin_bottom = 170.0
+
+[node name="BG" type="ColorRect" parent="UI/Slots/Slot2"]
+margin_right = 100.0
+margin_bottom = 130.0
+color = Color( 0.5, 0.3, 0.05, 1 )
+
+[node name="NameShadow" type="Label" parent="UI/Slots/Slot2"]
+modulate = Color( 0, 0, 0, 0.7 )
+margin_left = 1.0
+margin_top = 51.0
+margin_right = 101.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 2 )
+text = "AXL"
+align = 1
+
+[node name="NameLabel" type="Label" parent="UI/Slots/Slot2"]
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = 63.0
+custom_fonts/font = ExtResource( 2 )
+text = "AXL"
+align = 1
+
+[node name="StatusLabel" type="Label" parent="UI/Slots/Slot2"]
+modulate = Color( 0.6, 0.6, 0.6, 1 )
+margin_top = 70.0
+margin_right = 100.0
+margin_bottom = 83.0
+custom_fonts/font = ExtResource( 2 )
+text = ""
+align = 1
+
+[node name="CheckLabel" type="Label" parent="UI/Slots/Slot2"]
+visible = false
+modulate = Color( 1, 1, 0.4, 1 )
+margin_top = 110.0
+margin_right = 100.0
+margin_bottom = 123.0
+custom_fonts/font = ExtResource( 2 )
+text = ""
+align = 1
+
+[node name="Border" type="Control" parent="UI/Slots/Slot2"]
+visible = false
+margin_left = -2.0
+margin_top = -2.0
+margin_right = 102.0
+margin_bottom = 132.0
+
+[node name="Top" type="ColorRect" parent="UI/Slots/Slot2/Border"]
+margin_right = 104.0
+margin_bottom = 2.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Bottom" type="ColorRect" parent="UI/Slots/Slot2/Border"]
+margin_top = 132.0
+margin_right = 104.0
+margin_bottom = 134.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Left" type="ColorRect" parent="UI/Slots/Slot2/Border"]
+margin_top = 2.0
+margin_right = 2.0
+margin_bottom = 132.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="Right" type="ColorRect" parent="UI/Slots/Slot2/Border"]
+margin_left = 102.0
+margin_top = 2.0
+margin_right = 104.0
+margin_bottom = 132.0
+color = Color( 1, 1, 1, 0.9 )
+
+[node name="HintShadow" type="Label" parent="UI"]
+modulate = Color( 0, 0, 0, 0.7 )
+margin_left = 70.0
+margin_top = 191.0
+margin_right = 330.0
+margin_bottom = 204.0
+custom_fonts/font = ExtResource( 2 )
+text = "FIRE:SELECT  DASH:BACK"
+align = 1
+
+[node name="HintLabel" type="Label" parent="UI"]
+modulate = Color( 0.75, 0.75, 0.75, 1 )
+margin_left = 69.0
+margin_top = 190.0
+margin_right = 329.0
+margin_bottom = 203.0
+custom_fonts/font = ExtResource( 2 )
+text = "FIRE:SELECT  DASH:BACK"
+align = 1
+
+[node name="CountShadow" type="Label" parent="UI"]
+modulate = Color( 0, 0, 0, 0.7 )
+margin_left = 140.0
+margin_top = 177.0
+margin_right = 260.0
+margin_bottom = 190.0
+custom_fonts/font = ExtResource( 2 )
+text = "0/2 SELECTED"
+align = 1
+
+[node name="CountLabel" type="Label" parent="UI"]
+modulate = Color( 1, 1, 0.4, 1 )
+margin_left = 139.0
+margin_top = 176.0
+margin_right = 259.0
+margin_bottom = 189.0
+custom_fonts/font = ExtResource( 2 )
+text = "0/2 SELECTED"
+align = 1
+
+[node name="Fader" type="ColorRect" parent="UI"]
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="ChoiceSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="PickSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -12.0
+bus = "SFX"
+
+[node name="CancelSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -4.0
+bus = "SFX"

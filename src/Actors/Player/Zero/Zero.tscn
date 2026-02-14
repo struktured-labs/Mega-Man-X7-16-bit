@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Player/Zero/zero_sprites/zero.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://src/Actors/Player/Zero/ZeroPlayer.gd" type="Script" id=2]
 [ext_resource path="res://src/Sounds/JUMP.wav" type="AudioStream" id=3]
 [ext_resource path="res://Jump.gd" type="Script" id=4]

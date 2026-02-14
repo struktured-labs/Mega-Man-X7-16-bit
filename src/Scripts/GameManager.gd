@@ -48,6 +48,7 @@ var checkpoint_cam_height := Vector2.ZERO
 const player_life_count := "player_lives"
 
 var current_stage_info : StageInfo
+var pending_stage_info : StageInfo
 
 var time_attack:= false
 var ta_status := "Recording..."
@@ -268,6 +269,11 @@ func go_to_weapon_get() -> void:
 	var _dv = get_tree().change_scene("res://src/WeaponGet/WeaponGetScene.tscn")
 	call_deferred("force_unpause")
 	call_deferred("on_level_start")
+
+func go_to_character_select(stage : StageInfo) -> void:
+	print_debug(":::::::: going to character select")
+	pending_stage_info = stage
+	var _dv = get_tree().change_scene("res://src/StageSelect/CharacterSelect.tscn")
 
 func go_to_stage_intro(stage : StageInfo) -> void:
 	print_debug(":::::::: going to stage and boss intro")

@@ -22,7 +22,8 @@ var configurable = {
 	"analog_right" : "WPNRIGHT_ACT",
 	"analog_up" : "WPNUP_ACT",
 	"analog_down" : "WPNDOWN_ACT",
-	"reset_weapon" : "WPNRESET_ACT"
+	"reset_weapon" : "WPNRESET_ACT",
+	"tag" : "TAG_ACT"
 }
 
 onready var exit: TextureButton = $"../../exit"

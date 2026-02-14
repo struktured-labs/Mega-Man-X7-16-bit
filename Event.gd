@@ -204,7 +204,7 @@ signal teleport_anteator
 signal teleport_crowrang
 signal teleport_gungaroo
 
-# Legacy X8 boss teleport signals (used by PalaceRoad boss capsules)
+# Boss teleport signals (used by PalaceRoad boss capsules)
 signal teleport_sunflower
 signal teleport_panda
 signal teleport_rooster
@@ -230,7 +230,7 @@ signal sigma_walls
 signal sigma_desperation(atk_direction)
 signal final_fade_out
 
-# Lumine boss signals (legacy X8 boss still used in SigmaPalace/CrimsonPalace stages)
+# Lumine boss signals (used in SigmaPalace/CrimsonPalace stages)
 signal beat_seraph_lumine
 signal lumine_death
 signal lumine_desperation

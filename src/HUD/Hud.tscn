@@ -96,7 +96,7 @@ margin_right = 340.0
 margin_bottom = 310.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 8 )
-text = "X8FC 0.6.1.0 Demo03"
+text = "X7FC 1.0.0.9"
 
 [node name="Chronometer" type="RichTextLabel" parent="."]
 self_modulate = Color( 1, 1, 1, 0.780392 )

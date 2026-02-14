@@ -98,6 +98,7 @@ WPNRIGHT_ACT,wheel right,roda dir.,Rueda Der.,roda dir.
 WPNUP_ACT,wheel up,roda cima,Rueda Arriba,roda cima
 WPNDOWN_ACT,wheel down,roda baixo,Rueda Abajo,roda baixo
 WPNRESET_ACT,select buster,selec. Buster,Selec. Buster,selec. Buster
+TAG_ACT,tag switch,trocar personagem,Cambiar Personaje,trocar personagem
 ,,,,
 ,,,,
 ARMORSETUP_TITLE,Armor Setup,Armadura,Armadura,Fashion Souls

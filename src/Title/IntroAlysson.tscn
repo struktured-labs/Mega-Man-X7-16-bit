@@ -52,6 +52,19 @@ custom_fonts/font = ExtResource( 1 )
 text = "MADE_BY"
 align = 1
 
+[node name="ported_by" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0.733333 )
+material = SubResource( 1 )
+margin_left = 96.0
+margin_top = 190.0
+margin_right = 306.0
+margin_bottom = 217.0
+custom_colors/font_color = Color( 0.639216, 0.713726, 0.898039, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Ported to X7 by
+struktured labs and Claude"
+align = 1
+
 [node name="bg" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 199, 112 )

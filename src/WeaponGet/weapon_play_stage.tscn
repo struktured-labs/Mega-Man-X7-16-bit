@@ -362,7 +362,7 @@ margin_right = 518.0
 margin_bottom = 320.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 129 )
-text = "X8FC 0.6.1.0 Demo03"
+text = "X7FC 1.0.0.9"
 
 [node name="Chronometer" type="RichTextLabel" parent="Hud"]
 visible = false
