@@ -14,10 +14,10 @@ func on_press() -> void:
 	
 func go_to_next_scene() -> void:
 	IGT.reset()
-	if already_finished_noahs_park():
+	if already_finished_intro():
 		GameManager.call_deferred("go_to_stage_select")
 	else:
 		GameManager.start_level("IntroStage")
 
-func already_finished_noahs_park() -> bool:
+func already_finished_intro() -> bool:
 	return "finished_intro" in GameManager.collectibles

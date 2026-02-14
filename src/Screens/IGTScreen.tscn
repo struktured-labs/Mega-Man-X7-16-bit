@@ -28,7 +28,7 @@ margin_bottom = 210.0
 custom_colors/font_color = Color( 0.611765, 0.709804, 0.94902, 1 )
 custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
 custom_fonts/font = ExtResource( 1 )
-text = "Noah's Park:"
+text = "Highway:"
 autowrap = true
 
 [node name="totaltime" type="Label" parent="."]

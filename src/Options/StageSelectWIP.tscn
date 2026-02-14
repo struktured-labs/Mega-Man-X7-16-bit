@@ -115,7 +115,7 @@ custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 2 )
-text = "Noah's Park"
+text = "Highway"
 align = 1
 uppercase = true
 

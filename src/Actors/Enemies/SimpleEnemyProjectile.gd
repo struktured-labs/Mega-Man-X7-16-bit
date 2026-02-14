@@ -23,7 +23,7 @@ func _Update(_delta) -> void:
 		set_horizontal_speed(speed * 1.25 * return_direction.x)
 		set_vertical_speed(speed * 1.25 * return_direction.y )
 	
-	if attack_stage == -1: # King Crab death
+	if attack_stage == -1: # Mega Scorpio death
 		if timer > 10:
 			destroy()
 

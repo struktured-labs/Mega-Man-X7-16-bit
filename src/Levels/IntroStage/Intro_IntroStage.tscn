@@ -365,7 +365,7 @@ extents = Vector2( 198, 112 )
 [node name="NoahsPark" instance=ExtResource( 1 )]
 
 [node name="IGTimer" parent="." index="0" instance=ExtResource( 4 )]
-section = "Noah's Park"
+section = "Highway"
 
 [node name="X Bar" parent="Hud" index="8"]
 material = SubResource( 32 )
