@@ -134,6 +134,7 @@ func on_level_start():
 	inactive_player = null
 	bikes.clear()
 	change_state("Normal")
+	call_deferred("deferred_ensure_correct_active_player")
 	call_deferred("add_collectibles_to_player")
 	call_deferred("emit_stage_start_signal")
 	call_deferred("save_stage_start_msec")
@@ -142,6 +143,44 @@ func on_level_start():
 	call_deferred("deferred_spawn_inactive_partner")
 	end_stage_timer = 0
 	BossRNG.reset_seed()
+
+func deferred_ensure_correct_active_player() -> void:
+	if not tag_team_enabled:
+		return
+	if not is_instance_valid(player):
+		return
+
+	var active_name = selected_characters[0]
+	if _player_matches_character(player, active_name):
+		return
+
+	if not CHARACTER_SCENES.has(active_name):
+		push_warning("GameManager: Invalid active character: " + active_name)
+		return
+
+	var active_scene = load(CHARACTER_SCENES[active_name])
+	if not active_scene:
+		push_warning("GameManager: Failed to load scene for " + active_name)
+		return
+
+	var spawn_pos = player.global_position
+	var parent = player.get_parent()
+
+	parent.remove_child(player)
+	player.queue_free()
+
+	var new_player = active_scene.instance()
+	parent.add_child(new_player)
+	new_player.global_position = spawn_pos
+
+	print("GameManager: Replaced default player with " + active_name)
+
+func _player_matches_character(p: Character, char_name: String) -> bool:
+	match char_name:
+		"Zero": return "Zero" in p.name
+		"Axl": return "Axl" in p.name
+		"X": return not ("Zero" in p.name or "Axl" in p.name)
+	return false
 
 func deferred_spawn_inactive_partner() -> void:
 	if tag_team_enabled:
@@ -390,22 +429,9 @@ func spawn_inactive_partner() -> void:
 	if not is_instance_valid(player):
 		return
 
-	# Determine which character is inactive
-	var active_name := ""
-	var inactive_name := ""
-	if "Zero" in player.name:
-		active_name = "Zero"
-	elif "Axl" in player.name:
-		active_name = "Axl"
-	else:
-		active_name = "X"
+	var inactive_name = selected_characters[1]
 
-	for char_name in selected_characters:
-		if char_name != active_name:
-			inactive_name = char_name
-			break
-
-	if inactive_name == "" or not CHARACTER_SCENES.has(inactive_name):
+	if not CHARACTER_SCENES.has(inactive_name):
 		print("GameManager: Cannot spawn inactive partner - invalid name: " + inactive_name)
 		return
 

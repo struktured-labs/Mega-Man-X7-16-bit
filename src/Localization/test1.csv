@@ -126,14 +126,14 @@ ANTONION_NAME,Wind Crowrang,Wind Crowrang,Wind Crowrang,Corvo Ventoso
 MANTIS_NAME,Flame Hyenard,Flame Hyenard,Flame Hyenard,Hiena Flamejante
 MANOWAR_NAME,Snipe Anteator,Snipe Anteator,Snipe Anteator,Tamanduá Atirador
 PANDA_NAME,Tornado Tonion,Tornado Tonion,Tornado Tonion,Pião de Tornado
-TRILOBYTE_NAME,Ride Boarski,Ride Boarski,Ride Boarski,Javali Motoqueiro
+TRILOBYTE_NAME,Ride Boomer,Ride Boomer,Ride Boomer,Ride Boomer
 YETI_NAME,Soldier Stonekong,Soldier Stonekong,Soldier Stonekong,Macaco de Pedra
 ROOSTER_NAME,Splash Warfly,Splash Warfly,Splash Warfly,Mosca Molhada
 TONION_NAME,Tornado Tonion,Tornado Tonion,Tornado Tonion,Pião de Tornado
 GUNGAROO_NAME,Vanishing Gungaroo,Vanishing Gungaroo,Vanishing Gungaroo,Canguru Sumido
 WARFLY_NAME,Splash Warfly,Splash Warfly,Splash Warfly,Mosca Molhada
 HYENARD_NAME,Flame Hyenard,Flame Hyenard,Flame Hyenard,Hiena Flamejante
-BOARSKI_NAME,Ride Boarski,Ride Boarski,Ride Boarski,Javali Motoqueiro
+BOARSKI_NAME,Ride Boomer,Ride Boomer,Ride Boomer,Ride Boomer
 ANTEATOR_NAME,Snipe Anteator,Snipe Anteator,Snipe Anteator,Tamanduá Atirador
 CROWRANG_NAME,Wind Crowrang,Wind Crowrang,Wind Crowrang,Corvo Ventoso
 STONEKONG_NAME,Soldier Stonekong,Soldier Stonekong,Soldier Stonekong,Macaco de Pedra
@@ -310,10 +310,10 @@ SUNFLOWER4,"Sorry to disappoint, but no one can control us.","Desculpe desapont�
 SUNFLOWER5,"We may not be the good guys, but we're no monsters.","Talvez nós não sejamos os mocinhos, mas com certeza não somos monstros.","Quizás no seamos los buenos, pero no somos monstruos.",Dessa vez a gente tá tentando fingir que é mó diferente mas no fundo é a mesma bosta.
 SUNFLOWER6,No one has the right to put a stop to our plans!,Ninguém tem o direito de deter os nossos planos!,¡Nadie tiene derecho a detener nuestros planes!,"Mas se funciona, né? Fazer o quê. Segue o baile..."
 ,,,,
-TRILOBYTE1,Do you realize that the ore we mine here is used in space development?,Você está ciente que o minério que extraimos aqui é usado no desenvolvimento espacial?,¿Te das cuenta de que el mineral que extraemos aquí se utiliza en el desarrollo espacial?,"Olá, eu sou um besouro."
-TRILOBYTE2,Sigma must be behind this! What does he want with these minerals?,"Estou. Me diga, o que Sigma quer com esses minérios?",¡Sigma debe estar detrás de esto! ¿Qué quiere con estos minerales?,"Me diga, o que Sigma quer com esses minérios?"
-TRILOBYTE3,"Even if I explained, I doubt a brainless Maverick Hunter like yourself could understand.","Tsk. Mesmo que eu explicasse, duvido que um Caçador desmiolado como você conseguisse entender.","Incluso si explicara, dudo que un Cazador de Mavericks sin cerebro como tú pudiera entender.","Eu não sei, eu sou um besouro."
-TRILOBYTE4,I'll bury you old heaps of junk right here!,Eu vou enterrar essa sua carcaça bem aqui!,¡Te enterraré aquí en estos viejos montones de chatarra!,Um dia quero aprender a rolar bosta como o meu primo.
+TRILOBYTE1,"So you're the famous Maverick Hunters? Ha! You don't look so tough to me!","Então vocês são os famosos Caçadores de Mavericks? Ha! Não parecem tão fortes pra mim!","¿Así que ustedes son los famosos Maverick Hunters? ¡Ja! ¡No me parecen tan duros!","Então vocês são os famosos Caçadores? Ha!"
+TRILOBYTE2,"We don't want to fight! Just tell us what Red is planning!","Não queremos lutar! Apenas nos diga o que Red está planejando!","¡No queremos pelear! ¡Solo dinos qué está planeando Red!","Não queremos lutar! O que Red quer?"
+TRILOBYTE3,"Red? I don't know the details. I just love crushing things with Sirius!","Red? Eu não sei os detalhes. Eu só adoro esmagar coisas com Sirius!","¿Red? No sé los detalles. ¡Solo me encanta aplastar cosas con Sirius!","Red? Sei lá. Eu só gosto de esmagar coisas!"
+TRILOBYTE4,"Let me show you what my wheels can really do!","Deixa eu mostrar o que minhas rodas são capazes!","¡Déjame mostrarte lo que mis ruedas pueden hacer de verdad!","Vou mostrar o que minhas rodas fazem!"
 ,,,,
 YETI1,I will not let you get in our way.,Não deixarei você entrar em nosso caminho.,No permitiré que te interpongas en nuestro camino.,UGA BUGA.
 YETI2,Soldier Stonekong! What do you think you're doing?,Soldier Stonekong! O que pensa que está fazendo?,¡Soldier Stonekong!¿Qué crees que estás haciendo?,Aval Lanches! O que pensa que está fazendo?
@@ -594,12 +594,12 @@ SUNFLOWERNODAMAGE_TITLE,What We're After,,,
 SUNFLOWERNODAMAGE_DISC,Defeated Vanishing Gungaroo without taking damage.,Derrotou Vanishing Gungaroo sem tomar dano.,Derrotaste a Vanishing Gungaroo sin recibir daño.,Derrotou Vanishing Gungaroo sem tomar dano.
 SURFEDONMISSILE_TITLE,Bomb Rush Cyberfunk,,,
 SURFEDONMISSILE_DISC,Surfed through the skies for 6 seconds.,Surfou os céus por 6 segundos.,Surfeaste por los cielos durante 6 segundos.,Surfou os céus por 6 segundos.
-TRILOBYTEBUSTERONLY_TITLE,The Ore We Mine,,,
-TRILOBYTEBUSTERONLY_DISC,Defeated Ride Boarski without using special weapons.,Derrotou Ride Boarski sem usar armas especiais.,Derrotaste a Ride Boarski sin usar armas especiales.,Derrotou Ride Boarski sem usar armas especiais.
-TRILOBYTENAKED_TITLE,Old Heaps of Junk,,,
-TRILOBYTENAKED_DISC,Defeated Ride Boarski without equipping any upgrades.,Derrotou Ride Boarski sem equipar nenhuma melhoria.,Derrotaste a Ride Boarski sin equipar ninguna mejora.,Derrotou Ride Boarski sem equipar nenhuma melhoria.
-TRILOBYTENODAMAGE_TITLE,Brainless Maverick Hunter,,,
-TRILOBYTENODAMAGE_DISC,Defeated Ride Boarski without taking damage.,Derrotou Ride Boarski sem tomar dano.,Derrotaste a Ride Boarski sin recibir daño.,Derrotou Ride Boarski sem tomar dano.
+TRILOBYTEBUSTERONLY_TITLE,Highway Showdown,,,
+TRILOBYTEBUSTERONLY_DISC,Defeated Ride Boomer without using special weapons.,Derrotou Ride Boomer sem usar armas especiais.,Derrotaste a Ride Boomer sin usar armas especiales.,Derrotou Ride Boomer sem usar armas especiais.
+TRILOBYTENAKED_TITLE,Stripped Down,,,
+TRILOBYTENAKED_DISC,Defeated Ride Boomer without equipping any upgrades.,Derrotou Ride Boomer sem equipar nenhuma melhoria.,Derrotaste a Ride Boomer sin equipar ninguna mejora.,Derrotou Ride Boomer sem equipar nenhuma melhoria.
+TRILOBYTENODAMAGE_TITLE,Road Warrior,,,
+TRILOBYTENODAMAGE_DISC,Defeated Ride Boomer without taking damage.,Derrotou Ride Boomer sem tomar dano.,Derrotaste a Ride Boomer sin recibir daño.,Derrotou Ride Boomer sem tomar dano.
 VILEDEFEATEDTWICE_TITLE,Our Little Reunion,,,
 VILEDEFEATEDTWICE_DISC,Defeated Vile twice.,Derrotou Vile duas vezes.,Derrotaste a Vile dos veces.,Derrotou Vile duas vezes.
 VILEDEVILBEARDEFEATED_TITLE,Steel Assault,,,

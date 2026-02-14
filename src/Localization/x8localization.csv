@@ -121,14 +121,14 @@ ANTONION_NAME,Wind Crowrang,Wind Crowrang,,Corvo Ventoso
 MANTIS_NAME,Flame Hyenard,Flame Hyenard,,Hiena Flamejante
 MANOWAR_NAME,Snipe Anteator,Snipe Anteator,,Tamanduá Atirador
 PANDA_NAME,Tornado Tonion,Tornado Tonion,,Pião de Tornado
-TRILOBYTE_NAME,Ride Boarski,Ride Boarski,,Javali Motoqueiro
+TRILOBYTE_NAME,Ride Boomer,Ride Boomer,,Ride Boomer
 YETI_NAME,Soldier Stonekong,Soldier Stonekong,,Macaco de Pedra
 ROOSTER_NAME,Splash Warfly,Splash Warfly,,Mosca Molhada
 TONION_NAME,Tornado Tonion,Tornado Tonion,Tornado Tonion,Pião de Tornado
 GUNGAROO_NAME,Vanishing Gungaroo,Vanishing Gungaroo,Vanishing Gungaroo,Canguru Sumido
 WARFLY_NAME,Splash Warfly,Splash Warfly,Splash Warfly,Mosca Molhada
 HYENARD_NAME,Flame Hyenard,Flame Hyenard,Flame Hyenard,Hiena Flamejante
-BOARSKI_NAME,Ride Boarski,Ride Boarski,Ride Boarski,Javali Motoqueiro
+BOARSKI_NAME,Ride Boomer,Ride Boomer,Ride Boomer,Ride Boomer
 ANTEATOR_NAME,Snipe Anteator,Snipe Anteator,Snipe Anteator,Tamanduá Atirador
 CROWRANG_NAME,Wind Crowrang,Wind Crowrang,Wind Crowrang,Corvo Ventoso
 STONEKONG_NAME,Soldier Stonekong,Soldier Stonekong,Soldier Stonekong,Macaco de Pedra
@@ -587,11 +587,11 @@ SUNFLOWERNODAMAGE_DISC,Defeated Vanishing Gungaroo without taking damage.,,,
 SURFEDONMISSILE_TITLE,Bomb Rush Cyberfunk,,,
 SURFEDONMISSILE_DISC,Surfed through the skies for 6 seconds.,,,
 TRILOBYTEBUSTERONLY_TITLE,The Ore We Mine,,,
-TRILOBYTEBUSTERONLY_DISC,Defeated Ride Boarski without using special weapons.,,,
+TRILOBYTEBUSTERONLY_DISC,Defeated Ride Boomer without using special weapons.,,,
 TRILOBYTENAKED_TITLE,Old Heaps of Junk,,,
-TRILOBYTENAKED_DISC,Defeated Ride Boarski without equipping any upgrades.,,,
+TRILOBYTENAKED_DISC,Defeated Ride Boomer without equipping any upgrades.,,,
 TRILOBYTENODAMAGE_TITLE,Brainless Maverick Hunter,,,
-TRILOBYTENODAMAGE_DISC,Defeated Ride Boarski without taking damage.,,,
+TRILOBYTENODAMAGE_DISC,Defeated Ride Boomer without taking damage.,,,
 VILEDEFEATEDTWICE_TITLE,Our Little Reunion,,,
 VILEDEFEATEDTWICE_DISC,Defeated Vile twice.,,,
 VILEDEVILBEARDEFEATED_TITLE,Steel Assault,,,

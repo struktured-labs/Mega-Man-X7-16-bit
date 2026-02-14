@@ -1,6 +1,6 @@
 extends SimplePlayerProjectile
 
-# MovingWheel - Spinning wheel from Ride Boarski
+# MovingWheel - Spinning wheel from Ride Boomer
 # Rolls along floor and follows terrain, climbs walls
 
 const speed := 300.0

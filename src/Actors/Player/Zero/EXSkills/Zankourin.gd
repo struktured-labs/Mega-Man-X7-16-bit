@@ -1,6 +1,6 @@
 extends Ability
 
-# Zankourin (from Boarski) - Rolling light disc projectile
+# Zankourin (from Ride Boomer) - Rolling light disc projectile
 # Press alt_fire while walking -> rolling energy disc forward
 
 export var projectile_scene : PackedScene
