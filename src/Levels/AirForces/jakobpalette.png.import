@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jakobpalette.png-fb6d3bb35027e59834467edcd1af2847.stex"
+path="res://.import/jakobpalette.png-3cd43450a685d7c488a9b97eb6e4431f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/JakobElevator/jakobpalette.png"
-dest_files=[ "res://.import/jakobpalette.png-fb6d3bb35027e59834467edcd1af2847.stex" ]
+source_file="res://src/Levels/AirForces/jakobpalette.png"
+dest_files=[ "res://.import/jakobpalette.png-3cd43450a685d7c488a9b97eb6e4431f.stex" ]
 
 [params]
 

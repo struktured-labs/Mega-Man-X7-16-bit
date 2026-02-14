@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/pitchblack_s1.tmx-616d6f59aeabba9eeab2753772958799.scn"
+path="res://.import/pitchblack_s1.tmx-878a0bb3f5ac1e2ff10a70321c75ed91.scn"
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/pitchblack_s1.tmx"
-dest_files=[ "res://.import/pitchblack_s1.tmx-616d6f59aeabba9eeab2753772958799.scn" ]
+source_file="res://src/Levels/CyberField/pitchblack_s1.tmx"
+dest_files=[ "res://.import/pitchblack_s1.tmx-878a0bb3f5ac1e2ff10a70321c75ed91.scn" ]
 
 [params]
 

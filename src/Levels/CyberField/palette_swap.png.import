@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/palette_swap.png-0861928e71b03675ed6d19f5cb911386.stex"
+path="res://.import/palette_swap.png-b7582ae404eec1517e20e334767ef143.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/palette_swap.png"
-dest_files=[ "res://.import/palette_swap.png-0861928e71b03675ed6d19f5cb911386.stex" ]
+source_file="res://src/Levels/CyberField/palette_swap.png"
+dest_files=[ "res://.import/palette_swap.png-b7582ae404eec1517e20e334767ef143.stex" ]
 
 [params]
 

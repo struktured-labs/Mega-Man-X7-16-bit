@@ -11,7 +11,7 @@ var elapsed_time := 0.0
 
 func _ready() -> void:
 	Event.connect("teleport_rooster",self,"activate_in_1")
-	Event.connect("gateway_crystal_get",self,"on_crystal_get")
+	Event.connect("palace_crystal_get",self,"on_crystal_get")
 
 func on_crystal_get(boss_crystal_name):
 	if boss_crystal_name == "rooster":

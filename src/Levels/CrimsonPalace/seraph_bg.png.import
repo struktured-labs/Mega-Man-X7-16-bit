@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/seraph_bg.png-c4a8d02e60bb6a59034395752e1631a5.stex"
+path="res://.import/seraph_bg.png-9e61bfd80b37e4e498724266f1007393.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/seraph_bg.png"
-dest_files=[ "res://.import/seraph_bg.png-c4a8d02e60bb6a59034395752e1631a5.stex" ]
+source_file="res://src/Levels/CrimsonPalace/seraph_bg.png"
+dest_files=[ "res://.import/seraph_bg.png-9e61bfd80b37e4e498724266f1007393.stex" ]
 
 [params]
 

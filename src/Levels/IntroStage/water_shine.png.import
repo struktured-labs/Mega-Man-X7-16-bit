@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water_shine.png-67c196136724db58e6a9e41e7ec575d9.stex"
+path="res://.import/water_shine.png-521d2ff92473ce049f51d5b05d877d2a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/water_shine.png"
-dest_files=[ "res://.import/water_shine.png-67c196136724db58e6a9e41e7ec575d9.stex" ]
+source_file="res://src/Levels/IntroStage/water_shine.png"
+dest_files=[ "res://.import/water_shine.png-521d2ff92473ce049f51d5b05d877d2a.stex" ]
 
 [params]
 

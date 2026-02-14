@@ -27,24 +27,24 @@ KEYCFG_ABV,KEYCFG,CONFIG,CONFIG,CONFIG
 OPTIONS_ABV,OPTIONS,OPÇÕES,OPCIONES,OPÇÕES
 TANK_ABV,SUB.T,SUB.T,SUB.T,SUB.T
 X_WPNMENU,X. Buster,X. Buster,X. Buster,
-SUNFLOWER_WPNMENU,O. Shield,O. Shield,O. Shield,
-ANTONION_WPNMENU,S. Bomb,S. Bomb,S. Bomb,
-MANTIS_WPNMENU,D. Arrow,D. Arrow,D. Arrow,
-MANOWAR_WPNMENU,T. Dancer,T. Dancer,T. Dancer,
-PANDA_WPNMENU,B. Launcher,B. Launcher,B. Launcher,
-TRILOBYTE_WPNMENU,C. Bouncer,C. Bouncer,C. Bouncer,
-YETI_WPNMENU,D. Diamond,D. Diamond,D. Diamond,
-ROOSTER_WPNMENU,F. Dash,F. Dash,F. Dash,
+SUNFLOWER_WPNMENU,G. Shield,G. Shield,G. Shield,
+ANTONION_WPNMENU,S. Missile,S. Missile,S. Missile,
+MANTIS_WPNMENU,S. Laser,S. Laser,S. Laser,
+MANOWAR_WPNMENU,Explsion,Explsion,Explsion,
+PANDA_WPNMENU,C. Blaze,C. Blaze,C. Blaze,
+TRILOBYTE_WPNMENU,V. Tornado,V. Tornado,V. Tornado,
+YETI_WPNMENU,M. Wheel,M. Wheel,M. Wheel,
+ROOSTER_WPNMENU,W. Cutter,W. Cutter,W. Cutter,
 ,,,,
 YOUGOT_TITLE,You get,Você obteve,Obtienes,
-SUNFLOWER_WEAPON,Optic Shield,,,
-ANTONION_WEAPON,Squeeze Bomb,,,
-MANTIS_WEAPON,Dark Arrow,,,
-MANOWAR_WEAPON,Thunder Dancer,,,
-PANDA_WEAPON,Blast Launcher,,,
-TRILOBYTE_WEAPON,Crystal Bouncer,,,
-YETI_WEAPON,Drift Diamond,,,
-ROOSTER_WEAPON,Fire Dash,,,
+SUNFLOWER_WEAPON,Gaea Shield,,,
+ANTONION_WEAPON,Sniper Missile,,,
+MANTIS_WEAPON,Splash Laser,,,
+MANOWAR_WEAPON,Explosion,,,
+PANDA_WEAPON,Circle Blaze,,,
+TRILOBYTE_WEAPON,Volt Tornado,,,
+YETI_WEAPON,Moving Wheel,,,
+ROOSTER_WEAPON,Wind Cutter,,,
 ,,,,
 OPTIONS_TITLE,OPTIONS,OPÇÕES,OPCIONES,CUIDADO PRA NÃO ZOAR
 DT_DASH_OPTION,Double tap dash,Dash 2x pra frente,2x toque para deslizar,Isso n é jogo de luta carai
@@ -102,27 +102,60 @@ EXIT_BUTTON,Exit,Sair,Salir,Vazar
 STAGE_DC,Stage,Fase,Nivel,Engenho
 BOSS_DC,Boss,Chefe,Jefe,Capitão do Mato
 COMPLETION_DC,Completed,Concluído,,Paradas Pegadas
-SUNFLOWER_STAGE,Troia Base,Base Troia,Base de Troia,Anta Gorda
-ANTONION_STAGE,Primrose,Laboratório Primula,Primavera,Chorrochó
-MANTIS_STAGE,Pitch Black,Arsenal Soturno,Oscuridad Total,Santa Rita do Passa Quatro
-MANOWAR_STAGE,Dynasty,Usina Dinastia,Dinastía,Marginal do Tietê
-PANDA_STAGE,Booster Forest,Floresta Ergânica,Bosque de Booster,Paudalho
-TRILOBYTE_STAGE,Metal Valley,Vale do Metal,Valle de Metal,Caucaia
-YETI_STAGE,Central White,Central Alva,Central Blanca,Trombudo Central
-ROOSTER_STAGE,Inferno,Incinerador Inferno,Infierno,Favela do Gato Morto
+SUNFLOWER_STAGE,Tunnel Base,Base do Túnel,Base de Troia,Anta Gorda
+ANTONION_STAGE,Air Forces,Forças Aéreas,Primavera,Chorrochó
+MANTIS_STAGE,Cyber Field,Campo Cibernético,Campo Cibernético,Santa Rita do Passa Quatro
+MANOWAR_STAGE,Radio Tower,Torre de Rádio,Torre de Radio,Marginal do Tietê
+PANDA_STAGE,Deep Forest,Floresta Profunda,Bosque de Booster,Paudalho
+TRILOBYTE_STAGE,Central Circuit,Circuito Central,Circuito Central,Caucaia
+YETI_STAGE,Battleship,Couraçado,Central Blanca,Trombudo Central
+ROOSTER_STAGE,Lava Factory,Fábrica de Lava,Infierno,Favela do Gato Morto
 ,,,,
-JAKOB_STAGE,Jakob Elevator,Elevador Orbital Jakob,Elevador Orbital Jakob,Morro do Papagaio
-GATEWAY_STAGE,Gateway,Satélite de Acesso,Punto de Entrada,Arroio dos Ratos
-SIGMA_STAGE,Sigma Palace,Palácio Lunar Sigma,Palacio de Sigma,Rolândia
+JAKOB_STAGE,Air Forces,Forças Aéreas,Forças Aéreas,Morro do Papagaio
+GATEWAY_STAGE,Palace Road,Estrada do Palácio,Punto de Entrada,Arroio dos Ratos
+SIGMA_STAGE,Crimson Palace,Palácio Carmesim,Palacio Carmesí,Rolândia
 ,,,,
-SUNFLOWER_NAME,Optic Sunflower,Optic Sunflower,,Óleo de Girassol
-ANTONION_NAME,Gravity Antonion,Gravity Antonion,,Toninho Tanajura
-MANTIS_NAME,Dark Mantis,Dark Mantis,,João Grilo
-MANOWAR_NAME,Gigabolt Manowar,Gigabolt Manowar,,Geléia Manauara
-PANDA_NAME,Bamboo Pandamonium,Bamboo Pandamonium,,E o Bambú?
-TRILOBYTE_NAME,Earthrock Trilobyte,Earthrock Trilobyte,,Tatuzinho de Jardim
-YETI_NAME,Avalanche Yeti,Avalanche Yeti,,Aval Lanches e Vet.
-ROOSTER_NAME,Burn Rooster,Burn Rooster,,Frango de Padaria
+SUNFLOWER_NAME,Vanishing Gungaroo,Vanishing Gungaroo,,Canguru Sumido
+ANTONION_NAME,Wind Crowrang,Wind Crowrang,,Corvo Ventoso
+MANTIS_NAME,Flame Hyenard,Flame Hyenard,,Hiena Flamejante
+MANOWAR_NAME,Snipe Anteator,Snipe Anteator,,Tamanduá Atirador
+PANDA_NAME,Tornado Tonion,Tornado Tonion,,Pião de Tornado
+TRILOBYTE_NAME,Ride Boarski,Ride Boarski,,Javali Motoqueiro
+YETI_NAME,Soldier Stonekong,Soldier Stonekong,,Macaco de Pedra
+ROOSTER_NAME,Splash Warfly,Splash Warfly,,Mosca Molhada
+TONION_NAME,Tornado Tonion,Tornado Tonion,Tornado Tonion,Pião de Tornado
+GUNGAROO_NAME,Vanishing Gungaroo,Vanishing Gungaroo,Vanishing Gungaroo,Canguru Sumido
+WARFLY_NAME,Splash Warfly,Splash Warfly,Splash Warfly,Mosca Molhada
+HYENARD_NAME,Flame Hyenard,Flame Hyenard,Flame Hyenard,Hiena Flamejante
+BOARSKI_NAME,Ride Boarski,Ride Boarski,Ride Boarski,Javali Motoqueiro
+ANTEATOR_NAME,Snipe Anteator,Snipe Anteator,Snipe Anteator,Tamanduá Atirador
+CROWRANG_NAME,Wind Crowrang,Wind Crowrang,Wind Crowrang,Corvo Ventoso
+STONEKONG_NAME,Soldier Stonekong,Soldier Stonekong,Soldier Stonekong,Macaco de Pedra
+RED_NAME,Red,Red,Red,Red
+TONION_STAGE,Radio Tower,Torre de Rádio,Torre de Radio,Torre de Rádio
+GUNGAROO_STAGE,Tunnel Base,Base do Túnel,Base del Túnel,Base do Túnel
+WARFLY_STAGE,Battleship,Couraçado,Acorazado,Couraçado
+HYENARD_STAGE,Lava Factory,Fábrica de Lava,Fábrica de Lava,Fábrica de Lava
+BOARSKI_STAGE,Central Circuit,Circuito Central,Circuito Central,Circuito Central
+ANTEATOR_STAGE,Cyber Field,Campo Cibernético,Campo Cibernético,Campo Cibernético
+CROWRANG_STAGE,Air Forces,Forças Aéreas,Fuerzas Aéreas,Forças Aéreas
+STONEKONG_STAGE,Deep Forest,Floresta Profunda,Bosque Profundo,Floresta Profunda
+TONION_WEAPON,Volt Tornado,Volt Tornado,Volt Tornado,Volt Tornado
+GUNGAROO_WEAPON,Explosion,Explosion,Explosion,Explosion
+WARFLY_WEAPON,Splash Laser,Splash Laser,Splash Laser,Splash Laser
+HYENARD_WEAPON,Circle Blaze,Circle Blaze,Circle Blaze,Circle Blaze
+BOARSKI_WEAPON,Moving Wheel,Moving Wheel,Moving Wheel,Moving Wheel
+ANTEATOR_WEAPON,Sniper Missile,Sniper Missile,Sniper Missile,Sniper Missile
+CROWRANG_WEAPON,Wind Cutter,Wind Cutter,Wind Cutter,Wind Cutter
+STONEKONG_WEAPON,Gaea Shield,Gaea Shield,Gaea Shield,Gaea Shield
+TONION_WPNMENU,V. Tornado,V. Tornado,V. Tornado,V. Tornado
+GUNGAROO_WPNMENU,Explsion,Explsion,Explsion,Explsion
+WARFLY_WPNMENU,S. Laser,S. Laser,S. Laser,S. Laser
+HYENARD_WPNMENU,C. Blaze,C. Blaze,C. Blaze,C. Blaze
+BOARSKI_WPNMENU,M. Wheel,M. Wheel,M. Wheel,M. Wheel
+ANTEATOR_WPNMENU,S. Missile,S. Missile,S. Missile,S. Missile
+CROWRANG_WPNMENU,W. Cutter,W. Cutter,W. Cutter,W. Cutter
+STONEKONG_WPNMENU,G. Shield,G. Shield,G. Shield,G. Shield
 ,,,,
 ,,,,
 ,,,,
@@ -199,9 +232,9 @@ ICARUSHEAD3,"With this part equipped, you will cause damage to enemies by jumpin
 ICARUSHEAD4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",
 ,,,,
 VILE1-1,Vile!,Vile!,Vile!,
-VILE1-2,Where have you taken Lumine? Do you plan to hinder the Jakob Project?,Para onde você levou Lumine? Você pretende impedir o Projeto Jakob?,Dónde has llevado a Lumine? ¿Planeas obstaculizar el Proyecto Jakob?,
+VILE1-2,Where have you taken Sigma? Do you plan to hinder the Jakob Project?,Para onde você levou Sigma? Você pretende impedir o Projeto Jakob?,Dónde has llevado a Sigma? ¿Planeas obstaculizar el Proyecto Jakob?,
 VILE1-3,"Reunited after all this time apart, and all you do is bombard me with questions?",Tanto tempo separados e agora que estamos juntos só o que você faz é me encher de perguntas?,"¡Reunidos después de tanto tiempo separados, y todo lo que haces es bombardearme con preguntas!",
-VILE1-4,Don't worry about our little friend. Lumine is being taken care of. Ha ha ha…,"Não se preocupe, X... Lumine está em boas mãos. Ha ha ha...",No te preocupes por nuestra pequeña Lumine. Estamos cuidándola muy bien. Ja ja ja...,
+VILE1-4,Don't worry about our little friend. Sigma is being taken care of. Ha ha ha…,"Não se preocupe, X... Sigma está em boas mãos. Ha ha ha...",No te preocupes por nuestra pequeña Sigma. Estamos cuidándola muy bien. Ja ja ja...,
 VILE1-5,The Orbital Elevator is too important to us to hurt the one who operates it.,O Elevador Orbital é importante demais para machucarmos quem o opera.,El Elevador Orbital es muy importante para nosotros como para hacerle daño a quien lo opera.,
 VILE1-6,Don't you know what you're doing?,Você não sabe o que está fazendo?,¿No sabes lo que estás haciendo?,
 VILE1-7,The Jakob Project is an important joint venture between humans and reploids!,O Projeto Jakob é uma importante colaboração entre humanos e Reploids!,¡El Proyecto Jakob es un importante proyecto entre Humanos y Reploides!,
@@ -209,20 +242,20 @@ VILE1-8,"Chill out, X...","Relaxa, X...","Tranquilizate, X...",
 VILE1-9,"Let's enjoy this little reunion, OK?","Vamos curtir nosso momento juntos, OK?","Disfrutemos de nuestra pequeña reunion, OK?",
 ,,,,
 VILE2-1,Vile!,Vile!,Vile!,
-VILE2-2,I'm through chasing you down. Let Lumine go. Now!,Cansei de perseguir você. Liberte Lumine. Agora!,Me cansé de perseguirte. ¡Deja ir a Lumine. Ahora!,
-VILE2-3,"Ha ha ha... Lumine? Always the positive thinker, aren't you?","Ha ha ha... Lumine? Sempre pensando positivo, né?","Ja ja ja... ¿Lumine? Siempre el pensador positivo, ¿Verdad?",
+VILE2-2,I'm through chasing you down. Let Sigma go. Now!,Cansei de perseguir você. Liberte Sigma. Agora!,Me cansé de perseguirte. ¡Deja ir a Sigma. Ahora!,
+VILE2-3,"Ha ha ha... Sigma? Always the positive thinker, aren't you?","Ha ha ha... Sigma? Sempre pensando positivo, né?","Ja ja ja... ¿Sigma? Siempre el pensador positivo, ¿Verdad?",
 VILE2-4,"Look around you, fool! Your world has already begun to crumble!  Are you so dim as to think you're in a position to make demands?","Olhe a sua volta, idiota! Seu mundo já começou a desmoronar e você ainda pensa que pode fazer exigências?","¡Mira a tu alrededor, idiota! ¡Tu mundo ya ha comenzado a desmoronarse! ¿Eres tan tonto como para pensar que estás en posición de hacer demandas?",Parece que é abestado
 VILE2-5,The world as you know it? Mavericks? Kiss it all goodbye!,O mundo que você conhecia? Mavericks? Pode dar adeus a tudo isso!,¿El mundo tal como lo conoces? ¿Mavericks? ¡Dile adiós a todo eso!,
 VILE2-6,"Mayhem, doom and destruction! That's what we were built for!","Caos, ruína e desespero! Foi para isso que fomos construídos!","¡Caos, destrucción y ruina! ¡Para eso fuimos construidos!",
 ,,,,
-ANTONION1,Gravity Antonion... You used to be an incredible scientist. What happened?,Gravity Antonion... Você costumava ser um incrível cientista. O que aconteceu?,Gravity Antonion... Solías ser un científico increíble. ¿Qué sucedio?,
+ANTONION1,Wind Crowrang... You used to be an incredible scientist. What happened?,Wind Crowrang... Você costumava ser um incrível cientista. O que aconteceu?,Wind Crowrang... Solías ser un científico increíble. ¿Qué sucedio?,
 ANTONION2,Incredible scientist? Who are you to say such things?,Incrível cientista? Quem é você pra dizer isso?,¿Científico increíble ? ¿Quién eres tú para decir tales cosas?,
 ANTONION3,I don't pursue my research just to earn praise from the likes of you.,Eu não realizo minha pesquisa para ganhar elogios de gente como você.,No realizo mi investigación solo para ganar elogios de alguien como tú.,
 ANTONION4,Did he... Did Sigma make you go Maverick?,Será que... Sigma te transformou em um Maverick?,¿Acaso el... Sigma te hizo volverte Maverick?,
 ANTONION5,"Maverick? Once again, you attach labels to me. What arrogance!",Maverick? Mais uma vez você tenta me rotular. Quanta arrogância!,"¿Maverick? Una vez más, intentas catalogarme. ¡Qué arrogancia!",
 ANTONION6,"At any rate, if you choose to stand in my way, I'll destroy you!","De qualquer forma, se você escolher se por no meu caminho eu irei lhe destruir!","De cualquier forma, si eliges interponerte en mi camino, ¡Te destruiré!",
 ,,,,
-MANOWAR1,Gigabolt Manowar! ,Gigabolt Manowar! ,Gigabolt Manowar!,
+MANOWAR1,Snipe Anteator! ,Snipe Anteator! ,Snipe Anteator!,
 MANOWAR2,"Return Abel City's energy supply to normal! If you don't, the city will be destroyed!","Retorne o suprimento de energia de Abel City ao normal! Se não, a cidade será destruida!","¡Devuelve el suministro de energía de Abel City a la normalidad! ¡Si no lo haces, la ciudad será destruida!",
 MANOWAR3,... ... ...,... ... ...,... ... ...,
 MANOWAR4,"...I'm not doing anything wrong... Who are you, anyway?",...Eu não estou fazendo nada de errado... Quem é você?,"...No estoy haciendo nada malo... ¿Quién eres tú, de todos modos?",quem é vc na fila do pão
@@ -233,11 +266,11 @@ MANOWAR8,I'm working hard to realize our dream of a new world...!,Eu estou traba
 MANOWAR9,You've gone Maverick! I'll have to stop you!,Você se tornou um Maverick! Vou ter que te impedir!,¡Te has vuelto Maverick! ¡Tendré que detenerte!,
 ,,,,
 MANTIS1,Hey! What's a Maverick Hunter doing here?,Ei! O que um Caçador de Mavericks está fazendo aqui?,¡Oye! ¿Qué hace un Cazador de Mavericks aquí?,
-MANTIS2,Dark Mantis... You've gone Maverick. I'm putting an end to your weapons production.,Dark Mantis. Você é um Maverick. Estou pondo um fim a sua produção de armas.,Dark Mantis... Te has vuelto Maverick. Le pondre fin a tu producción de tus armas.,Esperança preta
+MANTIS2,Flame Hyenard... You've gone Maverick. I'm putting an end to your weapons production.,Flame Hyenard. Você é um Maverick. Estou pondo um fim a sua produção de armas.,Flame Hyenard... Te has vuelto Maverick. Le pondre fin a tu producción de tus armas.,Esperança preta
 MANTIS3,"We new generation Reploids are designed so that we can't go Maverick, kid.","Nós Reploids de Nova Geração fomos criados de forma que não podemos nos tornar Mavericks, garoto.","Nosotros los Reploids de nueva generación, estamos diseñados para que no podamos volvernos Maverick, chico.",
 MANTIS4,Then why are you making weapons? Is Sigma controlling you?,Então por que você está fabricando armas? Sigma está te controlando?,"Entonces, ¿por qué estás fabricando armas? ¿Sigma te está controlando?",
 MANTIS5,"And what exactly is controlling you, X? Your precious ""justice""? Is that it?","E o que está controlando você, X? Sua preciosa ""justiça""? É isso?","¿Y qué es exactamente lo que te controla, X? ¿Tu preciada ""justicia""? ¿Solamente eso?",
-MANTIS6,Dark Mantis... Your actions are those of a Maverick!,Dark Mantis... Suas ações são as de um Maverick!,Dark Mantis... ¡Tus acciones son las de un Maverick!,
+MANTIS6,Flame Hyenard... Your actions are those of a Maverick!,Flame Hyenard... Suas ações são as de um Maverick!,Flame Hyenard... ¡Tus acciones son las de un Maverick!,
 MANTIS7,"Not surprisingly, you old style Reploids really don't understand a thing.",Vocês Reploids antigos realmente não entendem coisa alguma.,"Como era de esperar, los Reploids de estilo antiguo realmente no entienden nada.",
 MANTIS8,"Let my blade show you how misguided your so called ""justice"" really is!","Minha lâmina vai te mostrar o quão falha sua ""justiça"" realmente é!",¡Deja que mi espada te muestre lo equivocada que es tu supuesta 'justicia'!,
 ,,,,
@@ -253,11 +286,11 @@ PANDA9,"That's why we are forced to fight, you see.",Precisamente por este motiv
 ,,,,
 ROOSTER1,"Do you know what this place is, X?","Sabe que lugar é esse, X?","¿Sabes qué es este lugar, X?",
 ROOSTER2,It's the borderline waste disposal center. Where garbage is pressurized and burned...,Aqui é o centro de descartes. Onde o lixo é compactado e incinerado...,Es el centro de eliminación de residuos en la frontera. Donde la basura es presurizada y quemada...,
-ROOSTER3,"Burn Rooster, why have you started a riot? Is Sigma controlling you?","Burn Rooster, por que você iniciou uma revolta? Por acaso Sigma está lhe controlando?","Burn Rooster, ¿por qué has comenzado un motín? ¿Sigma te está controlando?",
+ROOSTER3,"Splash Warfly, why have you started a riot? Is Sigma controlling you?","Splash Warfly, por que você iniciou uma revolta? Por acaso Sigma está lhe controlando?","Splash Warfly, ¿por qué has comenzado un motín? ¿Sigma te está controlando?",
 ROOSTER4,This is no ordinary riot. This is revenge for all the Reploids you labeled Maverick and threw onto this scrap heap!,Essa não é uma revolta qualquer. Isso é uma vingança em nome de todos os que você chamou de Maverick e atirou aqui!,Esto no es un motín ordinario. ¡Esto es venganza por todos los Reploides que etiquetaste como Maverick y arrojaste a este montón de chatarra!,
 ROOSTER5,Mavericks bring only disaster and destruction! We have no choice but to stop them!,Mavericks trazem apenas destruição! Não temos escolha a não ser detê-los!,¡Los Mavericks solo traen desastre y destrucción! ¡No tenemos más opción que detenerlos!,
 ROOSTER6,This is what you mean when you speak of justice? It's you who should be scrapped!,E você chama isso de justiça? Você é quem deveria ser atirado aqui!,¿Esto es lo que quieres decir cuando hablas de justicia? ¡Deberías ser tú quien sea desechado!,
-ROOSTER7,"What does Sigma plan to do? You know, he's just using you. Nothing more!","Acalme-se, Burn Rooster! É Sigma quem está te manipulando! Ele pretende apenas te usar, nada mais!","¿Qué planea hacer Sigma? Sabes, solo te está usando. ¡Nada más!",
+ROOSTER7,"What does Sigma plan to do? You know, he's just using you. Nothing more!","Acalme-se, Splash Warfly! É Sigma quem está te manipulando! Ele pretende apenas te usar, nada mais!","¿Qué planea hacer Sigma? Sabes, solo te está usando. ¡Nada más!",
 ROOSTER8,"Using me? If that's the price I have to pay to bring about the new world, so be it!","Me usando? Se esse é o preço que eu preciso pagar para criar um novo mundo, que assim seja!","¿Usarme? ¡Si ese es el precio que debo pagar para llevar a cabo el nuevo mundo, que así sea!",
 ROOSTER9,There's no place for Reploids like you in the new world we will create!,Não existirá lugar para Reploids como você no mundo que vamos criar!,¡No hay lugar para Reploids como tú en el nuevo mundo que crearemos!,
 ,,,,
@@ -274,7 +307,7 @@ TRILOBYTE3,"Even if I explained, I doubt a brainless Maverick Hunter like yourse
 TRILOBYTE4,I'll bury you old heaps of junk right here!,Eu vou enterrar essa sua carcaça bem aqui!,¡Te enterraré aquí en estos viejos montones de chatarra!,
 ,,,,
 YETI1,I will not let you get in our way.,Não deixarei você entrar em nosso caminho.,No permitiré que te interpongas en nuestro camino.,
-YETI2,Avalanche Yeti! What do you think you're doing?,Avalanche Yeti! O que pensa que está fazendo?,¡Avalanche Yeti!¿Qué crees que estás haciendo?,
+YETI2,Soldier Stonekong! What do you think you're doing?,Soldier Stonekong! O que pensa que está fazendo?,¡Soldier Stonekong!¿Qué crees que estás haciendo?,
 YETI3,We no longer considers your world to be ideal. You old model Reploids have no business here.,Seu mundo não é mais considerado ideal para nós. Dê o fora daqui.,Ya no consideramos que tu mundo sea ideal. Los Reploides de modelo antiguo como tú no tienen nada que hacer aquí.,
 YETI4,"No way! If we don't repair this system, the world's ecological balance is at risk!","De jeito nenhum! Se não repararmos este sistema, o balanço ecológico do mundo estará ameaçado!","¡De ninguna manera! ¡Si no reparamos este sistema, el equilibrio ecológico del mundo está en peligro!",
 YETI5,"Hmpf. It's too late, X. You and your puny Maverick Hunters have lost!","Hmpf. É tarde demais, X. Você e seus amiguinhos Caçadores de Mavericks já eram!","Hmpf. Es demasiado tarde, X. ¡Tú y tus insignificantes Cazadores de Mavericks han perdido!",
@@ -332,12 +365,12 @@ SIGMADEFEATED1,Impossible! How... could you... You couldn't...! ,Impossível! Co
 SIGMADEFEATED2,Destroy... The old... world... New age...!,Destruir... O mundo... Nova era...!,,
 SIGMADEFEATED3,Ahrrgh!,Ahrrgh!,,
 ,,,,
-FINALLUMINE1,"Oh, Lumine! Are you OK?",Lumine! Você está bem?,,
+FINALLUMINE1,"Oh, Sigma! Are you OK?",Sigma! Você está bem?,,
 FINALLUMINE2,Am I OK...? Of course.,Se eu estou bem? \nÉ claro que estou.,,
 FINALLUMINE3,"Now that you you've defeated Sigma, I supose you're satisfied.",Imagino que esteja satisfeito agora que derrotou Sigma.,,
 FINALLUMINE4,"But you see, he merely helped my plan along...",Mas ele apenas contribuiu com meu plano...,,
 FINALLUMINE5,The new generation Reploids have been awakened and the new world is at hand!,Nós Reploids de nova geração despertamos e o novo mundo está próximo!,,
-FINALLUMINE6,Lumine! What are you doing!?,Lumine! O que está dizendo!?,,
+FINALLUMINE6,Sigma! What are you doing!?,Sigma! O que está dizendo!?,,
 FINALLUMINE7,"Don't tell me you've gone Maverick, too...",Não me diga que você também se tornou Maverick...,,
 FINALLUMINE8,"Maverick? You know that's not the case, X.","Maverick? Você sabe que este não é o caso, X...",,
 FINALLUMINE9,That's why you are hesitating. You don't have it in you...,É por isso que você está hesitando em lutar.,,
@@ -363,7 +396,7 @@ FINALLUMINE28,And you think you can stand up to those of us who have evolved thi
 FINALLUMINE29,Ha ha...! Don't make me laugh...,Ha ha...! Não me faça rir...,,
 FINALLUMINE30,The world is changing! It's only natural that evolution take it's course!,O mundo está mudando! A evolução está tomando seu curso!,,
 FINALLUMINE31,"Now, line up to be exterminated!",Agora prepare-se para ser exterminado!,,
-FINALLUMINE32,Lumine... I can't help but treat you as an enemy!,Lumine... Não tenho escolha a não ser te tratar como inimigo!,,
+FINALLUMINE32,Sigma... I can't help but treat you as an enemy!,Sigma... Não tenho escolha a não ser te tratar como inimigo!,,
 FINALLUMINE33,Enemy... Ally... This issue isn't so black and white.,Inimigo... Aliado... Esse assunto não é tão preto e branco assim.,,
 FINALLUMINE34,"Reploids, along with humanity, have irrevocably changed.",Humanos e Reploids mudaram e não há como voltar atrás.,,
 FINALLUMINE35,The nature of their existence has also changed...,A natureza de sua existência também mudou...,,
@@ -381,13 +414,13 @@ ENDING2-2,The enemy... Has been dealt with.,A missão... foi concluída.,,
 ENDING2-3,I’m headed back now... ,Estou retornando agora... ,,
 ENDING2-4,Roger... ,Entendido... ,,
 ,,,,
-ENDING3-1,I bet you've been thinking about what Lumine was saying a while ago...,Aposto que você está pensando no que Lumine falou agora a pouco...,This dialog has been cut.,
-ENDING3-2,"""Awakening""... That's how Lumine described it.","""Despertar""... Foi como Lumine descreveu.",,
+ENDING3-1,I bet you've been thinking about what Sigma was saying a while ago...,Aposto que você está pensando no que Sigma falou agora a pouco...,This dialog has been cut.,
+ENDING3-2,"""Awakening""... That's how Sigma described it.","""Despertar""... Foi como Sigma descreveu.",,
 ENDING3-3,He said this was evolution... That they were acting on their own free will...,Ele disse que era evolução... Que eles escolheram agir como agiram...,,
 ENDING3-4,If he's right... Then what are we doing...?,Se isso for verdade... Então o que é que estamos fazendo?,,
 ENDING3-5,Don't let it get to you.,Não deixe isso lhe subir a cabeça.,,
 ENDING3-6,Just becoming Sigma could hardly be called evolution.,Agir como Sigma mal dá pra ser chamado de evolução.,,
-ENDING3-7,From what he said... Sigma won't be coming back.,"Se o que Lumine disse for verdade, Sigma não vai voltar.",,
+ENDING3-7,From what he said... Sigma won't be coming back.,"Se o que Sigma disse for verdade, Sigma não vai voltar.",,
 ENDING3-8,From now on we will be fighting not only Mavericks...,"A partir de agora, não lutaremos apenas com Mavericks...",,
 ENDING3-9,But also Reploids who honestly believe they are right in their views.,"Mas também contra Reploids igual a nós, apenas com pensamentos diferentes.",,
 ENDING3-10,X... ,X... ,,
@@ -415,14 +448,14 @@ INTRO2-7,We had to copy a sturdy Sigma body.,Tivemos que copiar um corpo resiste
 INTRO2-8,We new generation Reploids enjoy complete and total immunity to all viruses.,Nós Reploids de nova geração somos completamente imunes a qualquer tipo de vírus.,,
 INTRO2-9,So even copying something as dangerous as Sigma provides no risk.,Então copiar algo tão perigoso quanto Sigma não traz risco algum.,,
 INTRO2-10,Who are you?,Quem é você?,,
-INTRO2-11,I'm Lumine... ,Me chamo Lumine... ,,
+INTRO2-11,I'm Sigma... ,Me chamo Sigma... ,,
 INTRO2-12,I'm the director in charge of the elevator and the Jakob Project.,Sou responsável pelo elevador e pelo Projeto Jakob.,,
 INTRO2-13,"I see. Hold tight, I'll signal my team to send in the rescue-","Entendo. Aguentem firme, vou sinalizar minha equipe para que-",,
 ,,,,
 INTRO3-1,"How nice to see you again, X!","É muito bom te ver de novo, X!",,
 INTRO3-2,Vile?!,Vile?!,,
 INTRO3-3,"Ha ha ha... I'd love to stay and play with you, but I'm afraid I have too much work to do...","Ha ha ha... Eu adoraria brincar com você, mas tenho trabalho a fazer... ",,
-INTRO3-4,You're a wanted criminal! Stop and let Lumine go!,Você é um criminoso procurado! Pare e liberte Lumine!,,
+INTRO3-4,You're a wanted criminal! Stop and let Sigma go!,Você é um criminoso procurado! Pare e liberte Sigma!,,
 INTRO3-5,Not a chance. The Orbital Elevator is under our control now...,Sem chance. O Elevador Orbital está sob nosso controle agora... ,,
 INTRO3-6,Just what do you plan to do?!,O que é que você está planejando?!,,
 INTRO3-7,"It begins now, X... \nA new world will be born! \nHa ha ha!","Tudo começa agora, X... \nUm novo mundo está nascendo! Ha ha ha!",,
@@ -458,13 +491,13 @@ DEBUGACHIEVDISC,Used DebugMode.,Usou Modo Debug.,,
 BEATINTRO_TITLE,Good To See You Again,,,
 BEATINTRO_DISC,Defeated the Intro Stage Boss.,Derrotou o Boss da Fase Inicial.,,
 ANTONIONBUSTERONLY_TITLE,Don't Attach Labels to Me,,,
-ANTONIONBUSTERONLY_DISC,Defeated Gravity Antonion without using special weapons.,Derrotou Gravity Antonion sem usar armas especiais.,,
+ANTONIONBUSTERONLY_DISC,Defeated Wind Crowrang without using special weapons.,Derrotou Wind Crowrang sem usar armas especiais.,,
 ANTONIONNAKED_TITLE,Not After Praise,,,
-ANTONIONNAKED_DISC,Defeated Gravity Antonion without equipping any upgrades.,Derrotou Gravity Antonion sem equipar nenhuma melhoria.,,
+ANTONIONNAKED_DISC,Defeated Wind Crowrang without equipping any upgrades.,Derrotou Wind Crowrang sem equipar nenhuma melhoria.,,
 ANTONIONNODAMAGE_TITLE,An Incredible Scientist,,,
-ANTONIONNODAMAGE_DISC,Defeated Gravity Antonion without taking damage.,Derrotou Gravity Antonion sem tomar dano.,,
+ANTONIONNODAMAGE_DISC,Defeated Wind Crowrang without taking damage.,Derrotou Wind Crowrang sem tomar dano.,,
 ANTONIONNOROTATION_TITLE,Portal,,,
-ANTONIONNOROTATION_DISC,Reached the end of Primrose without rotating the Stage.,Chegou ao final do Laboratório Primula sem girar a fase.,,
+ANTONIONNOROTATION_DISC,Reached the end of Air Forces without rotating the Stage.,Chegou ao final do Forças Aéreas sem girar a fase.,,
 COLLECTALLHEARTS_TITLE,Strider,,,
 COLLECTALLHEARTS_DISC,Collected all Heart Tanks.,Coletou todos os Corações.,,
 COLLECTALLSUBTANKS_TITLE,Virtue's Last Reward,,,
@@ -486,7 +519,7 @@ DEFEATEDALL_DISC,Defeated all eight Maverick Bosses.,Derrotou os oito Mavericks.
 DEFEATEDANY_TITLE,New Generation Reploids,,,
 DEFEATEDANY_DISC,Defeated any of the Maverick Bosses.,Derrotou qualquer um dos Bosses.,,
 GATEWAYFIESTA_TITLE,Desperados,,,
-GATEWAYFIESTA_DISC,Survived through the hardest challenge in Gateway.,Sobreviveu ao desafio mais difícil do Satélite de Acesso.,,
+GATEWAYFIESTA_DISC,Survived through the hardest challenge in Palace Road.,Sobreviveu ao desafio mais difícil do Estrada do Palácio.,,
 GIGACRUSHKILL_TITLE,Cataclysm,,,
 GIGACRUSHKILL_DISC,Finished a Boss with Gigacrush.,Finalizou um Boss usando o Gigacrush.,,
 LUMINENAKED_TITLE,I Supose You're Satisfied,,,
@@ -494,41 +527,41 @@ LUMINENAKED_DISC,Defeated the Final Boss without equipping any upgrades.,Derroto
 LUMINENODAMAGE_TITLE,Of Course I'm Ok,,,
 LUMINENODAMAGE_DISC,Defeated the Final Boss without taking damage.,Derrotou o Boss Final sem tomar dano.,,
 MANOWARDOOREXPLODED_TITLE,Gotta Go Fast,,,
-MANOWARDOOREXPLODED_DISC,Broke your way through Dynasty.,Destruiu a segunda porta em Usina Dinastia.,,
+MANOWARDOOREXPLODED_DISC,Broke your way through Radio Tower.,Destruiu a segunda porta em Torre de Rádio.,,
 MANOWARBUSTERONLY_TITLE,I'm In Complete Control,,,
-MANOWARBUSTERONLY_DISC,Defeated Gigabolt Manowar without using special weapons.,Derrotou Gigabolt Manowar sem usar armas especiais.,,
+MANOWARBUSTERONLY_DISC,Defeated Snipe Anteator without using special weapons.,Derrotou Snipe Anteator sem usar armas especiais.,,
 MANOWARNAKED_TITLE,"Who Are You, Anyway?",,,
-MANOWARNAKED_DISC,Defeated Gigabolt Manowar without equipping any upgrades.,Derrotou Gigabolt Manowar sem equipar nenhuma melhoria.,,
+MANOWARNAKED_DISC,Defeated Snipe Anteator without equipping any upgrades.,Derrotou Snipe Anteator sem equipar nenhuma melhoria.,,
 MANOWARNODAMAGE_TITLE,Not Doing Anything Wrong,,,
-MANOWARNODAMAGE_DISC,Defeated Gigabolt Manowar without taking damage.,Derrotou Gigabolt Manowar sem tomar dano.,,
+MANOWARNODAMAGE_DISC,Defeated Snipe Anteator without taking damage.,Derrotou Snipe Anteator sem tomar dano.,,
 MANTISBUSTERONLY_TITLE,Let My Blade Show You,,,
-MANTISBUSTERONLY_DISC,Defeated Dark Mantis without using special weapons.,Derrotou Dark Mantis sem usar armas especiais.,,
+MANTISBUSTERONLY_DISC,Defeated Flame Hyenard without using special weapons.,Derrotou Flame Hyenard sem usar armas especiais.,,
 MANTISLIT_TITLE,Shining In The Darkness,,,
-MANTISLIT_DISC,Put an end to the darkness in Pitch Black.,Pôs um fim a escuridão do Arsenal Soturno.,,
+MANTISLIT_DISC,Put an end to the darkness in Cyber Field.,Pôs um fim a escuridão do Campo Cibernético.,,
 MANTISNAKED_TITLE,"Can't Go Maverick, Kid",,,
-MANTISNAKED_DISC,Defeated Dark Mantis without equipping any upgrades.,Derrotou Dark Mantis sem equipar nenhuma melhoria.,,
+MANTISNAKED_DISC,Defeated Flame Hyenard without equipping any upgrades.,Derrotou Flame Hyenard sem equipar nenhuma melhoria.,,
 MANTISNODAMAGE_TITLE,Your Precious 'Justice',,,
-MANTISNODAMAGE_DISC,Defeated Dark Mantis without taking damage.,Derrotou Dark Mantis sem tomar dano.,,
+MANTISNODAMAGE_DISC,Defeated Flame Hyenard without taking damage.,Derrotou Flame Hyenard sem tomar dano.,,
 PANDABUSTERONLY_TITLE,Sole Purpose To Destroy,,,
-PANDABUSTERONLY_DISC,Defeated Bamboo Pandamonium without using special weapons.,Derrotou Bamboo Pandamonium sem usar armas especiais.,,
+PANDABUSTERONLY_DISC,Defeated Tornado Tonion without using special weapons.,Derrotou Tornado Tonion sem usar armas especiais.,,
 PANDANAKED_TITLE,We Are Forced To Fight,,,
-PANDANAKED_DISC,Defeated Bamboo Pandamonium without equipping any upgrades.,Derrotou Bamboo Pandamonium sem equipar nenhuma melhoria.,,
+PANDANAKED_DISC,Defeated Tornado Tonion without equipping any upgrades.,Derrotou Tornado Tonion sem equipar nenhuma melhoria.,,
 PANDANODAMAGE_TITLE,Never Thought Yourself?,,,
-PANDANODAMAGE_DISC,Defeated Bamboo Pandamonium without taking damage.,Derrotou Bamboo Pandamonium sem tomar dano.,,
+PANDANODAMAGE_DISC,Defeated Tornado Tonion without taking damage.,Derrotou Tornado Tonion sem tomar dano.,,
 PANDARIDEREACHED_TITLE,Probotector,,,
-PANDARIDEREACHED_DISC,Reached the end of Booster Forest with the Cyclops.,Chegou ao final da Floresta Ergânica com a Cyclops.,,
+PANDARIDEREACHED_DISC,Reached the end of Deep Forest with the Cyclops.,Chegou ao final da Floresta Profunda com a Cyclops.,,
 PELEDOSGAMES_TITLE,Athlete of the Century,Pelé dos Games,,
 PELEDOSGAMES_DISC,Juggled the Armor well after beating the Boss.,Cabeceou a Armadura bem depois de derrotar o Boss.,,
 PERFECTKILL_TITLE,Mark of the Wolves,,,
 PERFECTKILL_DISC,"Defeated any Boss without using special weapons, without taking damage and without upgrades.","Derrotou qualquer Boss sem usar armsa especiais, sem melhorias e sem tomar dano.",,
 ROOSTERBUSTERONLY_TITLE,The Price I Have To Pay,,,
-ROOSTERBUSTERONLY_DISC,Defeated Burn Rooster without using special weapons.,Derrotou Burn Rooster sem usar armas especiais.,,
+ROOSTERBUSTERONLY_DISC,Defeated Splash Warfly without using special weapons.,Derrotou Splash Warfly sem usar armas especiais.,,
 ROOSTERFROZEN_TITLE,Hades,,,
-ROOSTERFROZEN_DISC,Stopped the Lava Wall at Inferno.,Parou a lava em Incinerador Inferno,,
+ROOSTERFROZEN_DISC,Stopped the Lava Wall at Lava Factory.,Parou a lava em Fábrica de Lava,,
 ROOSTERNAKED_TITLE,Labeled Maverick,,,
-ROOSTERNAKED_DISC,Defeated Burn Rooster without equipping any upgrades.,Derrotou Burn Rooster sem equipar nenhuma melhoria.,,
+ROOSTERNAKED_DISC,Defeated Splash Warfly without equipping any upgrades.,Derrotou Splash Warfly sem equipar nenhuma melhoria.,,
 ROOSTERNODAMAGE_TITLE,This Is No Ordinary Riot,,,
-ROOSTERNODAMAGE_DISC,Defeated Burn Rooster without taking damage.,Derrotou sem tomar dano.,,
+ROOSTERNODAMAGE_DISC,Defeated Splash Warfly without taking damage.,Derrotou sem tomar dano.,,
 SECRET2DEFEATED_TITLE,Cycle of the Six Existences,Ciclo das Seis Existências,,
 SECRET2DEFEATED_DISC,Defeated Secret Boss #2.,Derrotou o Boss Secreto #2.,,
 SERAPHDEFEATED_TITLE,Tools of the Old World,,,
@@ -543,21 +576,21 @@ SIGMANAKED_DISC,Defeated Sigma without equipping any upgrades.,Derrotou Sigma se
 SIGMANODAMAGE_TITLE,Our Meeting was Fated,,,
 SIGMANODAMAGE_DISC,Defeated Sigma without taking damage.,Derrotou Sigma sem tomar dano.,,
 SUNFLOWERBUSTERONLY_TITLE,No One Can Control Us,,,
-SUNFLOWERBUSTERONLY_DISC,Defeated Optic Sunflower without using special weapons.,Derrotou Optic Sunflower sem usar armas especiais.,,
+SUNFLOWERBUSTERONLY_DISC,Defeated Vanishing Gungaroo without using special weapons.,Derrotou Vanishing Gungaroo sem usar armas especiais.,,
 SUNFLOWERGOTSSSRANK_TITLE,Gravity Circuit,,,
 SUNFLOWERGOTSSSRANK_DISC,Got S Rank in all challenges in a single run.,Conseguiu Rank S em todos os desafios de uma vez só.,,
 SUNFLOWERNAKED_TITLE,We're No Monsters,,,
-SUNFLOWERNAKED_DISC,Defeated Optic Sunflower without equipping any upgrades.,Derrotou Optic Sunflower sem equipar nenhuma melhoria.,,
+SUNFLOWERNAKED_DISC,Defeated Vanishing Gungaroo without equipping any upgrades.,Derrotou Vanishing Gungaroo sem equipar nenhuma melhoria.,,
 SUNFLOWERNODAMAGE_TITLE,What We're After,,,
-SUNFLOWERNODAMAGE_DISC,Defeated Optic Sunflower without taking damage.,Derrotou Optic Sunflower sem tomar dano.,,
+SUNFLOWERNODAMAGE_DISC,Defeated Vanishing Gungaroo without taking damage.,Derrotou Vanishing Gungaroo sem tomar dano.,,
 SURFEDONMISSILE_TITLE,Bomb Rush Cyberfunk,,,
 SURFEDONMISSILE_DISC,Surfed through the skies for 6 seconds.,Surfou os céus por 6 segundos.,,
 TRILOBYTEBUSTERONLY_TITLE,The Ore We Mine,,,
-TRILOBYTEBUSTERONLY_DISC,Defeated Earthrock Trilobyte without using special weapons.,Derrotou Earthrock Trilobyte sem usar armas especiais.,,
+TRILOBYTEBUSTERONLY_DISC,Defeated Ride Boarski without using special weapons.,Derrotou Ride Boarski sem usar armas especiais.,,
 TRILOBYTENAKED_TITLE,Old Heaps of Junk,,,
-TRILOBYTENAKED_DISC,Defeated Earthrock Trilobyte without equipping any upgrades.,Derrotou Earthrock Trilobyte sem equipar nenhuma melhoria.,,
+TRILOBYTENAKED_DISC,Defeated Ride Boarski without equipping any upgrades.,Derrotou Ride Boarski sem equipar nenhuma melhoria.,,
 TRILOBYTENODAMAGE_TITLE,Brainless Maverick Hunter,,,
-TRILOBYTENODAMAGE_DISC,Defeated Earthrock Trilobyte without taking damage.,Derrotou Earthrock Trilobyte sem tomar dano.,,
+TRILOBYTENODAMAGE_DISC,Defeated Ride Boarski without taking damage.,Derrotou Ride Boarski sem tomar dano.,,
 VILEDEFEATEDTWICE_TITLE,Our Little Reunion,,,
 VILEDEFEATEDTWICE_DISC,Defeated Vile twice.,Derrotou Vile duas vezes.,,
 VILEDEVILBEARDEFEATED_TITLE,Steel Assault,,,
@@ -571,19 +604,19 @@ VILEJAKOBNAKED_DISC,Defeated Vile without equipping any upgrades.,Derrotou Vile 
 VILEJAKOBNODAMAGE_TITLE,At Times Like This,,,
 VILEJAKOBNODAMAGE_DISC,Defeated Vile without taking damage.,Derrotou Vile sem tomar dano.,,
 VILESIGMADEFEATED_TITLE,Hope Remains,,,
-VILESIGMADEFEATED_DISC,Defeated Vile at Sigma Palace.,Derrotou Vile no Palácio de Sigma.,,
+VILESIGMADEFEATED_DISC,Defeated Vile at Crimson Palace.,Derrotou Vile no Palácio Carmesim.,,
 XDRIVEDODGE_TITLE,Mark of the Ninja,,,
 XDRIVEDODGE_DISC,Used XDrive during a Desperation Attack.,Usou o XDrive durante um Ataque Desespero.,,
 YETIBUSTERONLY_TITLE,It's Too Late,,,
-YETIBUSTERONLY_DISC,Defeated Avalanche Yeti without using special weapons.,Derrotou Avalanche Yeti sem usar armas especiais.,,
+YETIBUSTERONLY_DISC,Defeated Soldier Stonekong without using special weapons.,Derrotou Soldier Stonekong sem usar armas especiais.,,
 YETIDOOREXPLODED_TITLE,Sonic Drive,,,
-YETIDOOREXPLODED_DISC,Broke your way through Central White.,Destruiu a primeira porta na Central Ala.,,
+YETIDOOREXPLODED_DISC,Broke your way through Battleship.,Destruiu a primeira porta na Central Ala.,,
 YETINAKED_TITLE,You Old Model Reploids,,,
-YETINAKED_DISC,Defeated Avalanche Yeti without equipping any upgrades.,Derrotou Avalanche Yeti sem equipar nenhuma melhoria.,,
+YETINAKED_DISC,Defeated Soldier Stonekong without equipping any upgrades.,Derrotou Soldier Stonekong sem equipar nenhuma melhoria.,,
 YETINODAMAGE_TITLE,Puny Maverick Hunter,,,
-YETINODAMAGE_DISC,Defeated Avalanche Yeti without taking damage.,Derrotou Avalanche Yeti sem tomar dano.,,
+YETINODAMAGE_DISC,Defeated Soldier Stonekong without taking damage.,Derrotou Soldier Stonekong sem tomar dano.,,
 MANTISUNDETECTED_TITLE,Shadow Tactics,,,
-MANTISUNDETECTED_DISC,Avoided all Seachlights in Pitch Black.,Não foi detectado pelas luzes em Arsenal Soturno.,,
+MANTISUNDETECTED_DISC,Avoided all Seachlights in Cyber Field.,Não foi detectado pelas luzes em Campo Cibernético.,,
 SECRET1DEFEATED_TITLE,Corridors of Time,,,
 SECRET1DEFEATED_DISC,Defeated the Secret Boss.,Derrotou o Boss Secreto.,,
 SECRET3DEFEATED_TITLE,Dual Destinies,,,

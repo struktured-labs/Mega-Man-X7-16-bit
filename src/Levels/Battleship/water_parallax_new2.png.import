@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water_parallax_new2.png-5bd9751d5b20d79dc7dca86eb8d7a316.stex"
+path="res://.import/water_parallax_new2.png-94b328df8ebaba0b07c2332333c0fe3b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/CentralWhite/water_parallax_new2.png"
-dest_files=[ "res://.import/water_parallax_new2.png-5bd9751d5b20d79dc7dca86eb8d7a316.stex" ]
+source_file="res://src/Levels/Battleship/water_parallax_new2.png"
+dest_files=[ "res://.import/water_parallax_new2.png-94b328df8ebaba0b07c2332333c0fe3b.stex" ]
 
 [params]
 

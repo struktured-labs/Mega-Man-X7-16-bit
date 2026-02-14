@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light.png-57984afc48769d5eee1b7405197851d5.stex"
+path="res://.import/light.png-ee9e440abe0a2d88659959a250aa10e4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/light.png"
-dest_files=[ "res://.import/light.png-57984afc48769d5eee1b7405197851d5.stex" ]
+source_file="res://src/Levels/CyberField/light.png"
+dest_files=[ "res://.import/light.png-ee9e440abe0a2d88659959a250aa10e4.stex" ]
 
 [params]
 

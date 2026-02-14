@@ -21,7 +21,7 @@ func extra_actions_after_death() -> void: #override
 	pass
 
 func extra_actions_at_death_start() -> void: #override
-	Event.emit_signal("gateway_boss_defeated",character.name.to_lower())
+	Event.emit_signal("palace_boss_defeated",character.name.to_lower())
 	character.set_horizontal_speed(0)
 	character.set_vertical_speed(0)
 	reploid.material = sprite.material

@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=2]
+[gd_scene load_steps=135 format=2]
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=2]
@@ -87,6 +87,7 @@
 [ext_resource path="res://src/Levels/Primrose/portal.png" type="Texture" id=85]
 [ext_resource path="res://src/Levels/Primrose/portal_deactivated.png" type="Texture" id=86]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=87]
+[ext_resource path="res://src/Objects/RescueReploid.tscn" type="PackedScene" id=88]
 
 [sub_resource type="RectangleShape2D" id=41]
 extents = Vector2( 41.5, 19 )
@@ -2068,6 +2069,39 @@ type = "down"
 [node name="IGTimer" parent="." index="9" instance=ExtResource( 87 )]
 section = "Dynasty"
 
+
+[node name="RescueReploid1" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 1000, -200 )
+reploid_id = "radio_tower_1"
+reward_type = "none"
+[node name="RescueReploid2" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 2500, -500 )
+reploid_id = "radio_tower_2"
+reward_type = "none"
+[node name="RescueReploid3" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 4000, -900 )
+reploid_id = "radio_tower_3"
+reward_type = "none"
+[node name="RescueReploid4" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 6000, -1200 )
+reploid_id = "radio_tower_4"
+reward_type = "life_up"
+[node name="RescueReploid5" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 8000, -1500 )
+reploid_id = "radio_tower_5"
+reward_type = "none"
+[node name="RescueReploid6" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 10000, -1800 )
+reploid_id = "radio_tower_6"
+reward_type = "none"
+[node name="RescueReploid7" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 12000, -2200 )
+reploid_id = "radio_tower_7"
+reward_type = "extra_life"
+[node name="RescueReploid8" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 13500, -2600 )
+reploid_id = "radio_tower_8"
+reward_type = "none"
 [connection signal="body_entered" from="Scenery/background_mover" to="Scenery/parallaxBackground" method="_on_background_mover_body_entered"]
 [connection signal="button_press" from="Objects/RisingPlatform/Button" to="Objects/RisingPlatform/rising_platform" method="_on_Button_button_press"]
 [connection signal="reset" from="Objects/RisingPlatform/rising_platform" to="Objects/RisingPlatform/Button" method="unpress"]

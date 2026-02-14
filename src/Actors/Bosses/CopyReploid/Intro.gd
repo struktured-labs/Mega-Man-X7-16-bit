@@ -80,7 +80,7 @@ func spawn_boss():
 	boss.current_health = 120.0
 	Tools.timer_p(0.1,"set_visible",boss,true)
 	character.emit_signal("spawned_boss",boss)
-	Event.emit_signal("gateway_boss_spawned",boss.name.to_lower())
+	Event.emit_signal("palace_boss_spawned",boss.name.to_lower())
 	intro.active = false
 	ai.call_deferred("set_physics_process",false)
 	ai.desperation_threshold = -1

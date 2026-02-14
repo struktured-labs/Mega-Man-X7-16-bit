@@ -16,7 +16,12 @@ margin_bottom = 171.0
 custom_colors/font_color = Color( 0.639216, 0.713726, 0.898039, 1 )
 custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
 custom_fonts/font = ExtResource( 1 )
-text = "DISCLAIMER1"
+text = "This is a free fangame.
+
+It is not affiliated, associated, authorized, endorsed or in any way officially connected with Capcom or any of its subsidiaries or its affiliates.
+
+Mega Man X is a property of Capcom.
+Please support the official release!"
 align = 1
 autowrap = true
 

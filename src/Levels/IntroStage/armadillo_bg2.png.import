@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/armadillo_bg2.png-cee01bdf0dd80f2ae3ddc6952d2a7f7e.stex"
+path="res://.import/armadillo_bg2.png-de07da98819a7704c5a6129eff62bfeb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/armadillo_bg2.png"
-dest_files=[ "res://.import/armadillo_bg2.png-cee01bdf0dd80f2ae3ddc6952d2a7f7e.stex" ]
+source_file="res://src/Levels/IntroStage/armadillo_bg2.png"
+dest_files=[ "res://.import/armadillo_bg2.png-de07da98819a7704c5a6129eff62bfeb.stex" ]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=155 format=2]
+[gd_scene load_steps=156 format=2]
 
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/HUD/Hud.tscn" type="PackedScene" id=2]
@@ -87,6 +87,7 @@
 [ext_resource path="res://src/Levels/Inferno/GravityPassage.tscn" type="PackedScene" id=85]
 [ext_resource path="res://src/Levels/Inferno/Blockade.gd" type="Script" id=86]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=87]
+[ext_resource path="res://src/Objects/RescueReploid.tscn" type="PackedScene" id=88]
 
 [sub_resource type="CanvasItemMaterial" id=92]
 blend_mode = 1
@@ -2212,6 +2213,39 @@ polygon = PoolVector2Array( -263.5, -333, -378.5, 2737, -927.5, 2703, -1162.5, 1
 [node name="IGTimer" parent="." instance=ExtResource( 87 )]
 section = "Inferno"
 
+
+[node name="RescueReploid1" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 500, 200 )
+reploid_id = "lava_factory_1"
+reward_type = "none"
+[node name="RescueReploid2" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 1200, 600 )
+reploid_id = "lava_factory_2"
+reward_type = "none"
+[node name="RescueReploid3" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 2000, 1000 )
+reploid_id = "lava_factory_3"
+reward_type = "none"
+[node name="RescueReploid4" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 3000, 1800 )
+reploid_id = "lava_factory_4"
+reward_type = "life_up"
+[node name="RescueReploid5" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 3900, 2400 )
+reploid_id = "lava_factory_5"
+reward_type = "none"
+[node name="RescueReploid6" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 4800, 3000 )
+reploid_id = "lava_factory_6"
+reward_type = "none"
+[node name="RescueReploid7" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 5600, 3600 )
+reploid_id = "lava_factory_7"
+reward_type = "extra_life"
+[node name="RescueReploid8" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 6500, 4000 )
+reploid_id = "lava_factory_8"
+reward_type = "none"
 [connection signal="animation_finished" from="camera2D/Ready Warning Text" to="camera2D/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="body_entered" from="Scenery/parallaxBackground/InsideBGActivator" to="Scenery/parallaxBackground/InsideBGActivator" method="_on_area2D_body_entered"]
 [connection signal="body_exited" from="Scenery/parallaxBackground/InsideBGActivator" to="Scenery/parallaxBackground/InsideBGActivator" method="_on_BackgroundSwap_body_exited"]

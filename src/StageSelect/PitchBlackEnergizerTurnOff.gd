@@ -32,7 +32,7 @@ func clear_weapon_get_data() -> void:
 	GameManager.finish_weapon_get()
 
 func reset_gateway_if_defeated_copy_sigma() -> void:
-	if GatewayManager.has_defeated_copy_sigma():
+	if GatewayManager.has_defeated_red():
 		GatewayManager.soft_reset()
 
 func add_finished_intro_to_savedata() -> void:

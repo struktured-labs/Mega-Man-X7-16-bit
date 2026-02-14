@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/_centralwhite_5.tmx-8548eef0137cd4ae02cd428d0d4cd44c.scn"
+path="res://.import/_centralwhite_5.tmx-c5d81cd23e4606bac57ed8a7d7472dc7.scn"
 
 [deps]
 
-source_file="res://src/Levels/CentralWhite/_centralwhite_5.tmx"
-dest_files=[ "res://.import/_centralwhite_5.tmx-8548eef0137cd4ae02cd428d0d4cd44c.scn" ]
+source_file="res://src/Levels/Battleship/_centralwhite_5.tmx"
+dest_files=[ "res://.import/_centralwhite_5.tmx-c5d81cd23e4606bac57ed8a7d7472dc7.scn" ]
 
 [params]
 

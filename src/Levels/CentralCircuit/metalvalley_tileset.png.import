@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/metalvalley_tileset.png-c42e29b6bd45ab6f1ffd84f7fe01fc78.stex"
+path="res://.import/metalvalley_tileset.png-507cb3e01a00bbc44ea384e36cffa47e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/MetalValley/metalvalley_tileset.png"
-dest_files=[ "res://.import/metalvalley_tileset.png-c42e29b6bd45ab6f1ffd84f7fe01fc78.stex" ]
+source_file="res://src/Levels/CentralCircuit/metalvalley_tileset.png"
+dest_files=[ "res://.import/metalvalley_tileset.png-507cb3e01a00bbc44ea384e36cffa47e.stex" ]
 
 [params]
 

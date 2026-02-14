@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Actors/Player/Axl/AxlBuster.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/Axl/AxlBullet.tscn" type="PackedScene" id=2]
+
+[node name="Buster" type="Node2D"]
+script = ExtResource( 1 )
+shots = [ ExtResource( 2 ) ]
+max_shots_alive = 6
+max_charged_shots_alive = 0
+max_ammo = 6.0
+ammo_per_shot = 0.0

@@ -9,8 +9,8 @@ onready var final_platform: Node2D = $"../../final_platform"
 onready var tween := TweenController.new(self,false)
 
 func _ready() -> void:
-	Event.connect("lumine_went_seraph",self,"activate")
-	Event.connect("lumine_desperation",self,"start_dark_mode")
+	Event.connect("sigma_walls",self,"activate")
+	Event.connect("sigma_desperation",self,"start_dark_mode")
 
 func activate():
 	visible = true
@@ -21,7 +21,7 @@ func activate():
 	hole_fillers.disabled = true
 	final_platform.visible = true
 
-func start_dark_mode():
+func start_dark_mode(_atk_direction = null):
 	tween.attribute("modulate",Color(1.5,1.5,1.5,1),.25)
 	tween.add_attribute("modulate",Color(.1,.1,.7,1),1.0)
 	tween.attribute("modulate",Color(.1,.1,.9,1),1.75,final_clouds)

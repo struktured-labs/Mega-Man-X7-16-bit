@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/sigmapalace_full.tmx-998adea25a517436a6c360259d33498f.scn"
+path="res://.import/sigmapalace_full.tmx-f2ff97cfa183d3c32862e2787950a670.scn"
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/sigmapalace_full.tmx"
-dest_files=[ "res://.import/sigmapalace_full.tmx-998adea25a517436a6c360259d33498f.scn" ]
+source_file="res://src/Levels/CrimsonPalace/sigmapalace_full.tmx"
+dest_files=[ "res://.import/sigmapalace_full.tmx-f2ff97cfa183d3c32862e2787950a670.scn" ]
 
 [params]
 

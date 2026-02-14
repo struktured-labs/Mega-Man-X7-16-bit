@@ -46,7 +46,7 @@ shader_param/palette = ExtResource( 19 )
 [node name="HUD" type="CanvasLayer"]
 pause_mode = 2
 script = ExtResource( 1 )
-checked_inputs = [ "move_left", "move_right", "fire", "alt_fire", "jump", "dash", "weapon_select_left", "weapon_select_right" ]
+checked_inputs = [ "move_left", "move_right", "fire", "alt_fire", "jump", "dash", "weapon_select_left", "weapon_select_right", "tag" ]
 
 [node name="Pause" parent="." instance=ExtResource( 13 )]
 layer = 4
@@ -316,6 +316,17 @@ layer = 128
 [node name="DebugAndCheats" parent="Boss and Weapon Info/canvasLayer" instance=ExtResource( 11 )]
 margin_left = 397.0
 margin_right = 397.0
+
+[node name="ReploidCounter" type="Label" parent="."]
+visible = false
+margin_left = 330.0
+margin_top = 2.0
+margin_right = 398.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0.5, 1, 0.5, 1 )
+text = "R:00/64"
+align = 2
 
 [connection signal="displayed" from="X Bar/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_displayed"]
 [connection signal="hidden" from="X Bar/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_hidden"]

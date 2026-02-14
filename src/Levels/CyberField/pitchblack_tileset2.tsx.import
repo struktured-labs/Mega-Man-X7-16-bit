@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/pitchblack_tileset2.tsx-f4e676ac2d614ce9030e1e36f4f8b9f3.res"
+path="res://.import/pitchblack_tileset2.tsx-baa4ac05e1e2bb8f7112c85e1a17cdb2.res"
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/pitchblack_tileset2.tsx"
-dest_files=[ "res://.import/pitchblack_tileset2.tsx-f4e676ac2d614ce9030e1e36f4f8b9f3.res" ]
+source_file="res://src/Levels/CyberField/pitchblack_tileset2.tsx"
+dest_files=[ "res://.import/pitchblack_tileset2.tsx-baa4ac05e1e2bb8f7112c85e1a17cdb2.res" ]
 
 [params]
 

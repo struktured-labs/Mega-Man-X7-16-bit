@@ -6,7 +6,7 @@ onready var next_limit: Area2D = $"../../Limits/final_boss"
 onready var invisible_wall: CollisionShape2D = $"../../Scenery/invisible_wall/collisionShape2D"
 
 func _ready() -> void:
-	Event.connect("lumine_went_seraph",self,"debug_seraph")
+	Event.connect("sigma_walls",self,"debug_seraph")
 
 func _on_body_entered(_body: Node) -> void:
 	if not activated:

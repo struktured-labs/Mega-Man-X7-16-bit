@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset_wip.png-0cc3e747f048bbab8e0b7ec408e3af6e.stex"
+path="res://.import/tileset_wip.png-92631b3c6da438ce648b6de1349ac5c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/tileset_wip.png"
-dest_files=[ "res://.import/tileset_wip.png-0cc3e747f048bbab8e0b7ec408e3af6e.stex" ]
+source_file="res://src/Levels/CrimsonPalace/tileset_wip.png"
+dest_files=[ "res://.import/tileset_wip.png-92631b3c6da438ce648b6de1349ac5c0.stex" ]
 
 [params]
 

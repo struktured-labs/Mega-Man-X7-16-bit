@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/satellite_palette.png-09df54b4ae5751308c208e2bc2bf666f.stex"
+path="res://.import/satellite_palette.png-fc18e16f26c217972ce59fb41baff04d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Gateway/satellite_palette.png"
-dest_files=[ "res://.import/satellite_palette.png-09df54b4ae5751308c208e2bc2bf666f.stex" ]
+source_file="res://src/Levels/PalaceRoad/satellite_palette.png"
+dest_files=[ "res://.import/satellite_palette.png-fc18e16f26c217972ce59fb41baff04d.stex" ]
 
 [params]
 

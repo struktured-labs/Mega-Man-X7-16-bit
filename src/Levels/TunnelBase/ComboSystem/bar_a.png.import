@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bar_a.png-a1fc02a3ca226502c1dc4438c3b274c0.stex"
+path="res://.import/bar_a.png-1da3ff07c3f47b557e5d4b2e82f5a89d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/TroiaBase/ComboSystem/bar_a.png"
-dest_files=[ "res://.import/bar_a.png-a1fc02a3ca226502c1dc4438c3b274c0.stex" ]
+source_file="res://src/Levels/TunnelBase/ComboSystem/bar_a.png"
+dest_files=[ "res://.import/bar_a.png-1da3ff07c3f47b557e5d4b2e82f5a89d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/far_clouds.png-28999e3449601fbd919b074fa8eb0264.stex"
+path="res://.import/far_clouds.png-3079dcb48330169dd6a038de20c3362f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/far_clouds.png"
-dest_files=[ "res://.import/far_clouds.png-28999e3449601fbd919b074fa8eb0264.stex" ]
+source_file="res://src/Levels/CrimsonPalace/far_clouds.png"
+dest_files=[ "res://.import/far_clouds.png-3079dcb48330169dd6a038de20c3362f.stex" ]
 
 [params]
 

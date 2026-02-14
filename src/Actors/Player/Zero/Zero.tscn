@@ -1,0 +1,440 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Player/Zero/ZeroPlayer.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/JUMP.wav" type="AudioStream" id=3]
+[ext_resource path="res://Jump.gd" type="Script" id=4]
+[ext_resource path="res://Dash.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/DASH.wav" type="AudioStream" id=6]
+[ext_resource path="res://Walk.gd" type="Script" id=7]
+[ext_resource path="res://Walljump.gd" type="Script" id=9]
+[ext_resource path="res://Wallslide.gd" type="Script" id=11]
+[ext_resource path="res://src/Sounds/SLIDE.wav" type="AudioStream" id=13]
+[ext_resource path="res://src/Actors/Player/Modules/Idle.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Damage.gd" type="Script" id=15]
+[ext_resource path="res://src/Sounds/DAMAGE.wav" type="AudioStream" id=16]
+[ext_resource path="res://DashJump.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Player/Modules/Fall.tscn" type="PackedScene" id=18]
+[ext_resource path="res://AirDash.gd" type="Script" id=19]
+[ext_resource path="res://DashWallJump.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/x_collision_box.tres" type="Shape2D" id=26]
+[ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=28]
+[ext_resource path="res://src/Effects/Materials/Player_Material_Shader.tres" type="Material" id=53]
+[ext_resource path="res://PlayerDeath.gd" type="Script" id=38]
+[ext_resource path="res://src/Sounds/11 - MMX - X Die.wav" type="AudioStream" id=39]
+[ext_resource path="res://src/Effects/Player Death.tscn" type="PackedScene" id=40]
+[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=41]
+[ext_resource path="res://src/Effects/Materials/mat_x_death.tres" type="Material" id=52]
+[ext_resource path="res://src/Actors/Player/Zero/SaberCombo.gd" type="Script" id=60]
+[ext_resource path="res://src/Actors/Player/Zero/SaberCharge.gd" type="Script" id=61]
+[ext_resource path="res://src/Actors/Player/Zero/SaberHitbox.tscn" type="PackedScene" id=62]
+[ext_resource path="res://src/Actors/Player/Zero/EXGauge.gd" type="Script" id=63]
+[ext_resource path="res://src/Actors/Player/Modules/TagSwitch.gd" type="Script" id=64]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.995, 7 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 7, 8 )
+
+[node name="Zero" type="KinematicBody2D" groups=["Player"]]
+z_index = 2
+z_as_relative = false
+collision_layer = 8192
+collision_mask = 1073743617
+script = ExtResource( 2 )
+max_health = 16.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 53 )
+position = Vector2( 0, -4 )
+z_index = 5
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 69
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="animatedSprite"]
+visible = false
+position = Vector2( 0, 3.99 )
+scale = Vector2( 0.6, 1.6 )
+
+[node name="ChargingParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+position = Vector2( 0, 3.99 )
+z_index = 4
+
+[node name="ChargedParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+position = Vector2( 0, 3.99 )
+z_index = 4
+
+[node name="Dash Smoke Particles" type="Particles2D" parent="animatedSprite"]
+position = Vector2( -10, 17.99 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+
+[node name="WallSlide Particles" type="Particles2D" parent="animatedSprite"]
+position = Vector2( -14, 10.99 )
+z_index = 1
+emitting = false
+amount = 6
+lifetime = 0.55
+local_coords = false
+
+[node name="WallJump Particle" type="Particles2D" parent="animatedSprite"]
+position = Vector2( 14, 17 )
+z_index = 1
+emitting = false
+amount = 1
+lifetime = 0.03
+one_shot = true
+local_coords = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource( 26 )
+
+[node name="Enemy Collision Detector" type="KinematicBody2D" parent="." groups=["Player"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 1, 0.913725, 0, 1 )
+position = Vector2( 0, -8 )
+shape = SubResource( 1 )
+
+[node name="DashShape" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 0.756863, 0, 1, 1 )
+position = Vector2( 0, 7 )
+shape = SubResource( 2 )
+
+[node name="_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Wallcheck Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -15 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 14.95 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -15 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 14.95 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -14 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 15 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -14 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 15 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="Groundcheck" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 0, 15 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[node name="Shot Position" type="Node2D" parent="."]
+position = Vector2( 18, -2 )
+
+[node name="EXGauge" type="Node" parent="."]
+script = ExtResource( 63 )
+
+[node name="Death" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 38 )
+actions = [ "Event" ]
+animation = "damage"
+sound = ExtResource( 39 )
+
+[node name="X Death Particles" parent="Death" instance=ExtResource( 40 )]
+z_index = 15
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="Death"]
+volume_db = -10.0
+bus = "SFX"
+
+[node name="background_light" type="Sprite" parent="Death"]
+visible = false
+material = ExtResource( 52 )
+position = Vector2( 5.99998, 7.49999 )
+scale = Vector2( 100, 40 )
+z_index = 100
+z_as_relative = false
+texture = ExtResource( 41 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 15 )
+conflicting_moves = [ "Death", "WallSlide", "Ride" ]
+actions = [ "Event" ]
+animation = "damage"
+sound = ExtResource( 16 )
+horizontal_velocity = 45.0
+jump_velocity = 190.0
+invulnerability_time = 1.75
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Damage"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="SaberCombo" type="Node2D" parent="."]
+script = ExtResource( 60 )
+conflicting_moves = [ "Death", "Damage", "Nothing" ]
+actions = [ "fire" ]
+sound = ExtResource( 6 )
+
+[node name="SaberHitbox" parent="SaberCombo" instance=ExtResource( 62 )]
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="SaberCombo"]
+pause_mode = 2
+volume_db = -10.0
+bus = "SFX"
+
+[node name="SaberCharge" type="Node2D" parent="."]
+script = ExtResource( 61 )
+conflicting_moves = [ "Death", "Nothing" ]
+actions = [ "fire" ]
+
+[node name="SaberHitbox" parent="SaberCharge" instance=ExtResource( 62 )]
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="SaberCharge"]
+pause_mode = 2
+volume_db = -13.5
+bus = "SFX"
+
+[node name="DashWallJump" type="Node2D" parent="."]
+script = ExtResource( 20 )
+conflicting_moves = [ "DashWallJump", "WallJump", "AirDash" ]
+actions = [ "jump" ]
+animation = "walljump"
+sound = ExtResource( 3 )
+horizontal_velocity = 210.0
+shot_pos_adjust = Vector2( 4, 0 )
+leeway_time = 0.0
+minimum_upwards_time = 0.235
+start_delay = 0.116
+move_away_duration = 0.134
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="DashWallJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="WallJump" type="Node2D" parent="."]
+script = ExtResource( 9 )
+conflicting_moves = [ "WallJump", "DashWallJump", "AirDash" ]
+actions = [ "jump" ]
+animation = "walljump"
+sound = ExtResource( 3 )
+shot_pos_adjust = Vector2( 4, 0 )
+leeway_time = 0.0
+minimum_upwards_time = 0.235
+start_delay = 0.116
+move_away_duration = 0.15
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="WallJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="AirDash" type="Node2D" parent="."]
+script = ExtResource( 19 )
+conflicting_moves = [ "DashWallJump", "WallJump", "WallSlide", "DashJump", "AirDash" ]
+actions = [ "dash" ]
+animation = "dash"
+sound = ExtResource( 6 )
+horizontal_velocity = 210.0
+dash_duration = 0.475
+leeway = 0.0
+shot_pos_adjust = Vector2( 14, 4 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="AirDash"]
+pause_mode = 2
+volume_db = -0.676
+bus = "SFX"
+
+[node name="dash_particle" type="Sprite" parent="AirDash"]
+visible = false
+position = Vector2( -16, 4 )
+z_index = 45
+
+[node name="duringImage" type="AnimatedSprite" parent="AirDash"]
+visible = false
+modulate = Color( 0.776471, 0.15, 0.15, 0.552941 )
+position = Vector2( 0, -4 )
+z_index = 4
+frames = ExtResource( 1 )
+animation = "dash"
+frame = 15
+playing = true
+
+[node name="particles2D" type="Particles2D" parent="AirDash"]
+pause_mode = 1
+position = Vector2( 0, -1 )
+z_index = 4
+emitting = false
+amount = 5
+lifetime = 0.35
+local_coords = false
+
+[node name="WallSlide" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "WallJump", "DashWallJump", "Walk" ]
+actions = [ "move_right", "move_left" ]
+animation = "slide"
+sound = ExtResource( 13 )
+horizontal_velocity = 0.0
+jump_velocity = 90.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="WallSlide"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="DashJump" type="Node2D" parent="."]
+script = ExtResource( 17 )
+conflicting_moves = [ "WallSlide", "WallJump", "DashWallJump", "AirDash" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+horizontal_velocity = 210.0
+shot_pos_adjust = Vector2( 4, 0 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="DashJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="Jump" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "DashJump", "WallSlide", "AirDash", "WallJump", "DashWallJump" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+shot_pos_adjust = Vector2( 4, 0 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Jump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="Dash" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "Jump", "DashJump", "WallJump", "WallSlide", "AirDash" ]
+actions = [ "dash" ]
+animation = "dash"
+sound = ExtResource( 6 )
+horizontal_velocity = 210.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Dash"]
+pause_mode = 2
+volume_db = -0.676
+bus = "SFX"
+
+[node name="dash_particle" type="Sprite" parent="Dash"]
+visible = false
+position = Vector2( -22, 0 )
+z_index = 45
+
+[node name="duringImage" type="AnimatedSprite" parent="Dash"]
+visible = false
+modulate = Color( 0.776471, 0.15, 0.15, 0.552941 )
+position = Vector2( 0, -4 )
+z_index = 4
+frames = ExtResource( 1 )
+animation = "dash"
+frame = 15
+playing = true
+
+[node name="particles2D" type="Particles2D" parent="Dash"]
+pause_mode = 1
+position = Vector2( 0, -1 )
+z_index = 4
+emitting = false
+amount = 5
+lifetime = 0.35
+local_coords = false
+
+[node name="Walk" type="Node2D" parent="."]
+script = ExtResource( 7 )
+conflicting_moves = [ "Dash", "Jump", "WallJump", "DashJump", "Fall" ]
+actions = [ "move_right", "move_left" ]
+animation = "walk"
+
+[node name="Fall" parent="." instance=ExtResource( 18 )]
+
+[node name="Idle" parent="." instance=ExtResource( 14 )]
+
+[node name="TagSwitch" type="Node2D" parent="."]
+script = ExtResource( 64 )
+conflicting_moves = [ "Death", "Damage", "Ride", "Intro", "Finish", "Forced" ]
+actions = [ "tag" ]
+
+[node name="label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="lowjumpcast" type="Label" parent="."]
+visible = false
+margin_left = -53.0
+margin_top = 2.0
+margin_right = -13.0
+margin_bottom = 16.0
+text = "x"
+
+[connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]

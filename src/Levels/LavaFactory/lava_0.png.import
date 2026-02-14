@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lava_0.png-b03c3fbfdfa86e83317230897e2e2332.stex"
+path="res://.import/lava_0.png-8569652c525726c7550daec296de123b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Inferno/lava_0.png"
-dest_files=[ "res://.import/lava_0.png-b03c3fbfdfa86e83317230897e2e2332.stex" ]
+source_file="res://src/Levels/LavaFactory/lava_0.png"
+dest_files=[ "res://.import/lava_0.png-8569652c525726c7550daec296de123b.stex" ]
 
 [params]
 

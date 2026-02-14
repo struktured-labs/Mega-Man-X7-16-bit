@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/GatewayPandaTiled.tmx-d7f786f20b13f64ef33a88ded200d38e.scn"
+path="res://.import/GatewayPandaTiled.tmx-d5b425e9da9a76e82fb9546a67226ea3.scn"
 
 [deps]
 
-source_file="res://src/Levels/Gateway/GatewayPandaTiled.tmx"
-dest_files=[ "res://.import/GatewayPandaTiled.tmx-d7f786f20b13f64ef33a88ded200d38e.scn" ]
+source_file="res://src/Levels/PalaceRoad/GatewayPandaTiled.tmx"
+dest_files=[ "res://.import/GatewayPandaTiled.tmx-d5b425e9da9a76e82fb9546a67226ea3.scn" ]
 
 [params]
 

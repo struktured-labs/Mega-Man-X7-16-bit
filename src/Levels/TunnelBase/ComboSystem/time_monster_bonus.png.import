@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/time_monster_bonus.png-1667a96c5412101933bccec533e949ab.stex"
+path="res://.import/time_monster_bonus.png-b06d04e88bca0915f9ba3d8e5bef76c3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/TroiaBase/ComboSystem/time_monster_bonus.png"
-dest_files=[ "res://.import/time_monster_bonus.png-1667a96c5412101933bccec533e949ab.stex" ]
+source_file="res://src/Levels/TunnelBase/ComboSystem/time_monster_bonus.png"
+dest_files=[ "res://.import/time_monster_bonus.png-b06d04e88bca0915f9ba3d8e5bef76c3.stex" ]
 
 [params]
 

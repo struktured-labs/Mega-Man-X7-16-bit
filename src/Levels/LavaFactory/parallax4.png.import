@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/parallax4.png-a4034dbe14a14461109b2bf6c9e74446.stex"
+path="res://.import/parallax4.png-3870f908fec9169ce662ad83c6839620.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Inferno/parallax4.png"
-dest_files=[ "res://.import/parallax4.png-a4034dbe14a14461109b2bf6c9e74446.stex" ]
+source_file="res://src/Levels/LavaFactory/parallax4.png"
+dest_files=[ "res://.import/parallax4.png-3870f908fec9169ce662ad83c6839620.stex" ]
 
 [params]
 

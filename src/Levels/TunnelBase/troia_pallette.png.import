@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/troia_pallette.png-5193d39fa484e5ce4e053bdff6cf5170.stex"
+path="res://.import/troia_pallette.png-bcc9a8aa7f5c89feba84bda2df8fcfaa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/TroiaBase/troia_pallette.png"
-dest_files=[ "res://.import/troia_pallette.png-5193d39fa484e5ce4e053bdff6cf5170.stex" ]
+source_file="res://src/Levels/TunnelBase/troia_pallette.png"
+dest_files=[ "res://.import/troia_pallette.png-bcc9a8aa7f5c89feba84bda2df8fcfaa.stex" ]
 
 [params]
 

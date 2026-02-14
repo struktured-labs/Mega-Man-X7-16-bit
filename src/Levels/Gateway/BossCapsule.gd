@@ -13,10 +13,10 @@ func _ready() -> void:
 	active.modulate = color
 	active.modulate.a = .8
 	portal.connect("teleport_start",self,"on_teleport")
-	Event.connect("gateway_crystal_get",self,"on_crystal_got")
-	Event.connect("gateway_boss_defeated",self,"on_boss_defeated")
-	Event.connect("gateway_lock_capsules",self,"on_lock")
-	Event.connect("gateway_unlock_capsules",self,"unlock")
+	Event.connect("palace_crystal_get",self,"on_crystal_got")
+	Event.connect("palace_boss_defeated",self,"on_boss_defeated")
+	Event.connect("palace_lock_capsules",self,"on_lock")
+	Event.connect("palace_unlock_capsules",self,"unlock")
 
 func on_teleport():
 	if boss_name == "none":

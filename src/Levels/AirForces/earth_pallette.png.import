@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/earth_pallette.png-5b2c5ccb6c0d876d21fb4db7f0eccfd6.stex"
+path="res://.import/earth_pallette.png-772ea3a0bf9a4b191f08b8f27acfd556.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/JakobElevator/earth_pallette.png"
-dest_files=[ "res://.import/earth_pallette.png-5b2c5ccb6c0d876d21fb4db7f0eccfd6.stex" ]
+source_file="res://src/Levels/AirForces/earth_pallette.png"
+dest_files=[ "res://.import/earth_pallette.png-772ea3a0bf9a4b191f08b8f27acfd556.stex" ]
 
 [params]
 

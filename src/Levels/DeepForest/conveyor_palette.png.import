@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/conveyor_palette.png-b0495f7f85511a241d4f465b95afb99f.stex"
+path="res://.import/conveyor_palette.png-0390861846933a9404e6681688f193ac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/BoosterForest/conveyor_palette.png"
-dest_files=[ "res://.import/conveyor_palette.png-b0495f7f85511a241d4f465b95afb99f.stex" ]
+source_file="res://src/Levels/DeepForest/conveyor_palette.png"
+dest_files=[ "res://.import/conveyor_palette.png-0390861846933a9404e6681688f193ac.stex" ]
 
 [params]
 

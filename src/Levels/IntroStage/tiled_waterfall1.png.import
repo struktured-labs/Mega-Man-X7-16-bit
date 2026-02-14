@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tiled_waterfall1.png-07ee7e7bf0d2ea33f717384f9e3be8af.stex"
+path="res://.import/tiled_waterfall1.png-71067a9e265b32ea0fd2df2a5863a5c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/tiled_waterfall1.png"
-dest_files=[ "res://.import/tiled_waterfall1.png-07ee7e7bf0d2ea33f717384f9e3be8af.stex" ]
+source_file="res://src/Levels/IntroStage/tiled_waterfall1.png"
+dest_files=[ "res://.import/tiled_waterfall1.png-71067a9e265b32ea0fd2df2a5863a5c1.stex" ]
 
 [params]
 

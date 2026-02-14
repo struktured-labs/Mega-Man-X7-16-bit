@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/doispontos.png-759b94b97415c9f9a05f7a84be2c947e.stex"
+path="res://.import/doispontos.png-06965152c6e8af37944bc8702328557f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/TroiaBase/ComboSystem/doispontos.png"
-dest_files=[ "res://.import/doispontos.png-759b94b97415c9f9a05f7a84be2c947e.stex" ]
+source_file="res://src/Levels/TunnelBase/ComboSystem/doispontos.png"
+dest_files=[ "res://.import/doispontos.png-06965152c6e8af37944bc8702328557f.stex" ]
 
 [params]
 

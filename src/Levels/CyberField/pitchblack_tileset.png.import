@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pitchblack_tileset.png-cf282df6c8c0fafa637e35cee2be0a7c.stex"
+path="res://.import/pitchblack_tileset.png-7ef8cb01a7c0645e9937c78d7fc62e1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/pitchblack_tileset.png"
-dest_files=[ "res://.import/pitchblack_tileset.png-cf282df6c8c0fafa637e35cee2be0a7c.stex" ]
+source_file="res://src/Levels/CyberField/pitchblack_tileset.png"
+dest_files=[ "res://.import/pitchblack_tileset.png-7ef8cb01a7c0645e9937c78d7fc62e1e.stex" ]
 
 [params]
 

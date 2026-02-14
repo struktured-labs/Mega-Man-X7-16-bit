@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/final_fight.png-58c5473600e12e628a46da065267eb6a.stex"
+path="res://.import/final_fight.png-3d7d3256531e0e513d8ed88e7c905298.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/final_fight.png"
-dest_files=[ "res://.import/final_fight.png-58c5473600e12e628a46da065267eb6a.stex" ]
+source_file="res://src/Levels/CrimsonPalace/final_fight.png"
+dest_files=[ "res://.import/final_fight.png-3d7d3256531e0e513d8ed88e7c905298.stex" ]
 
 [params]
 

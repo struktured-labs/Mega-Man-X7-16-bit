@@ -6,7 +6,7 @@ func _ready() -> void:
 	pass
 
 func guarantee_all_attacks_on_start():
-	var set_boss_order = GameManager.lumine_boss_order
+	var set_boss_order = GameManager.sigma_boss_order
 	if set_boss_order and set_boss_order.size() == 8:
 		order_of_attacks = set_boss_order
 	else:

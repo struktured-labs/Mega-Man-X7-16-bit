@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/troialines.png-956453a3dbbf58a2b7cd92b07c10cdd1.stex"
+path="res://.import/troialines.png-914c93c3895ee4ecdf230d3352900cf9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/TroiaBase/troialines.png"
-dest_files=[ "res://.import/troialines.png-956453a3dbbf58a2b7cd92b07c10cdd1.stex" ]
+source_file="res://src/Levels/TunnelBase/troialines.png"
+dest_files=[ "res://.import/troialines.png-914c93c3895ee4ecdf230d3352900cf9.stex" ]
 
 [params]
 

@@ -7,7 +7,7 @@ const guide_particle = preload("res://src/Levels/Gateway/GuidePaticle.tscn")
 onready var door: StaticBody2D = $"../../Door"
 
 func _ready() -> void:
-	Event.connect("gateway_capsule_teleport",self,"_on_Door_open")
+	Event.connect("palace_capsule_teleport",self,"_on_Door_open")
 
 
 func _on_BossWatcher_ready_for_battle() -> void:

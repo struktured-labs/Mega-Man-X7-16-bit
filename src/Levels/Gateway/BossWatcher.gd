@@ -12,9 +12,9 @@ signal prepare_for_sigma
 onready var ready_effect: Sprite = $"../charge_circle2"
 
 func _ready() -> void:
-	Event.connect("gateway_crystal_get",self,"on_crystal_got")
-	Event.connect("gateway_boss_defeated",self,"on_boss_defeated")
-	Event.connect("gateway_final_section",self,"start_final_section")
+	Event.connect("palace_crystal_get",self,"on_crystal_got")
+	Event.connect("palace_boss_defeated",self,"on_boss_defeated")
+	Event.connect("palace_final_section",self,"start_final_section")
 	Tools.timer(0.1,"update_based_on_savedata",self)
 	
 	for child in get_children():
@@ -25,7 +25,7 @@ func _ready() -> void:
 func update_based_on_savedata() -> void:
 	for boss in GatewayManager.beaten_bosses:
 		print("Boss defeated: " + boss)
-		Event.emit_signal("gateway_boss_defeated",boss)
+		Event.emit_signal("palace_boss_defeated",boss)
 	
 	if has_defeated_all_bosses():
 		GameManager.music_player.start_slow_fade_out()
@@ -37,7 +37,7 @@ func on_boss_defeated(boss_name) -> void:
 	
 	remove_ready_crystal(boss_name)
 	if crystals_ready.size() < 2:
-		Event.emit_signal("gateway_unlock_capsules")
+		Event.emit_signal("palace_unlock_capsules")
 	
 func add_ready_crystal(boss_name) -> void:
 	crystals_ready.append(boss_name)
@@ -59,7 +59,7 @@ func on_crystal_got(boss_name) -> void:
 		add_ready_crystal(boss_name)
 	
 	if has_enough_crystals():
-		Event.emit_signal("gateway_lock_capsules")
+		Event.emit_signal("palace_lock_capsules")
 		Tools.timer(0.5,"activate",ready_effect)
 		emit_signal("ready_for_battle")
 

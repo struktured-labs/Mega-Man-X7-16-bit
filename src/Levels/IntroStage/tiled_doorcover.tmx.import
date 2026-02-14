@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/tiled_doorcover.tmx-6cea89a9f307962afcfd9465001e8564.scn"
+path="res://.import/tiled_doorcover.tmx-9e611a272ffe57ffe5b13d2733a50414.scn"
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/tiled_doorcover.tmx"
-dest_files=[ "res://.import/tiled_doorcover.tmx-6cea89a9f307962afcfd9465001e8564.scn" ]
+source_file="res://src/Levels/IntroStage/tiled_doorcover.tmx"
+dest_files=[ "res://.import/tiled_doorcover.tmx-9e611a272ffe57ffe5b13d2733a50414.scn" ]
 
 [params]
 

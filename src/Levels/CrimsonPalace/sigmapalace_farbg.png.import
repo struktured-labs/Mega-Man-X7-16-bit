@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sigmapalace_farbg.png-e5231c17525ce198f12eb4539247221c.stex"
+path="res://.import/sigmapalace_farbg.png-2c030478aa5123fecd952328beee67ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/sigmapalace_farbg.png"
-dest_files=[ "res://.import/sigmapalace_farbg.png-e5231c17525ce198f12eb4539247221c.stex" ]
+source_file="res://src/Levels/CrimsonPalace/sigmapalace_farbg.png"
+dest_files=[ "res://.import/sigmapalace_farbg.png-2c030478aa5123fecd952328beee67ea.stex" ]
 
 [params]
 

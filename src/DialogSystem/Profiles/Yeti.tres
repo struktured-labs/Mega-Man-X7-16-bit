@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Avalanche Yeti"
+name = "Soldier Stonekong"
 portrait_animations = ExtResource( 2 )
 text_palette = ExtResource( 3 )
 audio_pitch = 0.75

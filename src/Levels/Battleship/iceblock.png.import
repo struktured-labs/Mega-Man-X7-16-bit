@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/iceblock.png-ede81aab334946800811f5a3d335e365.stex"
+path="res://.import/iceblock.png-6ab6a23bcf192d0fc4307c0bba2d066a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/CentralWhite/iceblock.png"
-dest_files=[ "res://.import/iceblock.png-ede81aab334946800811f5a3d335e365.stex" ]
+source_file="res://src/Levels/Battleship/iceblock.png"
+dest_files=[ "res://.import/iceblock.png-6ab6a23bcf192d0fc4307c0bba2d066a.stex" ]
 
 [params]
 

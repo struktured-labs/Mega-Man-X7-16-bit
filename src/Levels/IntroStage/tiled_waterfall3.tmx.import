@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/tiled_waterfall3.tmx-09308376d8112a4bbf2868a4f0518c72.scn"
+path="res://.import/tiled_waterfall3.tmx-89325592c8ccaee6311c3b31888fd3d1.scn"
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/tiled_waterfall3.tmx"
-dest_files=[ "res://.import/tiled_waterfall3.tmx-09308376d8112a4bbf2868a4f0518c72.scn" ]
+source_file="res://src/Levels/IntroStage/tiled_waterfall3.tmx"
+dest_files=[ "res://.import/tiled_waterfall3.tmx-89325592c8ccaee6311c3b31888fd3d1.scn" ]
 
 [params]
 

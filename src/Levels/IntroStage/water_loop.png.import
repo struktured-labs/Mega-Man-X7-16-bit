@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/water_loop.png-921cbb78f70bb5d68fd3e78aaa6fb38b.stex"
+path="res://.import/water_loop.png-018c7a315f5e6996d73813f612a946e1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/water_loop.png"
-dest_files=[ "res://.import/water_loop.png-921cbb78f70bb5d68fd3e78aaa6fb38b.stex" ]
+source_file="res://src/Levels/IntroStage/water_loop.png"
+dest_files=[ "res://.import/water_loop.png-018c7a315f5e6996d73813f612a946e1.stex" ]
 
 [params]
 

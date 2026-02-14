@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg2.png-89a7878c4ac7c44b0ea6baa90f9298f8.stex"
+path="res://.import/bg2.png-bd6335a1c027dc9a2f91e1e2f95e83c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Dynasty/bg2.png"
-dest_files=[ "res://.import/bg2.png-89a7878c4ac7c44b0ea6baa90f9298f8.stex" ]
+source_file="res://src/Levels/RadioTower/bg2.png"
+dest_files=[ "res://.import/bg2.png-bd6335a1c027dc9a2f91e1e2f95e83c7.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eletric_platform.png-a52f5d4c55848e18194bba86831b05bc.stex"
+path="res://.import/eletric_platform.png-3c4e11607a76e7429fa82b1b36b6f24f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/JakobElevator/eletric_platform.png"
-dest_files=[ "res://.import/eletric_platform.png-a52f5d4c55848e18194bba86831b05bc.stex" ]
+source_file="res://src/Levels/AirForces/eletric_platform.png"
+dest_files=[ "res://.import/eletric_platform.png-3c4e11607a76e7429fa82b1b36b6f24f.stex" ]
 
 [params]
 

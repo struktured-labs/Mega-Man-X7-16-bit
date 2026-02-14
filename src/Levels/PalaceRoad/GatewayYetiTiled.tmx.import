@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/GatewayYetiTiled.tmx-c52e268557d7dc6da963d9f6bbc7a881.scn"
+path="res://.import/GatewayYetiTiled.tmx-f02357b1c6932e5fba3cb014c7c2920c.scn"
 
 [deps]
 
-source_file="res://src/Levels/Gateway/GatewayYetiTiled.tmx"
-dest_files=[ "res://.import/GatewayYetiTiled.tmx-c52e268557d7dc6da963d9f6bbc7a881.scn" ]
+source_file="res://src/Levels/PalaceRoad/GatewayYetiTiled.tmx"
+dest_files=[ "res://.import/GatewayYetiTiled.tmx-f02357b1c6932e5fba3cb014c7c2920c.scn" ]
 
 [params]
 

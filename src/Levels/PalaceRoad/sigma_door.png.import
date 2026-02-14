@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/sigma_door.png-5e045e342843a58eb686bd8ee9520e07.stex"
+path="res://.import/sigma_door.png-309e1738777081e641fb5e4c1f895dbd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Gateway/sigma_door.png"
-dest_files=[ "res://.import/sigma_door.png-5e045e342843a58eb686bd8ee9520e07.stex" ]
+source_file="res://src/Levels/PalaceRoad/sigma_door.png"
+dest_files=[ "res://.import/sigma_door.png-309e1738777081e641fb5e4c1f895dbd.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/tileset_inferno.tsx-2c7561810f6a6a7cd1c8bb90267c136f.res"
+path="res://.import/tileset_inferno.tsx-dac677f23b4c6ec43835a89ac18174f3.res"
 
 [deps]
 
-source_file="res://src/Levels/Inferno/tileset_inferno.tsx"
-dest_files=[ "res://.import/tileset_inferno.tsx-2c7561810f6a6a7cd1c8bb90267c136f.res" ]
+source_file="res://src/Levels/LavaFactory/tileset_inferno.tsx"
+dest_files=[ "res://.import/tileset_inferno.tsx-dac677f23b4c6ec43835a89ac18174f3.res" ]
 
 [params]
 

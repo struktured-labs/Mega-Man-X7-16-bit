@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NoahsPark2.png-14dea0242a8858193c12568eb3b9607f.stex"
+path="res://.import/NoahsPark2.png-df38d8f70d9791fb02e4f7922a87947a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/NoahsPark2.png"
-dest_files=[ "res://.import/NoahsPark2.png-14dea0242a8858193c12568eb3b9607f.stex" ]
+source_file="res://src/Levels/IntroStage/NoahsPark2.png"
+dest_files=[ "res://.import/NoahsPark2.png-df38d8f70d9791fb02e4f7922a87947a.stex" ]
 
 [params]
 

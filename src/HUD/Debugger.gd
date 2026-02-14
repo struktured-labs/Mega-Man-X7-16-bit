@@ -312,27 +312,27 @@ func _on_defeat_boss_pressed() -> void:
 
 
 func _on_seraph_lumine_pressed() -> void:
-	GameManager.go_to_lumine_boss_test()
+	GameManager.go_to_sigma_boss_test()
 	pass # Replace with function body.
 
 
 func _on_rooster_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","rooster")
+	Event.emit_signal("palace_crystal_get","rooster")
 func _on_manow_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","manowar")
+	Event.emit_signal("palace_crystal_get","manowar")
 func _on_trilo_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","trilobyte")
+	Event.emit_signal("palace_crystal_get","trilobyte")
 func _on_sunf_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","sunflower")
+	Event.emit_signal("palace_crystal_get","sunflower")
 func _on_yeti_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","yeti")
+	Event.emit_signal("palace_crystal_get","yeti")
 func _on_panda_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","panda")
+	Event.emit_signal("palace_crystal_get","panda")
 func _on_mantis_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","mantis")
+	Event.emit_signal("palace_crystal_get","mantis")
 
 func _on_anton_crystal_pressed() -> void:
-	Event.emit_signal("gateway_crystal_get","antonion")
+	Event.emit_signal("palace_crystal_get","antonion")
 	pass # Replace with function body.
 
 
@@ -343,7 +343,7 @@ func _on_gateway_reset_pressed() -> void:
 
 
 func _on_gateway_final_pressed() -> void:
-	Event.emit_signal("gateway_final_section")
+	Event.emit_signal("palace_final_section")
 
 
 func _on_sss_rank_pressed() -> void:

@@ -652,7 +652,7 @@ margin_right = 59.0
 margin_bottom = 40.0
 texture = ExtResource( 46 )
 script = ExtResource( 47 )
-fullset_signal = "full_hermes"
+fullset_signal = "full_glide"
 
 [node name="animatedSprite" type="AnimatedSprite" parent="Menu/special_holder"]
 position = Vector2( 48, 27 )
@@ -686,7 +686,7 @@ margin_right = 59.0
 margin_bottom = 40.0
 texture = ExtResource( 45 )
 script = ExtResource( 47 )
-fullset_signal = "full_icarus"
+fullset_signal = "full_glide"
 
 [node name="animatedSprite" type="AnimatedSprite" parent="Menu/special_holder2"]
 position = Vector2( 48, 27 )

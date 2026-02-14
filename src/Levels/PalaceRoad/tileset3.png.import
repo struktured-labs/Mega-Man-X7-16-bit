@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/tileset3.png-330f04600a76c6f9a50389b5d47ab16e.stex"
+path="res://.import/tileset3.png-1c3dbfc19129cbe41fcc9c7bdf04a698.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Gateway/tileset3.png"
-dest_files=[ "res://.import/tileset3.png-330f04600a76c6f9a50389b5d47ab16e.stex" ]
+source_file="res://src/Levels/PalaceRoad/tileset3.png"
+dest_files=[ "res://.import/tileset3.png-1c3dbfc19129cbe41fcc9c7bdf04a698.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/generator_door.png-98c2570fec4a2ee6f1ea825cb7ba501b.stex"
+path="res://.import/generator_door.png-a5c796090bcb7622c9d61f17925a0e2b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/generator_door.png"
-dest_files=[ "res://.import/generator_door.png-98c2570fec4a2ee6f1ea825cb7ba501b.stex" ]
+source_file="res://src/Levels/CyberField/generator_door.png"
+dest_files=[ "res://.import/generator_door.png-a5c796090bcb7622c9d61f17925a0e2b.stex" ]
 
 [params]
 

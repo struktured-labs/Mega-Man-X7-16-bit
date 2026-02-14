@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/parallax_5.png-56d0d65b037472b9d26f79517c8d516f.stex"
+path="res://.import/parallax_5.png-f91cbe4d887772d3c5e2ab551f4f2849.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/CentralWhite/parallax_5.png"
-dest_files=[ "res://.import/parallax_5.png-56d0d65b037472b9d26f79517c8d516f.stex" ]
+source_file="res://src/Levels/Battleship/parallax_5.png"
+dest_files=[ "res://.import/parallax_5.png-f91cbe4d887772d3c5e2ab551f4f2849.stex" ]
 
 [params]
 

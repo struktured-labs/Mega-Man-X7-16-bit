@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/road.png-a5cb17cbc355e820bb041c9aab9d3b44.stex"
+path="res://.import/road.png-82b5d27ccf34d0d60af1cca33a5684f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/JakobElevator/road.png"
-dest_files=[ "res://.import/road.png-a5cb17cbc355e820bb041c9aab9d3b44.stex" ]
+source_file="res://src/Levels/AirForces/road.png"
+dest_files=[ "res://.import/road.png-82b5d27ccf34d0d60af1cca33a5684f7.stex" ]
 
 [params]
 

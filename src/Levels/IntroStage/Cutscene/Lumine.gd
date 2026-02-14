@@ -10,7 +10,7 @@ func _ready() -> void:
 
 func on_talk(character_name):
 	if appeared:
-		if character_name == "Lumine":
+		if character_name == "Sigma":
 			play("talk")
 		else:
 			play("idle")

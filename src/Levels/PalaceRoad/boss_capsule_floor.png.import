@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boss_capsule_floor.png-8860cb20ffb2ddab4a868e5505c37109.stex"
+path="res://.import/boss_capsule_floor.png-d8b1685b126da5998f162193c0f32d7f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Gateway/boss_capsule_floor.png"
-dest_files=[ "res://.import/boss_capsule_floor.png-8860cb20ffb2ddab4a868e5505c37109.stex" ]
+source_file="res://src/Levels/PalaceRoad/boss_capsule_floor.png"
+dest_files=[ "res://.import/boss_capsule_floor.png-d8b1685b126da5998f162193c0f32d7f.stex" ]
 
 [params]
 

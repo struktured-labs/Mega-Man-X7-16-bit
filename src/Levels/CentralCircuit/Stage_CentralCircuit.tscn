@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=2]
+[gd_scene load_steps=121 format=2]
 
 [ext_resource path="res://src/Actors/Enemies/BigMechaniloid/EnemyMechaniloid.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Pickups/SubTank.tscn" type="PackedScene" id=2]
@@ -71,6 +71,7 @@
 [ext_resource path="res://src/Levels/MetalValley/sandstorm.gd" type="Script" id=69]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=70]
 [ext_resource path="res://src/Actors/Enemies/Respawner.gd" type="Script" id=74]
+[ext_resource path="res://src/Objects/RescueReploid.tscn" type="PackedScene" id=75]
 
 [sub_resource type="CanvasItemMaterial" id=109]
 particles_animation = true
@@ -1924,6 +1925,39 @@ max_health = 200.0
 [node name="IGTimer" parent="." index="9" instance=ExtResource( 70 )]
 section = "Metal Valley"
 
+
+[node name="RescueReploid1" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( -500, -300 )
+reploid_id = "central_circuit_1"
+reward_type = "none"
+[node name="RescueReploid2" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( 500, -100 )
+reploid_id = "central_circuit_2"
+reward_type = "none"
+[node name="RescueReploid3" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( 1500, 200 )
+reploid_id = "central_circuit_3"
+reward_type = "none"
+[node name="RescueReploid4" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( 2200, 400 )
+reploid_id = "central_circuit_4"
+reward_type = "life_up"
+[node name="RescueReploid5" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( 2800, 500 )
+reploid_id = "central_circuit_5"
+reward_type = "none"
+[node name="RescueReploid6" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( 3500, 250 )
+reploid_id = "central_circuit_6"
+reward_type = "none"
+[node name="RescueReploid7" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( 4000, -200 )
+reploid_id = "central_circuit_7"
+reward_type = "extra_life"
+[node name="RescueReploid8" parent="Objects" instance=ExtResource( 75 )]
+position = Vector2( 4300, 700 )
+reploid_id = "central_circuit_8"
+reward_type = "none"
 [connection signal="body_entered" from="Scenery/parallaxBackground/OutsideBGActivator" to="Scenery/parallaxBackground/OutsideBGActivator" method="_on_area2D_body_entered"]
 [connection signal="body_exited" from="Scenery/parallaxBackground/OutsideBGActivator" to="Scenery/parallaxBackground/OutsideBGActivator" method="_on_BackgroundSwap_body_exited"]
 [connection signal="body_entered" from="Scenery/parallaxBackground/Cave1BGActivator" to="Scenery/parallaxBackground/Cave1BGActivator" method="_on_area2D_body_entered"]

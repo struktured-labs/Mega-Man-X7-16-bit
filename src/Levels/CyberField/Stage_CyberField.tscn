@@ -1,4 +1,4 @@
-[gd_scene load_steps=128 format=2]
+[gd_scene load_steps=129 format=2]
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=2]
@@ -87,6 +87,7 @@
 [ext_resource path="res://src/AchievementSystem/Achievements/MANTISUNDETECTED.tres" type="Resource" id=85]
 [ext_resource path="res://src/Levels/Inferno/DeathShock.tscn" type="PackedScene" id=86]
 [ext_resource path="res://src/Levels/PitchBlack/parent_mover.gd" type="Script" id=87]
+[ext_resource path="res://src/Objects/RescueReploid.tscn" type="PackedScene" id=88]
 
 [sub_resource type="RectangleShape2D" id=52]
 extents = Vector2( 2303.5, 557 )
@@ -7540,6 +7541,39 @@ rotate = false
 [node name="IGTimer" parent="." instance=ExtResource( 46 )]
 section = "Pitch Black"
 
+
+[node name="RescueReploid1" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( -1500, -700 )
+reploid_id = "cyber_field_1"
+reward_type = "none"
+[node name="RescueReploid2" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( -500, -500 )
+reploid_id = "cyber_field_2"
+reward_type = "none"
+[node name="RescueReploid3" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 800, -300 )
+reploid_id = "cyber_field_3"
+reward_type = "none"
+[node name="RescueReploid4" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 1500, -100 )
+reploid_id = "cyber_field_4"
+reward_type = "life_up"
+[node name="RescueReploid5" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 2500, 100 )
+reploid_id = "cyber_field_5"
+reward_type = "none"
+[node name="RescueReploid6" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 3500, 300 )
+reploid_id = "cyber_field_6"
+reward_type = "none"
+[node name="RescueReploid7" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 4800, 50 )
+reploid_id = "cyber_field_7"
+reward_type = "extra_life"
+[node name="RescueReploid8" parent="Objects" instance=ExtResource( 88 )]
+position = Vector2( 5800, -400 )
+reploid_id = "cyber_field_8"
+reward_type = "none"
 [connection signal="animation_finished" from="camera2D/Ready Warning Text" to="camera2D/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="body_entered" from="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" to="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" method="_on_area2D_body_entered"]
 [connection signal="body_exited" from="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" to="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" method="_on_BackgroundSwap_body_exited"]

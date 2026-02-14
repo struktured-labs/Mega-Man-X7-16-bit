@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/finish_line.png-62083d92098dd4cddf492bb5287085fe.stex"
+path="res://.import/finish_line.png-466a80eeab0c98922f8bc4f53f171293.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/TroiaBase/ComboSystem/finish_line.png"
-dest_files=[ "res://.import/finish_line.png-62083d92098dd4cddf492bb5287085fe.stex" ]
+source_file="res://src/Levels/TunnelBase/ComboSystem/finish_line.png"
+dest_files=[ "res://.import/finish_line.png-466a80eeab0c98922f8bc4f53f171293.stex" ]
 
 [params]
 

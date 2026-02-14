@@ -20,6 +20,7 @@ onready var ride_hp: TextureProgress = $"Ride Bar/textureProgress"
 
 
 onready var rec_info: RichTextLabel = $"Rec Info"
+onready var reploid_counter: Label = $"ReploidCounter"
 
 onready var black_screen = $BlackScreen
 onready var white_screen = $WhiteScreen
@@ -42,6 +43,10 @@ var last_message
 
 var ride_hp_tween : SceneTreeTween
 
+# Tag-team partner health indicator
+var partner_bar_label : Label
+var partner_bar_created := false
+
 func show_rng():
 	rec_info.text = "BossRNG: " + str(BossRNG.seed_rng)
 
@@ -59,16 +64,20 @@ func _ready() -> void:
 		Event.listen("boss_health_hide",self,"hide_boss_hp")
 	Event.listen("healable_amount",self,"on_healable_amount")
 	Event.listen("disabled_lifesteal",self,"hide_healable_amount")
+	Event.listen("rescue_reploid",self,"update_reploid_counter")
 	Event.listen("fade_out",self,"start_fade_out")
 	Event.listen("final_fade_out",self,"start_final_fade_out")
 	Event.listen("new_camera_focus",self,"change_camera_focus")
-	Event.connect("beat_seraph_lumine",self,"stop_chronometer")
+	Event.connect("final_fade_out",self,"stop_chronometer")
 	#Event.listen("player_death",self,"stop_chronometer")
 	#Event.listen("enemy_kill",self,"try_stop_chronometer")
 	BossRNG.connect("updated_rng",self,"show_rng")
 	BossRNG.connect("decided_boss_order",self,"show_boss_attack")
+	Event.listen("tag_switch",self,"on_tag_switch")
 	call_deferred("connect_debug")
 	call_deferred("on_showdebug","ShowDebug")
+	call_deferred("update_reploid_counter")
+	call_deferred("setup_partner_bar")
 
 func connect_debug():
 	Configurations.listen("value_changed",self,"on_showdebug")
@@ -152,11 +161,12 @@ func _process(delta: float) -> void:
 	process_fade(delta)
 	process_player_bar_size()
 	process_blink(delta)
-	
+	update_partner_bar()
+
 	i_info.text = "Inputs:" + show_input_info()
 	b_info.text = "FPS: " + str(Engine.get_frames_per_second())
 	b_info.text += "\n" + show_boss_health_and_weapon(delta)
-	
+
 	timer += delta
 	if chronometering:
 		chronotimer += delta
@@ -266,6 +276,78 @@ func show_input_info() -> String:
 		#if Input.is_action_just_released("jump"):
 		#	Log("jump_rls")
 	return text
+
+func update_reploid_counter() -> void:
+	var count = GameManager.get_rescued_count()
+	reploid_counter.text = "R:" + str(count).pad_zeros(2) + "/64"
+	reploid_counter.visible = count > 0
+
+# --- Tag-Team Partner Bar ---
+
+func setup_partner_bar() -> void:
+	if partner_bar_created:
+		return
+	# Create a small label to show partner name + health
+	partner_bar_label = Label.new()
+	partner_bar_label.name = "PartnerBar"
+	partner_bar_label.rect_position = Vector2(8, 112)
+	partner_bar_label.rect_size = Vector2(60, 14)
+	partner_bar_label.visible = false
+	# Use the same font as other HUD elements if available
+	var font = reploid_counter.get("custom_fonts/font")
+	if font:
+		partner_bar_label.set("custom_fonts/font", font)
+	partner_bar_label.set("custom_colors/font_color", Color(0.7, 0.85, 1.0, 1.0))
+	add_child(partner_bar_label)
+	partner_bar_created = true
+
+func on_tag_switch() -> void:
+	# Update the ride bar to show partner health instead when tag-team is active
+	pass
+
+func update_partner_bar() -> void:
+	if not partner_bar_created or not is_instance_valid(partner_bar_label):
+		return
+
+	if not GameManager.is_tag_team_active():
+		partner_bar_label.visible = false
+		return
+
+	var partner = GameManager.get_inactive_player()
+	if not is_instance_valid(partner):
+		partner_bar_label.visible = false
+		return
+
+	partner_bar_label.visible = true
+	var health_pct = partner.current_health / partner.max_health
+	var bar_length := 8
+	var filled = int(health_pct * bar_length)
+	var empty_count = bar_length - filled
+	var bar_text = ""
+	for _i in range(filled):
+		bar_text += "|"
+	for _i in range(empty_count):
+		bar_text += "."
+
+	# Show partner name abbreviation + health bar
+	var partner_name = partner.name.left(1)
+	partner_bar_label.text = partner_name + "[" + bar_text + "]"
+
+	# Color based on health
+	if health_pct > 0.5:
+		partner_bar_label.set("custom_colors/font_color", Color(0.7, 0.85, 1.0, 1.0))
+	elif health_pct > 0.25:
+		partner_bar_label.set("custom_colors/font_color", Color(1.0, 0.85, 0.3, 1.0))
+	else:
+		partner_bar_label.set("custom_colors/font_color", Color(1.0, 0.3, 0.3, 1.0))
+
+	# Also show partner health on the Ride Bar when no ride armor is active
+	if GameManager.is_tag_team_active():
+		if not is_instance_valid(GameManager.player) or not is_instance_valid(GameManager.player.ride):
+			ride_bar.visible = true
+			ride_hp.value = ceil((partner.current_health / partner.max_health) * 32)
+
+# --- End Tag-Team Partner Bar ---
 
 func Log(message):
 	if last_message != message:

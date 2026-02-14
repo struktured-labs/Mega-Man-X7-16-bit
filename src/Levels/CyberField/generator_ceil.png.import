@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/generator_ceil.png-8438cd43a835836a011e1a2af1c75c69.stex"
+path="res://.import/generator_ceil.png-5e2c12f5784eb8ef5cb4a57ec34dd50c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/generator_ceil.png"
-dest_files=[ "res://.import/generator_ceil.png-8438cd43a835836a011e1a2af1c75c69.stex" ]
+source_file="res://src/Levels/CyberField/generator_ceil.png"
+dest_files=[ "res://.import/generator_ceil.png-5e2c12f5784eb8ef5cb4a57ec34dd50c.stex" ]
 
 [params]
 

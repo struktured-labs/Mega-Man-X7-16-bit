@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gateway_earth.png-6ddee8dd97c654b9591b48eb762b086d.stex"
+path="res://.import/gateway_earth.png-3e40e4825563293fd36aa942815aa2c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Gateway/gateway_earth.png"
-dest_files=[ "res://.import/gateway_earth.png-6ddee8dd97c654b9591b48eb762b086d.stex" ]
+source_file="res://src/Levels/PalaceRoad/gateway_earth.png"
+dest_files=[ "res://.import/gateway_earth.png-3e40e4825563293fd36aa942815aa2c8.stex" ]
 
 [params]
 

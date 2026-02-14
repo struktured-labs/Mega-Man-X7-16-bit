@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dynasty_palette.png-ae67b210bac57631eaebaf27a362e711.stex"
+path="res://.import/dynasty_palette.png-28673c3d15f791183f800e4303ace5a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Dynasty/dynasty_palette.png"
-dest_files=[ "res://.import/dynasty_palette.png-ae67b210bac57631eaebaf27a362e711.stex" ]
+source_file="res://src/Levels/RadioTower/dynasty_palette.png"
+dest_files=[ "res://.import/dynasty_palette.png-28673c3d15f791183f800e4303ace5a3.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/combo_letter.png-1569502732342874f6f57352e324abdd.stex"
+path="res://.import/combo_letter.png-d6d295a047c58ff85d6c06be8e4092eb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/TroiaBase/ComboSystem/combo_letter.png"
-dest_files=[ "res://.import/combo_letter.png-1569502732342874f6f57352e324abdd.stex" ]
+source_file="res://src/Levels/TunnelBase/ComboSystem/combo_letter.png"
+dest_files=[ "res://.import/combo_letter.png-d6d295a047c58ff85d6c06be8e4092eb.stex" ]
 
 [params]
 

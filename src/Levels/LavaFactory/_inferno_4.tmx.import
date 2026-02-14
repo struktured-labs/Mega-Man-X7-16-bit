@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/_inferno_4.tmx-70c145abf70f8de229bb1ede1d9ed51c.scn"
+path="res://.import/_inferno_4.tmx-e5f3a8c1479f228c99d5627bc31619d0.scn"
 
 [deps]
 
-source_file="res://src/Levels/Inferno/_inferno_4.tmx"
-dest_files=[ "res://.import/_inferno_4.tmx-70c145abf70f8de229bb1ede1d9ed51c.scn" ]
+source_file="res://src/Levels/LavaFactory/_inferno_4.tmx"
+dest_files=[ "res://.import/_inferno_4.tmx-e5f3a8c1479f228c99d5627bc31619d0.scn" ]
 
 [params]
 

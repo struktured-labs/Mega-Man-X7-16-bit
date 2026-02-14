@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/NoahsPark.tsx-7d241d444c7005a41b8d8c829cb34040.res"
+path="res://.import/NoahsPark.tsx-fd1dac2a6e38544a054c4fc10eb51141.res"
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/NoahsPark.tsx"
-dest_files=[ "res://.import/NoahsPark.tsx-7d241d444c7005a41b8d8c829cb34040.res" ]
+source_file="res://src/Levels/IntroStage/NoahsPark.tsx"
+dest_files=[ "res://.import/NoahsPark.tsx-fd1dac2a6e38544a054c4fc10eb51141.res" ]
 
 [params]
 

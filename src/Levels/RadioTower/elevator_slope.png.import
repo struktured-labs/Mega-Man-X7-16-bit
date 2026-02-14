@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/elevator_slope.png-cd475acc363988039a8c3bff0362cff2.stex"
+path="res://.import/elevator_slope.png-399fb2ed9b24a6ed918d566d80c7f489.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Dynasty/elevator_slope.png"
-dest_files=[ "res://.import/elevator_slope.png-cd475acc363988039a8c3bff0362cff2.stex" ]
+source_file="res://src/Levels/RadioTower/elevator_slope.png"
+dest_files=[ "res://.import/elevator_slope.png-399fb2ed9b24a6ed918d566d80c7f489.stex" ]
 
 [params]
 

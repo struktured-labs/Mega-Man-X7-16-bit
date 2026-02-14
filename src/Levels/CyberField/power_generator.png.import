@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/power_generator.png-5ee3001189f5959ec06f6c541af6b0db.stex"
+path="res://.import/power_generator.png-9b467e019282cc4066941eb83e0d456e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/PitchBlack/power_generator.png"
-dest_files=[ "res://.import/power_generator.png-5ee3001189f5959ec06f6c541af6b0db.stex" ]
+source_file="res://src/Levels/CyberField/power_generator.png"
+dest_files=[ "res://.import/power_generator.png-9b467e019282cc4066941eb83e0d456e.stex" ]
 
 [params]
 

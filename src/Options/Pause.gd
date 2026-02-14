@@ -30,9 +30,9 @@ func _ready() -> void:
 	key_config.connect("end",self,"unlock_buttons") # warning-ignore:return_value_discarded
 	options_menu.connect("end",self,"unlock_buttons") # warning-ignore:return_value_discarded
 	achievements.connect("end",self,"unlock_buttons") # warning-ignore:return_value_discarded
-	Event.connect("lumine_desperation",self,"on_lumine_desperation")
-	
-func on_lumine_desperation():
+	Event.connect("sigma_desperation",self,"on_sigma_desperation")
+
+func on_sigma_desperation(_atk_direction = null):
 	endgame = true
 
 func lock_buttons() -> void:

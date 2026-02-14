@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ending_loop.png-635a7c4acda4868f3f435ab18ddd4fa7.stex"
+path="res://.import/ending_loop.png-448e34743b6abe2d986fcdb8565281f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/JakobElevator/ending_loop.png"
-dest_files=[ "res://.import/ending_loop.png-635a7c4acda4868f3f435ab18ddd4fa7.stex" ]
+source_file="res://src/Levels/AirForces/ending_loop.png"
+dest_files=[ "res://.import/ending_loop.png-448e34743b6abe2d986fcdb8565281f7.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/elec_plat1.png-1516f1a6d466d6f06cd149e6d14bf7a9.stex"
+path="res://.import/elec_plat1.png-ad64bfc566b7bc1f97dae69fee565b53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Dynasty/elec_plat1.png"
-dest_files=[ "res://.import/elec_plat1.png-1516f1a6d466d6f06cd149e6d14bf7a9.stex" ]
+source_file="res://src/Levels/RadioTower/elec_plat1.png"
+dest_files=[ "res://.import/elec_plat1.png-ad64bfc566b7bc1f97dae69fee565b53.stex" ]
 
 [params]
 

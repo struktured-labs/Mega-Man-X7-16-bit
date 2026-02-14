@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/Jakob_Tileset.tsx-bc45da0d30b008082087d0c598463d3e.res"
+path="res://.import/Jakob_Tileset.tsx-e1a1ef2d66a1f9f5527a924ea72fa2c7.res"
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/Jakob_Tileset.tsx"
-dest_files=[ "res://.import/Jakob_Tileset.tsx-bc45da0d30b008082087d0c598463d3e.res" ]
+source_file="res://src/Levels/CrimsonPalace/Jakob_Tileset.tsx"
+dest_files=[ "res://.import/Jakob_Tileset.tsx-e1a1ef2d66a1f9f5527a924ea72fa2c7.res" ]
 
 [params]
 

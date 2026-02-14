@@ -57,8 +57,8 @@ func emit_current_set_signals():
 		if "hermes" in piece: parts += 1
 		elif "icarus" in piece: parts -= 1
 	
-	if parts == 4: Event.emit_signal("full_hermes")
-	elif parts == -4: Event.emit_signal("full_icarus")
+	if parts == 4: Event.emit_signal("full_glide")
+	elif parts == -4: Event.emit_signal("full_glide")
 	else: Event.emit_signal("mixed_set")
 	
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bg3.png-6674b2e1f8bbeb195e22b548f86c26fe.stex"
+path="res://.import/bg3.png-c38d9922df7b602c746daa6342a89447.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/MetalValley/bg3.png"
-dest_files=[ "res://.import/bg3.png-6674b2e1f8bbeb195e22b548f86c26fe.stex" ]
+source_file="res://src/Levels/CentralCircuit/bg3.png"
+dest_files=[ "res://.import/bg3.png-c38d9922df7b602c746daa6342a89447.stex" ]
 
 [params]
 

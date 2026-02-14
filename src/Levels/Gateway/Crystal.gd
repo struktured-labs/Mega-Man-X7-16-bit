@@ -30,7 +30,7 @@ func activate() -> void:
 	particles.emitting = false
 	sfx.play()
 	Tools.timer(2,"reset",self,self,true)
-	Event.emit_signal("gateway_crystal_get",boss)
+	Event.emit_signal("palace_crystal_get",boss)
 
 func reset():
 	animation.scale = Vector2.ONE

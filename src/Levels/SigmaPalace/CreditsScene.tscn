@@ -145,7 +145,7 @@ margin_bottom = 1541.0
 custom_colors/font_color_shadow = Color( 0.105882, 0, 0.54902, 0.486275 )
 custom_fonts/normal_font = ExtResource( 25 )
 bbcode_enabled = true
-bbcode_text = "[center]Mega Man X8
+bbcode_text = "[center]Mega Man X7
 16-bit
 
 
@@ -247,12 +247,12 @@ Speedrunning Community![/color]
 
 
 [color=#47a1fc]Based on[/color]
-MEGAMAN X8
-Paradise Lost
+MEGAMAN X7
+16-bit Demake
 
 By CAPCOM
 [/center]"
-text = "Mega Man X8
+text = "Mega Man X7
 16-bit
 
 
@@ -354,8 +354,8 @@ Speedrunning Community!
 
 
 Based on
-MEGAMAN X8
-Paradise Lost
+MEGAMAN X7
+16-bit Demake
 
 By CAPCOM
 "
@@ -372,7 +372,7 @@ margin_bottom = 5218.0
 custom_colors/font_color_shadow = Color( 0.105882, 0, 0.54902, 0.486275 )
 custom_fonts/normal_font = ExtResource( 25 )
 bbcode_enabled = true
-bbcode_text = "[center][color=#47a1fc]Original Megaman X8 Staff[/color]
+bbcode_text = "[center][color=#47a1fc]Original Megaman X7 Staff[/color]
 
 [color=#47a1fc]Director[/color]
 Eiro Shirahama
@@ -675,7 +675,7 @@ and CAPCOM All Staff!
 
 Thanks for Playing!
 [/center]"
-text = "Original Megaman X8 Staff
+text = "Original Megaman X7 Staff
 
 Director
 Eiro Shirahama
@@ -992,7 +992,7 @@ margin_bottom = 847.0
 custom_colors/font_color = Color( 0.639216, 0.713726, 0.898039, 1 )
 custom_colors/font_color_shadow = Color( 0.0212727, 0.0892019, 0.286621, 0.545098 )
 custom_fonts/font = ExtResource( 25 )
-text = "Mega Man X8
+text = "Mega Man X7
 16-bit
 
 
@@ -1047,8 +1047,8 @@ OllimTR
 
 
 A Fangame based on
-MEGAMAN X8
-Paradise Lost
+MEGAMAN X7
+16-bit Demake
 
 By CAPCOM
 and it's incredible staff

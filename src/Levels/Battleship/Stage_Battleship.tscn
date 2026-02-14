@@ -1,4 +1,4 @@
-[gd_scene load_steps=127 format=2]
+[gd_scene load_steps=128 format=2]
 
 [ext_resource path="res://src/Levels/CentralWhite/Music Player.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
@@ -86,6 +86,7 @@
 [ext_resource path="res://src/Levels/Primrose/portal_deactivated.png" type="Texture" id=84]
 [ext_resource path="res://src/Levels/Gateway/Portal.tscn" type="PackedScene" id=85]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=86]
+[ext_resource path="res://src/Objects/RescueReploid.tscn" type="PackedScene" id=87]
 
 [sub_resource type="CanvasItemMaterial" id=94]
 particles_animation = true
@@ -1281,6 +1282,39 @@ despawnable = false
 [node name="IGTimer" parent="." instance=ExtResource( 86 )]
 section = "Central White"
 
+
+[node name="RescueReploid1" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( -3500, -400 )
+reploid_id = "battleship_1"
+reward_type = "none"
+[node name="RescueReploid2" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( -1500, -200 )
+reploid_id = "battleship_2"
+reward_type = "none"
+[node name="RescueReploid3" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( 500, -100 )
+reploid_id = "battleship_3"
+reward_type = "none"
+[node name="RescueReploid4" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( 2500, -600 )
+reploid_id = "battleship_4"
+reward_type = "life_up"
+[node name="RescueReploid5" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( 4500, -800 )
+reploid_id = "battleship_5"
+reward_type = "none"
+[node name="RescueReploid6" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( 7000, -900 )
+reploid_id = "battleship_6"
+reward_type = "none"
+[node name="RescueReploid7" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( 9500, -700 )
+reploid_id = "battleship_7"
+reward_type = "extra_life"
+[node name="RescueReploid8" parent="Objects" instance=ExtResource( 87 )]
+position = Vector2( 11500, -400 )
+reploid_id = "battleship_8"
+reward_type = "none"
 [connection signal="animation_finished" from="StateCamera/Ready Warning Text" to="StateCamera/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="body_entered" from="Scenery/CollapsingRepeating/SinkStarter" to="Scenery/CollapsingRepeating/SinkStarter" method="_on_SinkStarter_body_entered"]
 [connection signal="spawned" from="Scenery/CollapsingRepeating/Boss/MantaRay" to="Scenery/CollapsingRepeating" method="add_spawn_to_list"]

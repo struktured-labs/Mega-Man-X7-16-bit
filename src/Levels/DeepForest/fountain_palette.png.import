@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fountain_palette.png-65fbceaf063b5b407d7d8482acf5db3a.stex"
+path="res://.import/fountain_palette.png-2c75d367ecc19151ce1bd7906a707f6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/BoosterForest/fountain_palette.png"
-dest_files=[ "res://.import/fountain_palette.png-65fbceaf063b5b407d7d8482acf5db3a.stex" ]
+source_file="res://src/Levels/DeepForest/fountain_palette.png"
+dest_files=[ "res://.import/fountain_palette.png-2c75d367ecc19151ce1bd7906a707f6d.stex" ]
 
 [params]
 

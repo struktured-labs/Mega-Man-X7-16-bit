@@ -6,7 +6,7 @@ onready var blockage: Node2D = $"../../Scenery/GatewayTiled/Blockage"
 onready var collider: CollisionShape2D = $"../../Scenery/GatewayTiled/Blockage/staticBody2D/collisionShape2D"
 
 func _ready() -> void:
-	if GatewayManager.has_defeated_copy_sigma():
+	if GatewayManager.has_defeated_red():
 		activate()
 
 func activate():
@@ -16,7 +16,7 @@ func activate():
 func set_alarm_off():
 	active = false
 	play("down")
-	Event.emit_signal("gateway_final_section")
+	Event.emit_signal("palace_final_section")
 	blockage.visible = true
 	collider.set_deferred("disabled",false)
 

@@ -3,7 +3,7 @@ extends AudioStreamPlayer
 onready var tween := TweenController.new(self,false)
 
 func _ready() -> void:
-	Event.connect("lumine_went_seraph",self,"activate")
+	Event.connect("sigma_walls",self,"activate")
 	Event.connect("enemy_kill",self,"deactivate")
 
 func deactivate(enemy):

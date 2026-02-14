@@ -23,15 +23,15 @@ func _ready() -> void:
 		buttons.append(child)
 		i += 1
 	
-	if GameManager.lumine_boss_order:
+	if GameManager.sigma_boss_order:
 		display_set_boss_order()
 
 func display_set_boss_order():
 	var i = 0
 	for boss_button in buttons:
 		var label : Label = boss_button.get_child(0)
-		label.text = str(GameManager.lumine_boss_order[i] + 1)
-		print(GameManager.lumine_boss_order[i] + 1)
+		label.text = str(GameManager.sigma_boss_order[i] + 1)
+		print(GameManager.sigma_boss_order[i] + 1)
 		i += 1
 
 func on_boss_press(boss_number : int, button : Button):
@@ -50,7 +50,7 @@ func on_boss_press(boss_number : int, button : Button):
 	print(boss_order)
 	
 	if boss_order.size() == 8:
-		GameManager.lumine_boss_order = boss_order
+		GameManager.sigma_boss_order = boss_order
 		print(boss_order)
 
 func reset():

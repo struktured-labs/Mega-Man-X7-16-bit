@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/GatewayTrilo.tmx-843d535f33df4a821560da5cb11bf284.scn"
+path="res://.import/GatewayTrilo.tmx-092b61632925f6faac78979d16e15af6.scn"
 
 [deps]
 
-source_file="res://src/Levels/Gateway/GatewayTrilo.tmx"
-dest_files=[ "res://.import/GatewayTrilo.tmx-843d535f33df4a821560da5cb11bf284.scn" ]
+source_file="res://src/Levels/PalaceRoad/GatewayTrilo.tmx"
+dest_files=[ "res://.import/GatewayTrilo.tmx-092b61632925f6faac78979d16e15af6.scn" ]
 
 [params]
 

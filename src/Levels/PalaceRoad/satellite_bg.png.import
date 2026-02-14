@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/satellite_bg.png-63e4cc45784c1757b0a46d08b5e9b064.stex"
+path="res://.import/satellite_bg.png-3ffc488d2cd34eb4983b8a2d39de999d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/Gateway/satellite_bg.png"
-dest_files=[ "res://.import/satellite_bg.png-63e4cc45784c1757b0a46d08b5e9b064.stex" ]
+source_file="res://src/Levels/PalaceRoad/satellite_bg.png"
+dest_files=[ "res://.import/satellite_bg.png-3ffc488d2cd34eb4983b8a2d39de999d.stex" ]
 
 [params]
 

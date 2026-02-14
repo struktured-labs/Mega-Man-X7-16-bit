@@ -5,7 +5,7 @@ export var section := "section_name"
 var running := true
 
 func _ready() -> void:
-	Event.connect("beat_seraph_lumine",self,"stop")
+	Event.connect("final_fade_out",self,"stop")
 	running = true
 
 func _physics_process(delta: float) -> void:

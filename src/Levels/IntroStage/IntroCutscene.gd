@@ -47,7 +47,7 @@ onready var visual_skip: Control = $canvasLayer/VisualSkip
 var executing := false
 
 func _ready() -> void:
-	Event.connect("noahspark_cutscene_start",self,"start")
+	Event.connect("introstage_cutscene_start",self,"start")
 	Event.connect("dialog_concluded",self,"on_dialog_end")
 	Event.connect("kingcrab_crash",self,"explode_craft")
 	Event.emit_signal("disable_victory_ending")
@@ -62,7 +62,7 @@ func _ready() -> void:
 func start():
 	dialogbox = GameManager.dialog_box
 	if GameManager.was_dialogue_seen(dialog_4):
-		Event.emit_signal("noahspark_cutscene_end")
+		Event.emit_signal("introstage_cutscene_end")
 	else:
 		executing = true
 		set_physics_process(true)
@@ -126,7 +126,7 @@ func get_rid_of_everything_uneeded():
 	executing = false
 
 func end_skip():
-	Event.emit_signal("noahspark_cutscene_end")
+	Event.emit_signal("introstage_cutscene_end")
 
 func quick_fadeout():
 	skip_screencover.visible = true
@@ -355,7 +355,7 @@ func finish_cutscene():
 	kidnapped.visible = false
 	executing = false
 	set_physics_process(false)
-	Event.emit_signal("noahspark_cutscene_end")
+	Event.emit_signal("introstage_cutscene_end")
 	
 func explode_craft():
 	flash.start()

@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/BoosterForestTileset.tsx-7cd00d3637eeffe7fa318aa1ab11682f.res"
+path="res://.import/BoosterForestTileset.tsx-ae98b3c861c5a2244878768709adcda7.res"
 
 [deps]
 
-source_file="res://src/Levels/BoosterForest/BoosterForestTileset.tsx"
-dest_files=[ "res://.import/BoosterForestTileset.tsx-7cd00d3637eeffe7fa318aa1ab11682f.res" ]
+source_file="res://src/Levels/DeepForest/BoosterForestTileset.tsx"
+dest_files=[ "res://.import/BoosterForestTileset.tsx-ae98b3c861c5a2244878768709adcda7.res" ]
 
 [params]
 

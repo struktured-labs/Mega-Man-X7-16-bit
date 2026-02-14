@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/Inferno.tsx-cba3cb37403466ef6120001fc387fad1.res"
+path="res://.import/Inferno.tsx-4d14428221f01baf3e5eb84dc0fed0c8.res"
 
 [deps]
 
-source_file="res://src/Levels/NoahsPark/Inferno.tsx"
-dest_files=[ "res://.import/Inferno.tsx-cba3cb37403466ef6120001fc387fad1.res" ]
+source_file="res://src/Levels/IntroStage/Inferno.tsx"
+dest_files=[ "res://.import/Inferno.tsx-4d14428221f01baf3e5eb84dc0fed0c8.res" ]
 
 [params]
 

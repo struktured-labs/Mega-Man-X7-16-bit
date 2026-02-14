@@ -1,4 +1,4 @@
-[gd_scene load_steps=113 format=2]
+[gd_scene load_steps=114 format=2]
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Bosses/WindCrowrang/WindCrowrang.tscn" type="PackedScene" id=2]
@@ -75,6 +75,7 @@
 [ext_resource path="res://src/Levels/BoosterForest/ForegroundObject.gd" type="Script" id=73]
 [ext_resource path="res://src/Levels/BoosterForest/Bush.tscn" type="PackedScene" id=74]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=75]
+[ext_resource path="res://src/Objects/RescueReploid.tscn" type="PackedScene" id=76]
 
 [sub_resource type="ShaderMaterial" id=23]
 shader = ExtResource( 13 )
@@ -1337,6 +1338,39 @@ shape = SubResource( 29 )
 [node name="IGTimer" parent="." index="13" instance=ExtResource( 75 )]
 section = "Jakob Elevator"
 
+
+[node name="RescueReploid1" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( -1500, -3200 )
+reploid_id = "air_forces_1"
+reward_type = "none"
+[node name="RescueReploid2" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( -500, -2600 )
+reploid_id = "air_forces_2"
+reward_type = "none"
+[node name="RescueReploid3" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( 500, -1800 )
+reploid_id = "air_forces_3"
+reward_type = "none"
+[node name="RescueReploid4" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( 1200, -1300 )
+reploid_id = "air_forces_4"
+reward_type = "life_up"
+[node name="RescueReploid5" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( 1800, -800 )
+reploid_id = "air_forces_5"
+reward_type = "none"
+[node name="RescueReploid6" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( 2500, -400 )
+reploid_id = "air_forces_6"
+reward_type = "none"
+[node name="RescueReploid7" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( 3000, 100 )
+reploid_id = "air_forces_7"
+reward_type = "extra_life"
+[node name="RescueReploid8" parent="Objects" instance=ExtResource( 76 )]
+position = Vector2( 3500, 600 )
+reploid_id = "air_forces_8"
+reward_type = "none"
 [connection signal="visibility_changed" from="Scenery/parallaxBackground/mid_sky" to="parallaxBackground2/foreground" method="_on_mid_sky_visibility_changed"]
 [connection signal="body_entered" from="Scenery/Passarins2" to="Scenery/Passarins2" method="_on_area2D_body_entered"]
 [connection signal="activated" from="Objects/ManipulatorEnder" to="Objects/Elevator/CameraManipulator" method="deactivate"]

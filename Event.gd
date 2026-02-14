@@ -204,6 +204,16 @@ signal teleport_anteator
 signal teleport_crowrang
 signal teleport_gungaroo
 
+# Legacy X8 boss teleport signals (used by PalaceRoad boss capsules)
+signal teleport_sunflower
+signal teleport_panda
+signal teleport_rooster
+signal teleport_manowar
+signal teleport_yeti
+signal teleport_mantis
+signal teleport_antonion
+signal teleport_trilobyte
+
 signal palace_crystal_get(boss_name)
 signal palace_boss_spawned(boss_name)
 signal palace_boss_defeated(boss_name)
@@ -219,4 +229,22 @@ signal set_boss_bar(new_bar)
 signal sigma_walls
 signal sigma_desperation(atk_direction)
 signal final_fade_out
+
+# Lumine boss signals (legacy X8 boss still used in SigmaPalace/CrimsonPalace stages)
+signal beat_seraph_lumine
+signal lumine_death
+signal lumine_desperation
+signal lumine_went_seraph
+
+# Boss desperation signals used in PalaceRoad boss rematches
+signal trilobyte_desperation
+signal trilobyte_desperation_end
+signal copy_sigma_desperation
+signal copy_sigma_end_desperation
+signal copy_sigma_flash
+
+# Vile boss signals
+signal vile_eject
+signal vile_intro
+signal set_vile_respawn(value)
 

@@ -20,6 +20,8 @@ func set_all_data() -> void:
 	game_data["configs"] = Configurations.variables
 	game_data["keys"] = InputManager.modified_keys
 	game_data["achievements"] = Achievements.export_unlocked_list()
+	game_data["rescued_reploids"] = GameManager.rescued_reploids
+	game_data["x_unlocked"] = GameManager.x_unlocked
 
 func write_to_file() -> void:
 	var file = File.new()
@@ -50,7 +52,9 @@ func clear_save():
 		"variables" : {},
 		"configs" : {},
 		"keys" : {},
-		"achievements" : {}
+		"achievements" : {},
+		"rescued_reploids" : {},
+		"x_unlocked" : false
 	}
 	InputMap.load_from_globals()
 	write_to_file()
@@ -60,6 +64,8 @@ func clear_game_data() -> void:
 	set_all_data()
 	game_data["collectibles"] = []
 	game_data["variables"] = {}
+	game_data["rescued_reploids"] = {}
+	game_data["x_unlocked"] = false
 	apply_data()
 	GatewayManager.reset_bosses()
 	IGT.reset()
@@ -87,6 +93,10 @@ func apply_data():
 		Configurations.load_variables(game_data["configs"])
 		Achievements.load_achievements(game_data["achievements"])
 		InputManager.load_modified_keys(game_data["keys"])
+		if game_data.has("rescued_reploids"):
+			GameManager.rescued_reploids = game_data["rescued_reploids"]
+		if game_data.has("x_unlocked"):
+			GameManager.x_unlocked = game_data["x_unlocked"]
 		call_deferred("emit_signal","loaded")
 		print("Save: Finished applying and emitted signal")
 	else:

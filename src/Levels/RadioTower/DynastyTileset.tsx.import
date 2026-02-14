@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_tileset_importer"
 type="TileSet"
-path="res://.import/DynastyTileset.tsx-96a2b0a49688ca32f9bc9d160e0fe19a.res"
+path="res://.import/DynastyTileset.tsx-4a1fce0e396c43ac0f1e0afd94c4d6d0.res"
 
 [deps]
 
-source_file="res://src/Levels/Dynasty/DynastyTileset.tsx"
-dest_files=[ "res://.import/DynastyTileset.tsx-96a2b0a49688ca32f9bc9d160e0fe19a.res" ]
+source_file="res://src/Levels/RadioTower/DynastyTileset.tsx"
+dest_files=[ "res://.import/DynastyTileset.tsx-4a1fce0e396c43ac0f1e0afd94c4d6d0.res" ]
 
 [params]
 

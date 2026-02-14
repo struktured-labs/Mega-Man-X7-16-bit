@@ -2,12 +2,12 @@
 
 importer="vnen.tiled_importer"
 type="PackedScene"
-path="res://.import/_dynastyextra.tmx-c35cd5a5c968ea4c92e07198bcb90428.scn"
+path="res://.import/_dynastyextra.tmx-d27d01c2d627f618f9d039fc31aa69f8.scn"
 
 [deps]
 
-source_file="res://src/Levels/Dynasty/_dynastyextra.tmx"
-dest_files=[ "res://.import/_dynastyextra.tmx-c35cd5a5c968ea4c92e07198bcb90428.scn" ]
+source_file="res://src/Levels/RadioTower/_dynastyextra.tmx"
+dest_files=[ "res://.import/_dynastyextra.tmx-d27d01c2d627f618f9d039fc31aa69f8.scn" ]
 
 [params]
 

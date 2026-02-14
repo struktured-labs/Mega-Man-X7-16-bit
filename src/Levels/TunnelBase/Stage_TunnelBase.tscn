@@ -1,4 +1,4 @@
-[gd_scene load_steps=235 format=2]
+[gd_scene load_steps=236 format=2]
 
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Enemies/Servbot/Servbot.tscn" type="PackedScene" id=2]
@@ -66,6 +66,7 @@
 [ext_resource path="res://src/Effects/Textures/elec_particles.png" type="Texture" id=64]
 [ext_resource path="res://src/Levels/TroiaBase/a_door.png" type="Texture" id=65]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=66]
+[ext_resource path="res://src/Objects/RescueReploid.tscn" type="PackedScene" id=67]
 
 [sub_resource type="AtlasTexture" id=67]
 flags = 4
@@ -3265,6 +3266,39 @@ shape = SubResource( 35 )
 [node name="IGTimer" parent="." index="8" instance=ExtResource( 66 )]
 section = "Troia Base"
 
+
+[node name="RescueReploid1" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 1000, -400 )
+reploid_id = "tunnel_base_1"
+reward_type = "none"
+[node name="RescueReploid2" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 2500, -200 )
+reploid_id = "tunnel_base_2"
+reward_type = "none"
+[node name="RescueReploid3" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 4000, 200 )
+reploid_id = "tunnel_base_3"
+reward_type = "none"
+[node name="RescueReploid4" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 5500, 500 )
+reploid_id = "tunnel_base_4"
+reward_type = "life_up"
+[node name="RescueReploid5" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 7000, 800 )
+reploid_id = "tunnel_base_5"
+reward_type = "none"
+[node name="RescueReploid6" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 8500, 1000 )
+reploid_id = "tunnel_base_6"
+reward_type = "none"
+[node name="RescueReploid7" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 10500, 1300 )
+reploid_id = "tunnel_base_7"
+reward_type = "extra_life"
+[node name="RescueReploid8" parent="Objects" instance=ExtResource( 67 )]
+position = Vector2( 12000, 1600 )
+reploid_id = "tunnel_base_8"
+reward_type = "none"
 [connection signal="disabled" from="Objects/Section1" to="Objects/Section1/Door" method="_on_Lock"]
 [connection signal="open_doors" from="Objects/Section1" to="Objects/Section1/RewardDoor" method="queue_free"]
 [connection signal="open_doors" from="Objects/Section1" to="Objects/Section1/RewardDoor2" method="queue_free"]

@@ -12,11 +12,11 @@ onready var eyeFlash := $eyeFlash
 func _ready() -> void:
 	if active and not skip_intro:
 		sprite.visible = false
-	Event.connect("noahspark_cutscene_end",self,"enter_scene")
+	Event.connect("introstage_cutscene_end",self,"enter_scene")
 
 
 func _Setup() -> void:
-	Event.emit_signal("noahspark_cutscene_start")
+	Event.emit_signal("introstage_cutscene_start")
 
 func enter_scene():
 	turn_and_face_player()

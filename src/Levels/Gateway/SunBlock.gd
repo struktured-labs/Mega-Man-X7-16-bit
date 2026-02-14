@@ -4,8 +4,8 @@ onready var tween := TweenController.new(self,false)
 
 func _ready() -> void:
 	deactivate()
-	Event.connect("gateway_boss_spawned",self,"on_spawn")
-	Event.connect("gateway_boss_defeated",self,"on_defeat")
+	Event.connect("palace_boss_spawned",self,"on_spawn")
+	Event.connect("palace_boss_defeated",self,"on_defeat")
 	
 func on_spawn(boss_name):
 	if boss_name == "sunflower":

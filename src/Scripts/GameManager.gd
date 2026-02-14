@@ -13,6 +13,14 @@ var player_1 : Character
 var player_2 : Character
 var active_player : Character
 var inactive_player : Character
+var selected_characters := ["X", "Zero"]
+var tag_team_enabled := true
+
+const CHARACTER_SCENES := {
+	"X": "res://src/Actors/Player.tscn",
+	"Zero": "res://src/Actors/Player/Zero/Zero.tscn",
+	"Axl": "res://src/Actors/Player/Axl/Axl.tscn"
+}
 var bikes = []
 var debug_actions = []
 var debug_skip := 1
@@ -62,6 +70,11 @@ var debug_enabled := false
 var last_player_position := Vector2.ZERO
 
 var sigma_boss_order : Array
+
+# Rescue Reploid system (X7)
+var rescued_reploids := {}
+var x_unlocked := false
+const X_UNLOCK_REPLOID_THRESHOLD := 64
 
 func _ready() -> void:
 	print ("GameManager: Initializing...")
@@ -116,6 +129,8 @@ func on_level_start():
 	print ("GameManager: On Level Start...")
 	last_player_position = Vector2.ZERO
 	player = null
+	active_player = null
+	inactive_player = null
 	bikes.clear()
 	change_state("Normal")
 	call_deferred("add_collectibles_to_player")
@@ -123,8 +138,13 @@ func on_level_start():
 	call_deferred("save_stage_start_msec")
 	call_deferred("position_player_on_checkpoint")
 	call_deferred("start_stage_music")
+	call_deferred("deferred_spawn_inactive_partner")
 	end_stage_timer = 0
 	BossRNG.reset_seed()
+
+func deferred_spawn_inactive_partner() -> void:
+	if tag_team_enabled:
+		spawn_inactive_partner()
 
 func start_stage_music() -> void:
 	if is_instance_valid(music_player):
@@ -294,6 +314,8 @@ func position_player_on_checkpoint() -> void:
 func set_player(object):
 	print_debug("Setting player: " + object.name)
 	player = object
+	if not active_player:
+		active_player = object
 	player.active = false
 	player.visible = false
 	player.deactivate()
@@ -348,6 +370,126 @@ func is_collectible_in_savedata(collectible : String) -> bool:
 func reposition_collectible_in_savedata(collectible : String) -> void:
 	collectibles.erase(collectible)
 	collectibles.append(collectible)
+
+# --- Tag-Team System ---
+
+func setup_tag_team(char1: String, char2: String) -> void:
+	selected_characters = [char1, char2]
+	tag_team_enabled = true
+	print("GameManager: Tag-team setup with " + char1 + " and " + char2)
+
+func spawn_inactive_partner() -> void:
+	if not tag_team_enabled:
+		return
+	if not is_instance_valid(player):
+		return
+
+	# Determine which character is inactive
+	var active_name := ""
+	var inactive_name := ""
+	if "Zero" in player.name:
+		active_name = "Zero"
+	elif "Axl" in player.name:
+		active_name = "Axl"
+	else:
+		active_name = "X"
+
+	for char_name in selected_characters:
+		if char_name != active_name:
+			inactive_name = char_name
+			break
+
+	if inactive_name == "" or not CHARACTER_SCENES.has(inactive_name):
+		print("GameManager: Cannot spawn inactive partner - invalid name: " + inactive_name)
+		return
+
+	# Load and instance the inactive character
+	var scene = load(CHARACTER_SCENES[inactive_name])
+	if not scene:
+		print("GameManager: Failed to load scene for " + inactive_name)
+		return
+
+	# Save active player reference (partner's _ready will call set_player and overwrite it)
+	var saved_player = player
+	var saved_active = active_player
+
+	var partner = scene.instance()
+
+	# Add to the same parent as the active player
+	player.get_parent().add_child(partner)
+
+	# Restore active player reference (was overwritten by partner's _ready -> set_player)
+	player = saved_player
+	active_player = saved_active if saved_active else saved_player
+
+	# Deactivate and hide the partner
+	partner.visible = false
+	partner.active = false
+	partner.global_position = Vector2(-9999, -9999)
+	partner.stop_listening_to_inputs()
+
+	# Store references
+	player_1 = player
+	inactive_player = partner
+	player_2 = partner
+
+	# Re-emit player_set so the camera and HUD track the correct player
+	Event.call_deferred("emit_signal", "player_set")
+
+	print("GameManager: Inactive partner spawned: " + inactive_name)
+
+func perform_tag_switch() -> void:
+	if not is_instance_valid(active_player) or not is_instance_valid(inactive_player):
+		print("GameManager: Cannot tag switch - invalid player references")
+		return
+
+	if not inactive_player.has_health():
+		print("GameManager: Cannot tag switch - partner has no health")
+		return
+
+	# Store the active player's position and direction
+	var swap_position = active_player.global_position
+	var swap_direction = active_player.get_facing_direction()
+
+	# Deactivate the current active player
+	active_player.stop_listening_to_inputs()
+	active_player.set_horizontal_speed(0)
+	active_player.set_vertical_speed(0)
+	active_player.visible = false
+	active_player.active = false
+	active_player.global_position = Vector2(-9999, -9999)
+
+	# Activate the inactive player at the stored position
+	inactive_player.global_position = swap_position
+	inactive_player.set_direction(swap_direction, true)
+	inactive_player.visible = true
+	inactive_player.active = true
+	inactive_player.start_listening_to_inputs()
+	inactive_player.set_horizontal_speed(0)
+	inactive_player.set_vertical_speed(0)
+
+	# Flash the new character
+	if inactive_player.has_method("flash"):
+		inactive_player.flash()
+
+	# Swap references
+	var temp = active_player
+	active_player = inactive_player
+	inactive_player = temp
+
+	# Update the main player reference
+	player = active_player
+	Event.emit_signal("player_set")
+
+	print("GameManager: Tag switched to " + active_player.name)
+
+func get_inactive_player() -> Character:
+	return inactive_player
+
+func is_tag_team_active() -> bool:
+	return tag_team_enabled and is_instance_valid(inactive_player)
+
+# --- End Tag-Team System ---
 
 func _physics_process(delta: float) -> void:
 	handle_end_of_level(delta)
@@ -497,6 +639,10 @@ func emit_stage_start_signal():
 func emit_intro_signal():
 	player.active = true
 	player.visible = true
+	# Ensure inactive partner stays hidden during intro
+	if is_instance_valid(inactive_player):
+		inactive_player.visible = false
+		inactive_player.active = false
 	Event.emit_signal("intro_x")
 
 func start_end_cutscene() -> void:
@@ -592,3 +738,31 @@ func finish_weapon_get() -> void:
 
 func has_beaten_the_game() -> bool:
 	return GlobalVariables.get("sigma_defeated")
+
+# Rescue Reploid system
+func rescue_reploid(id: String) -> void:
+	if not id in rescued_reploids:
+		rescued_reploids[id] = true
+		print("Reploid rescued: " + id + " (total: " + str(rescued_reploids.size()) + ")")
+		check_x_unlock()
+
+func is_reploid_rescued(id: String) -> bool:
+	return rescued_reploids.has(id)
+
+func get_rescued_count() -> int:
+	return rescued_reploids.size()
+
+func check_x_unlock() -> void:
+	if x_unlocked:
+		return
+	if rescued_reploids.size() >= X_UNLOCK_REPLOID_THRESHOLD or all_mavericks_defeated():
+		x_unlocked = true
+		Event.emit_signal("x_unlocked")
+		print("X has been unlocked!")
+
+func all_mavericks_defeated() -> bool:
+	var weapon_count := 0
+	for collectible in collectibles:
+		if "_weapon" in collectible:
+			weapon_count += 1
+	return weapon_count >= 8

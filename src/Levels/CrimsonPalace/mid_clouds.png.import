@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mid_clouds.png-8c451432b5ee46303149ea69fd4ac9a1.stex"
+path="res://.import/mid_clouds.png-68016dd00593404ac850607088789c40.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Levels/SigmaPalace/mid_clouds.png"
-dest_files=[ "res://.import/mid_clouds.png-8c451432b5ee46303149ea69fd4ac9a1.stex" ]
+source_file="res://src/Levels/CrimsonPalace/mid_clouds.png"
+dest_files=[ "res://.import/mid_clouds.png-68016dd00593404ac850607088789c40.stex" ]
 
 [params]
 
