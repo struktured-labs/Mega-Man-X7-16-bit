@@ -87,20 +87,17 @@ func spawn_boss():
 	character.get_parent().add_child(boss)
 	boss.global_position = character.global_position
 
-	if boss.name == "Manowar":
+	if boss.name == "Warfly":
 		boss.global_position.y -= 24
 		boss.z_index -= 4
-		boss.get_node("Space").define_arena()
-		
-	elif boss.name == "Yeti":
-		boss.z_index -= 4
-		boss.animatedSprite.modulate = Color(1,1,1,1)
+		if boss.has_node("Space"):
+			boss.get_node("Space").define_arena()
 
-	elif boss.name == "Panda" or boss.name == "Sunflower":
+	elif boss.name == "Stonekong" or boss.name == "VanishingGungaroo":
 		boss.global_position.y -= 24
 		boss.z_index -= 5
-		
-	elif boss.name == "Mantis":
+
+	elif boss.name == "WindCrowrang" or boss.name == "SnipeAnteator":
 		boss.global_position.y -= 24
 		
 	intro.play_animation_once("idle")
