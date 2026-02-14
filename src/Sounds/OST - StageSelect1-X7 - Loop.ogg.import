@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - StageSelect1-X7 - Loop.ogg-ae9604b9e59ea91bc7289828dd929564.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - StageSelect1-X7 - Loop.ogg"
+dest_files=[ "res://.import/OST - StageSelect1-X7 - Loop.ogg-ae9604b9e59ea91bc7289828dd929564.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - SigmaPalace-X7 - Loop.ogg-8a1374d920d5b0275802323a2fa472d4.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - SigmaPalace-X7 - Loop.ogg"
+dest_files=[ "res://.import/OST - SigmaPalace-X7 - Loop.ogg-8a1374d920d5b0275802323a2fa472d4.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

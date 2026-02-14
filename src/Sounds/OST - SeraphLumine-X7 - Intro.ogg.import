@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - SeraphLumine-X7 - Intro.ogg-a4a213a585cfc8d3f97eca4c4b8c2c2d.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - SeraphLumine-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - SeraphLumine-X7 - Intro.ogg-a4a213a585cfc8d3f97eca4c4b8c2c2d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

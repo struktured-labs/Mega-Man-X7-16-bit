@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=215 format=2]
+[gd_resource type="SpriteFrames" load_steps=235 format=2]
 
 [ext_resource path="res://src/Actors/Player/Zero/zero_sprites/zero.png" type="Texture" id=1]
 
@@ -854,6 +854,86 @@ region = Rect2( 384, 672, 64, 56 )
 atlas = ExtResource( 1 )
 region = Rect2( 448, 672, 64, 56 )
 
+[sub_resource type="AtlasTexture" id=215]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=216]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=217]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=218]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=219]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=220]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=221]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=222]
+atlas = ExtResource( 1 )
+region = Rect2( 448, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=223]
+atlas = ExtResource( 1 )
+region = Rect2( 512, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=224]
+atlas = ExtResource( 1 )
+region = Rect2( 576, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=225]
+atlas = ExtResource( 1 )
+region = Rect2( 640, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=226]
+atlas = ExtResource( 1 )
+region = Rect2( 704, 728, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=227]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 784, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=228]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 784, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=229]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 784, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=230]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 784, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=231]
+atlas = ExtResource( 1 )
+region = Rect2( 256, 784, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=232]
+atlas = ExtResource( 1 )
+region = Rect2( 320, 784, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=233]
+atlas = ExtResource( 1 )
+region = Rect2( 384, 784, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=234]
+atlas = ExtResource( 1 )
+region = Rect2( 448, 784, 64, 56 )
+
 [resource]
 animations = [ {
 "frames": [ SubResource( 2 ) ],
@@ -1080,4 +1160,29 @@ animations = [ {
 "loop": true,
 "name": "turn",
 "speed": 16.0
+}, {
+"frames": [ SubResource( 215 ), SubResource( 216 ), SubResource( 217 ), SubResource( 218 ) ],
+"loop": false,
+"name": "slash1",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 219 ), SubResource( 220 ), SubResource( 221 ), SubResource( 222 ) ],
+"loop": false,
+"name": "slash2",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 223 ), SubResource( 224 ), SubResource( 225 ), SubResource( 226 ) ],
+"loop": false,
+"name": "slash3",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 227 ), SubResource( 228 ), SubResource( 229 ), SubResource( 230 ) ],
+"loop": false,
+"name": "slash_air",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 231 ), SubResource( 232 ), SubResource( 233 ), SubResource( 234 ) ],
+"loop": false,
+"name": "slash_dash",
+"speed": 10.0
 } ]

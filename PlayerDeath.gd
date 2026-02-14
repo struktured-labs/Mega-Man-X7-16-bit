@@ -11,6 +11,7 @@ onready var dash_shape: CollisionShape2D = $"../Enemy Collision Detector/DashSha
 var alpha := 0.0
 var emitted_sound := false
 var game_paused = false
+var death_completed := false
 var death_location : Vector2
 func play_sound_on_initialize():
 	pass
@@ -25,6 +26,7 @@ func _Setup():
 	GameManager.pause("PlayerDeath")
 	emitted_sound = false
 	game_paused = true
+	death_completed = false
 	alpha = 0
 	character.current_health = 0
 	character.deactivate()
@@ -46,8 +48,9 @@ func _Update(delta):
 	if timer > 1.5:
 		alpha += delta * 2
 		background.material.set_shader_param("Alpha",alpha)
-	if timer > 5:
+	if timer > 5 and not death_completed:
 		background.set_scale(Vector2(400, 160))
+		death_completed = true
 		GameManager.on_death()
 
 func _physics_process(delta: float) -> void:

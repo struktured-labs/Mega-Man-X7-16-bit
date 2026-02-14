@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://src/Actors/Player/Zero/zero_sprites/zero.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://src/Actors/Player/Zero/ZeroPlayer.gd" type="Script" id=2]
@@ -30,6 +30,11 @@
 [ext_resource path="res://src/Actors/Player/Zero/SaberHitbox.tscn" type="PackedScene" id=62]
 [ext_resource path="res://src/Actors/Player/Zero/EXGauge.gd" type="Script" id=63]
 [ext_resource path="res://src/Actors/Player/Modules/TagSwitch.gd" type="Script" id=64]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=65]
+[ext_resource path="res://src/Effects/Textures/airdash.png" type="Texture" id=66]
+[ext_resource path="res://src/Effects/Textures/dash.png" type="Texture" id=67]
+[ext_resource path="res://src/Actors/Modules/ExtraDashJump.gd" type="Script" id=68]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=69]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.995, 7 )
@@ -297,7 +302,7 @@ bus = "SFX"
 
 [node name="AirDash" type="Node2D" parent="."]
 script = ExtResource( 19 )
-conflicting_moves = [ "DashWallJump", "WallJump", "WallSlide", "DashJump", "AirDash" ]
+conflicting_moves = [ "DashWallJump", "WallJump", "WallSlide", "DashJump", "AirDash", "AirJump" ]
 actions = [ "dash" ]
 animation = "dash"
 sound = ExtResource( 6 )
@@ -315,6 +320,17 @@ bus = "SFX"
 visible = false
 position = Vector2( -16, 4 )
 z_index = 45
+texture = ExtResource( 66 )
+hframes = 3
+vframes = 2
+script = ExtResource( 65 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="AirDash/dash_particle"]
+script = ExtResource( 69 )
+make_invisible = true
+undo_on_rotation_end = false
 
 [node name="duringImage" type="AnimatedSprite" parent="AirDash"]
 visible = false
@@ -335,6 +351,14 @@ amount = 5
 lifetime = 0.35
 local_coords = false
 
+[node name="label" type="Label" parent="AirDash"]
+visible = false
+margin_left = -8.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = -18.0
+text = "3w"
+
 [node name="WallSlide" type="Node2D" parent="."]
 script = ExtResource( 11 )
 conflicting_moves = [ "WallJump", "DashWallJump", "Walk" ]
@@ -350,7 +374,7 @@ bus = "SFX"
 
 [node name="DashJump" type="Node2D" parent="."]
 script = ExtResource( 17 )
-conflicting_moves = [ "WallSlide", "WallJump", "DashWallJump", "AirDash" ]
+conflicting_moves = [ "WallSlide", "WallJump", "DashWallJump", "AirJump", "AirDash" ]
 actions = [ "jump" ]
 animation = "jump"
 sound = ExtResource( 3 )
@@ -363,7 +387,7 @@ bus = "SFX"
 
 [node name="Jump" type="Node2D" parent="."]
 script = ExtResource( 4 )
-conflicting_moves = [ "DashJump", "WallSlide", "AirDash", "WallJump", "DashWallJump" ]
+conflicting_moves = [ "DashJump", "WallSlide", "AirDash", "WallJump", "DashWallJump", "AirJump" ]
 actions = [ "jump" ]
 animation = "jump"
 sound = ExtResource( 3 )
@@ -372,6 +396,34 @@ shot_pos_adjust = Vector2( 4, 0 )
 [node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Jump"]
 pause_mode = 2
 bus = "SFX"
+
+[node name="AirJump" type="Node2D" parent="."]
+script = ExtResource( 68 )
+conflicting_moves = [ "WallSlide", "AirDash" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+jump_velocity = 190.0
+shot_pos_adjust = Vector2( 4, 0 )
+leeway_time = 0.0
+fullspeed_proportion = 0.3
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="AirJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="jump_particle" type="Sprite" parent="AirJump"]
+visible = false
+position = Vector2( 0, 24 )
+rotation = -1.5708
+scale = Vector2( 0.35, 1 )
+z_index = 45
+texture = ExtResource( 66 )
+hframes = 3
+vframes = 2
+script = ExtResource( 65 )
+animation_speed = 48.0
+one_shot = true
 
 [node name="Dash" type="Node2D" parent="."]
 script = ExtResource( 5 )
@@ -390,6 +442,17 @@ bus = "SFX"
 visible = false
 position = Vector2( -22, 0 )
 z_index = 45
+texture = ExtResource( 67 )
+hframes = 3
+vframes = 2
+script = ExtResource( 65 )
+animation_speed = 24.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="Dash/dash_particle"]
+script = ExtResource( 69 )
+make_invisible = true
+undo_on_rotation_end = false
 
 [node name="duringImage" type="AnimatedSprite" parent="Dash"]
 visible = false

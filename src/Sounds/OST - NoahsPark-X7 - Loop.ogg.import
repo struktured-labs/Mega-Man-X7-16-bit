@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - NoahsPark-X7 - Loop.ogg-ed1bfc40f1e322dfdd586a1d680b1bf1.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - NoahsPark-X7 - Loop.ogg"
+dest_files=[ "res://.import/OST - NoahsPark-X7 - Loop.ogg-ed1bfc40f1e322dfdd586a1d680b1bf1.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

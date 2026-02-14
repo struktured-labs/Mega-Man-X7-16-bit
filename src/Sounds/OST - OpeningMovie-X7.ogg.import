@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - OpeningMovie-X7.ogg-ee7253707136e6f17953e284e5734320.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - OpeningMovie-X7.ogg"
+dest_files=[ "res://.import/OST - OpeningMovie-X7.ogg-ee7253707136e6f17953e284e5734320.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

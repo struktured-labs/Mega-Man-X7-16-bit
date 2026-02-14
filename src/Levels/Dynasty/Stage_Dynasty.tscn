@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://src/Sounds/OST - Dynasty - Intro.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/Sounds/OST - Dynasty-X7 - Intro.ogg" type="AudioStream" id=3]
 [ext_resource path="res://src/Levels/Dynasty/bg1.png" type="Texture" id=4]
 [ext_resource path="res://src/Levels/Dynasty/bg2.png" type="Texture" id=5]
 [ext_resource path="res://src/Objects/Door/NewDoor.tscn" type="PackedScene" id=6]
@@ -45,7 +45,7 @@
 [ext_resource path="res://src/Levels/Checkpoint.tscn" type="PackedScene" id=43]
 [ext_resource path="res://src/Objects/LifeUp.tscn" type="PackedScene" id=44]
 [ext_resource path="res://src/Levels/Dynasty/BreakableGlass.tscn" type="PackedScene" id=45]
-[ext_resource path="res://src/Sounds/OST - Dynasty - Loop.ogg" type="AudioStream" id=46]
+[ext_resource path="res://src/Sounds/OST - Dynasty-X7 - Loop.ogg" type="AudioStream" id=46]
 [ext_resource path="res://src/Levels/Dynasty/DynastyTileset.tsx" type="TileSet" id=47]
 [ext_resource path="res://src/DialogSystem/Dialogs/Capsules/IcarusBuster.tres" type="Resource" id=48]
 [ext_resource path="res://src/Objects/Door/boss_door.res" type="SpriteFrames" id=49]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - CentralWhite-X7 - Intro.ogg-a474d285584f27badd431bd03a68b05c.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - CentralWhite-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - CentralWhite-X7 - Intro.ogg-a474d285584f27badd431bd03a68b05c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

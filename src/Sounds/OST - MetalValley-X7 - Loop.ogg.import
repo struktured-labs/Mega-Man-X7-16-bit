@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - MetalValley-X7 - Loop.ogg-005ac5feafd677cf594a2c5175982d0e.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - MetalValley-X7 - Loop.ogg"
+dest_files=[ "res://.import/OST - MetalValley-X7 - Loop.ogg-005ac5feafd677cf594a2c5175982d0e.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

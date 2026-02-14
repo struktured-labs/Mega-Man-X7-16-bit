@@ -1,7 +1,7 @@
 extends Panda
 
-const intro := preload("res://src/Sounds/OST - Metal Valley 1 - Intro.ogg")
-const loop := preload("res://src/Sounds/OST - Metal Valley 1 - Loop.ogg")
+const intro := preload("res://src/Sounds/OST - MetalValley-X7 - Intro.ogg")
+const loop := preload("res://src/Sounds/OST - MetalValley-X7 - Loop.ogg")
 
 func _ready() -> void:
 	Event.listen("moved_player_to_checkpoint",self,"on_checkpoint")

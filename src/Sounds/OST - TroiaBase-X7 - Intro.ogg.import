@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - TroiaBase-X7 - Intro.ogg-de928219a19ab971d6951a4aa590c4bc.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - TroiaBase-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - TroiaBase-X7 - Intro.ogg-de928219a19ab971d6951a4aa590c4bc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -6,6 +6,9 @@ extends Character
 
 export var skip_intro := false
 
+# Stub for compatibility with systems that check armor (Zero has no armor system)
+var current_armor = []
+
 var flash_timer := 0.0
 var block_charging := false
 var dashfall := false
@@ -190,6 +193,10 @@ func get_subtank_current_health(id) -> int:
 
 func has_any_upgrades() -> bool:
 	return false
+
+# Stub for compatibility - Zero has no armor system
+func is_full_armor() -> String:
+	return "no_armor"
 
 func disable_collision():
 	colliding = false

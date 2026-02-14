@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - TitleCall-X7.ogg-e491928d8baf0259aafc4fd31974dfe1.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - TitleCall-X7.ogg"
+dest_files=[ "res://.import/OST - TitleCall-X7.ogg-e491928d8baf0259aafc4fd31974dfe1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

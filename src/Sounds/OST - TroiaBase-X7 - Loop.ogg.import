@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - TroiaBase-X7 - Loop.ogg-5cf24547df35d2dd8f2e7846da9bda4d.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - TroiaBase-X7 - Loop.ogg"
+dest_files=[ "res://.import/OST - TroiaBase-X7 - Loop.ogg-5cf24547df35d2dd8f2e7846da9bda4d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

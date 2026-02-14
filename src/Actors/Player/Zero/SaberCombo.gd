@@ -133,7 +133,7 @@ func _Update(delta: float) -> void:
 
 		if waiting_for_next:
 			combo_timer += delta
-			if action_just_pressed():
+			if _is_action_just_pressed():
 				# Continue combo
 				timer = 0
 				continue_combo()
@@ -163,6 +163,12 @@ func reset_combo() -> void:
 	combo_timer = 0.0
 	is_air_slash = false
 	is_dash_slash = false
+
+func _is_action_just_pressed() -> bool:
+	for input in actions:
+		if character.get_action_just_pressed(input):
+			return true
+	return false
 
 func play_slash_animation(anim: String):
 	character.play_animation(anim)

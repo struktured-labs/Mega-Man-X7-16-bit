@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - SeraphLumine-X7 - Loop.ogg-e21e0733d488b814efdaa963781beb0a.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - SeraphLumine-X7 - Loop.ogg"
+dest_files=[ "res://.import/OST - SeraphLumine-X7 - Loop.ogg-e21e0733d488b814efdaa963781beb0a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

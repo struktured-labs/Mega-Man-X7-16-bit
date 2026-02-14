@@ -51,3 +51,7 @@ Thumbs.db
 .import/
 tmp/
 tmp/
+mcp/
+setenv.sh
+.claude/
+generate_saber_frames.py

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - PitchBlack-X7 - Intro.ogg-c1edeb6584793e2beb682ec9d978926c.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - PitchBlack-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - PitchBlack-X7 - Intro.ogg-c1edeb6584793e2beb682ec9d978926c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

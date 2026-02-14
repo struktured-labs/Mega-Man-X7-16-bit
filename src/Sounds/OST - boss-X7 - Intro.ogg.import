@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - boss-X7 - Intro.ogg-f52bb0239749b902d50a4f428d578b3e.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - boss-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - boss-X7 - Intro.ogg-f52bb0239749b902d50a4f428d578b3e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

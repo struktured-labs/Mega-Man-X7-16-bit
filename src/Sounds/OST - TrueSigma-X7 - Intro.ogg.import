@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - TrueSigma-X7 - Intro.ogg-4ba34b76338780f3698f8964731103e2.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - TrueSigma-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - TrueSigma-X7 - Intro.ogg-4ba34b76338780f3698f8964731103e2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

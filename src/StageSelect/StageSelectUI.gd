@@ -16,10 +16,10 @@ onready var palace_road: TextureButton = $Menu/Gateway
 onready var crimson_palace: TextureButton = $Menu/SigmaPalace
 onready var last_stages := [palace_road,crimson_palace]
 
-const music_0_intro:= preload("res://src/Sounds/OST - Stage Select 1 - Intro.ogg")
-const music_0_loop := preload("res://src/Sounds/OST - Stage Select 1 - Loop.ogg")
-const music_1_intro := preload("res://src/Sounds/OST - StageSelect3 - Intro.ogg")
-const music_1_loop := preload("res://src/Sounds/OST - StageSelect3 - Loop.ogg")
+const music_0_intro:= preload("res://src/Sounds/OST - StageSelect1-X7 - Intro.ogg")
+const music_0_loop := preload("res://src/Sounds/OST - StageSelect1-X7 - Loop.ogg")
+const music_1_intro := preload("res://src/Sounds/OST - StageSelect1-X7 - Intro.ogg")
+const music_1_loop := preload("res://src/Sounds/OST - StageSelect1-X7 - Loop.ogg")
 
 func _ready() -> void:
 	GameManager.force_unpause()

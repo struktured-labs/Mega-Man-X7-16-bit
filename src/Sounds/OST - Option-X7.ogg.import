@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Option-X7.ogg-2eca48d493091d75496d71ea85d8fda7.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Option-X7.ogg"
+dest_files=[ "res://.import/OST - Option-X7.ogg-2eca48d493091d75496d71ea85d8fda7.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

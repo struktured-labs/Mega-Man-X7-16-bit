@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - MiniBoss-X7 - Intro.ogg-ed7dfd6e96e0e38801f704c0ed75eec5.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - MiniBoss-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - MiniBoss-X7 - Intro.ogg-ed7dfd6e96e0e38801f704c0ed75eec5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

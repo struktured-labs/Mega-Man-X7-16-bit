@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - CopySigma-X7 - Intro.ogg-86e7b85c646c1d74b94d3c57a76098d0.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - CopySigma-X7 - Intro.ogg"
+dest_files=[ "res://.import/OST - CopySigma-X7 - Intro.ogg-86e7b85c646c1d74b94d3c57a76098d0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

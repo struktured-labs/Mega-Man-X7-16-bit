@@ -4,9 +4,9 @@
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://src/System/Camera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Sounds/yeti.ogg" type="AudioStream" id=4]
-[ext_resource path="res://src/Sounds/OST - Stage Clear.ogg" type="AudioStream" id=5]
+[ext_resource path="res://src/Sounds/OST - StageClear-X7.ogg" type="AudioStream" id=5]
 [ext_resource path="res://src/Sounds/Mega Man X8 OST - Angry boss.ogg" type="AudioStream" id=6]
-[ext_resource path="res://src/Sounds/OST - boss.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Sounds/OST - boss-X7 - Loop.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/HUD/Hud.tscn" type="PackedScene" id=9]
 

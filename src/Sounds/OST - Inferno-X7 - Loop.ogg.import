@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Inferno-X7 - Loop.ogg-cc647d40555b26ce49c9e1c106504580.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Inferno-X7 - Loop.ogg"
+dest_files=[ "res://.import/OST - Inferno-X7 - Loop.ogg-cc647d40555b26ce49c9e1c106504580.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
