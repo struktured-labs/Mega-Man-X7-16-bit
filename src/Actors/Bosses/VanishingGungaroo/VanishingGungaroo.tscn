@@ -21,7 +21,7 @@
 [ext_resource path="res://src/Actors/Bosses/VanishingGungaroo/RideArmorFury.gd" type="Script" id=23]
 [ext_resource path="res://src/Actors/Bosses/VanishingGungaroo/BulletProjectile.tscn" type="PackedScene" id=24]
 [ext_resource path="res://src/Actors/Bosses/VanishingGungaroo/ShockwaveProjectile.tscn" type="PackedScene" id=25]
-[ext_resource path="res://src/Sounds/Mantis - Jump.wav" type="AudioStream" id=26]
+[ext_resource path="res://src/Sounds/Antonion - Jump.wav" type="AudioStream" id=26]
 [ext_resource path="res://src/Sounds/Mantis - Land.ogg" type="AudioStream" id=27]
 [ext_resource path="res://src/Sounds/Mantis - Dash.ogg" type="AudioStream" id=28]
 [ext_resource path="res://src/Sounds/Mantis - Cut1.ogg" type="AudioStream" id=29]
