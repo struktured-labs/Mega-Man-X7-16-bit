@@ -608,8 +608,8 @@ func is_nearby(object1 : Node, object2 : Node, distance : Vector2) -> bool:
 			return abs(object1.position.x - object2.global_position.x) < distance.x and \
 				   abs(object1.position.y - object2.global_position.y) < distance.y
 		elif not object2.is_inside_tree():
-			return abs(object1.global_position.x - object2.global.x) < distance.x and \
-				   abs(object1.global_position.y - object2.global.y) < distance.y
+			return abs(object1.global_position.x - object2.position.x) < distance.x and \
+				   abs(object1.global_position.y - object2.position.y) < distance.y
 
 		return abs(object1.global_position.x - object2.global_position.x) < distance.x and \
 			   abs(object1.global_position.y - object2.global_position.y) < distance.y
