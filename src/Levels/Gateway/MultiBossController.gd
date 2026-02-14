@@ -1,7 +1,19 @@
 extends Node
 
-onready var _reploids := [$"../TrilobyteReploid", $"../PandaReploid", $"../YetiReploid", $"../AntonionReploid", $"../ManowarReploid", $"../RoosterReploid", $"../SunflowerReploid", $"../MantisReploid"]
+onready var _reploids := [$"../BoarskiReploid", $"../GungarooReploid", $"../StonekongReploid", $"../TonionReploid", $"../WarflyReploid", $"../HyenardReploid", $"../AnteatorReploid", $"../CrowrangReploid"]
 onready var boss_watcher: Node2D = $"../BossWatcher"
+
+# Crystal names (internal X8 sub-stage IDs) → X7 reploid name prefix
+const CRYSTAL_TO_REPLOID := {
+	"rooster": "Hyenard",
+	"manowar": "Warfly",
+	"trilobyte": "Boarski",
+	"sunflower": "Anteator",
+	"yeti": "Stonekong",
+	"panda": "Gungaroo",
+	"mantis": "Crowrang",
+	"antonion": "Tonion"
+}
 
 var bosses_to_desperate : Array
 var boss_ais : Dictionary
@@ -25,7 +37,8 @@ func bring_reploids():
 	for reploid in _reploids:
 		if is_instance_valid(reploid):
 			for ready_boss in boss_watcher.crystals_ready:
-				if ready_boss.capitalize() in reploid.name:
+				var match_name = CRYSTAL_TO_REPLOID.get(ready_boss, ready_boss).capitalize()
+				if match_name in reploid.name:
 					reploid.start_battle()
 					total_bosses += 1
 	

@@ -87,48 +87,48 @@ script = ExtResource( 5 )
 
 [node name="Objects" type="Node2D" parent="."]
 
-[node name="TrilobyteReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="BoarskiReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 76, 180 )
 active = false
 boss = ExtResource( 23 )
 
-[node name="PandaReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="GungarooReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 106, 180 )
 active = false
 unique_time = 0.7
 boss = ExtResource( 17 )
 
-[node name="YetiReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="StonekongReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 136, 180 )
 active = false
 unique_time = 0.3
 boss = ExtResource( 18 )
 
-[node name="AntonionReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="TonionReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 166, 180 )
 active = false
 unique_time = 0.6
 boss = ExtResource( 19 )
 
-[node name="ManowarReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="WarflyReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 299, 180 )
 active = false
 unique_time = 0.75
 boss = ExtResource( 24 )
 
-[node name="RoosterReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="HyenardReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 329, 180 )
 active = false
 unique_time = 0.55
 boss = ExtResource( 22 )
 
-[node name="SunflowerReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="AnteatorReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 359, 180 )
 active = false
 unique_time = 0.42
 boss = ExtResource( 20 )
 
-[node name="MantisReploid" parent="Objects" instance=ExtResource( 21 )]
+[node name="CrowrangReploid" parent="Objects" instance=ExtResource( 21 )]
 position = Vector2( 389, 180 )
 unique_time = 0.6
 boss = ExtResource( 25 )

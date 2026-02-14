@@ -1865,47 +1865,47 @@ total_duration = 0.5
 [node name="MultiBossController" type="Node" parent="Objects" index="33"]
 script = ExtResource( 43 )
 
-[node name="AntonionReploid" parent="Objects" index="34" instance=ExtResource( 46 )]
+[node name="TonionReploid" parent="Objects" index="34" instance=ExtResource( 46 )]
 position = Vector2( 1502, -177 )
 active = false
 unique_time = 0.6
 boss = ExtResource( 52 )
 
-[node name="TrilobyteReploid" parent="Objects" index="35" instance=ExtResource( 46 )]
+[node name="BoarskiReploid" parent="Objects" index="35" instance=ExtResource( 46 )]
 position = Vector2( 1532, -177 )
 active = false
 boss = ExtResource( 48 )
 
-[node name="RoosterReploid" parent="Objects" index="36" instance=ExtResource( 46 )]
+[node name="HyenardReploid" parent="Objects" index="36" instance=ExtResource( 46 )]
 position = Vector2( 1562, -177 )
 active = false
 unique_time = 0.55
 boss = ExtResource( 45 )
 
-[node name="MantisReploid" parent="Objects" index="37" instance=ExtResource( 46 )]
+[node name="CrowrangReploid" parent="Objects" index="37" instance=ExtResource( 46 )]
 position = Vector2( 1592, -177 )
 unique_time = 0.6
 boss = ExtResource( 49 )
 
-[node name="ManowarReploid" parent="Objects" index="38" instance=ExtResource( 46 )]
+[node name="WarflyReploid" parent="Objects" index="38" instance=ExtResource( 46 )]
 position = Vector2( 1623, -177 )
 active = false
 unique_time = 0.75
 boss = ExtResource( 50 )
 
-[node name="YetiReploid" parent="Objects" index="39" instance=ExtResource( 46 )]
+[node name="StonekongReploid" parent="Objects" index="39" instance=ExtResource( 46 )]
 position = Vector2( 1653, -177 )
 active = false
 unique_time = 0.3
 boss = ExtResource( 51 )
 
-[node name="SunflowerReploid" parent="Objects" index="40" instance=ExtResource( 46 )]
+[node name="AnteatorReploid" parent="Objects" index="40" instance=ExtResource( 46 )]
 position = Vector2( 1683, -177 )
 active = false
 unique_time = 0.42
 boss = ExtResource( 47 )
 
-[node name="PandaReploid" parent="Objects" index="41" instance=ExtResource( 46 )]
+[node name="GungarooReploid" parent="Objects" index="41" instance=ExtResource( 46 )]
 position = Vector2( 1714, -177 )
 active = false
 unique_time = 0.7
