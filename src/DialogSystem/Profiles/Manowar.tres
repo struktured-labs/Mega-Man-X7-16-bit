@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Snipe Anteator"
+name = "Splash Warfly"
 portrait_animations = ExtResource( 3 )
 text_palette = ExtResource( 2 )
 audio_pitch = 1.5
