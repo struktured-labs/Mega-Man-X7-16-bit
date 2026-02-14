@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/title_x7_00.png-cdd81d58bddd132c59e849d2e002823f.stex"
+path="res://.import/zero_leftarm.png-626ad03cf223ff2245d853b97b61ce11.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/Title/title_x7_00.png"
-dest_files=[ "res://.import/title_x7_00.png-cdd81d58bddd132c59e849d2e002823f.stex" ]
+source_file="res://src/Actors/Player/Zero/zero_sprites/zero_leftarm.png"
+dest_files=[ "res://.import/zero_leftarm.png-626ad03cf223ff2245d853b97b61ce11.stex" ]
 
 [params]
 

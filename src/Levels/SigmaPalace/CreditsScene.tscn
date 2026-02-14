@@ -26,7 +26,7 @@
 [ext_resource path="res://src/Sounds/Bike - RunLoop.wav" type="AudioStream" id=24]
 [ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=25]
 [ext_resource path="res://src/Title/title_megaman.png" type="Texture" id=26]
-[ext_resource path="res://src/Title/title_x7_06.png" type="Texture" id=27]
+[ext_resource path="res://src/Title/title_x8_06.png" type="Texture" id=27]
 [ext_resource path="res://src/Effects/Textures/simple_gradient4.png" type="Texture" id=28]
 [ext_resource path="res://src/Levels/NoahsPark/VisuaSkip.gd" type="Script" id=29]
 [ext_resource path="res://src/Effects/Textures/skip_icon.png" type="Texture" id=30]
